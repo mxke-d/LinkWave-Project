@@ -1,0 +1,206 @@
+/* Hero Section Styles */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Full-bleed hero height; adjust as you like */
+.hero--full {
+  min-height: clamp(68vh, 85vh, 92vh);
+}
+
+.hero__bg,
+.hero__bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__bg img {
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+}
+
+/* Soft dark overlay for legibility */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 15, 25, 0.55),
+    rgba(10, 15, 25, 0.55)
+  );
+  z-index: -1;
+}
+
+.hero__container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px);
+  text-align: center;
+  color: #fff;
+}
+
+.hero__content {
+  max-width: min(100%, 920px);
+}
+
+.hero__subtitle {
+  color: #FF6B35;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  opacity: 0.95;
+}
+
+.hero__title {
+  font-size: clamp(2.2rem, 4.8vw, 4.25rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.hero__description {
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  line-height: 1.6;
+  opacity: 0.95;
+  margin: 0 auto clamp(18px, 3vw, 28px);
+  max-width: 72ch;
+  color: #fff;
+}
+
+.hero__cta {
+  margin-bottom: 24px;
+}
+
+.hero__cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn--primary {
+  background: linear-gradient(90deg, #ff7a3d, #ffb02e);
+  color: #1c1f2a;
+  box-shadow: 0 6px 20px rgba(255, 140, 60, 0.35);
+}
+
+.btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(255, 140, 60, 0.45);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+.hero__support {
+  margin-top: 20px;
+}
+
+.hero__support .support-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero__support .divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero__support .support-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.hero__support .support-text span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero__support .phone {
+  color: #FF6B35 !important;
+  font-weight: 600;
+  font-size: 16px !important;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+  .hero__title { 
+    letter-spacing: 0.3px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__support .support-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero__support .divider {
+    width: 40px;
+    height: 1px;
+  }
+  
+  .hero__support .support-text {
+    text-align: center;
+  }
+}
+
+/* Ensure the hero image is properly positioned */
+.hero__bg img {
+  object-position: center 35%; /* Adjust this value to control image focus */
+}
+
+/* Additional responsive improvements */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: clamp(1.8rem, 4.2vw, 2.2rem);
+  }
+  
+  .hero__description {
+    font-size: clamp(0.9rem, 1.4vw, 1rem);
+    max-width: 100%;
+  }
+  
+  .hero__cta .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 14px;
+  }
+}
+
+/* Ensure proper spacing on very small screens */
+@media (max-width: 360px) {
+  .hero__container {
+    padding: clamp(12px, 2.5vw, 16px);
+  }
+  
+  .hero__content {
+    max-width: 100%;
+  }
+}
