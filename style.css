@@ -650,29 +650,41 @@ body {
 .industries-right .section-title {
     text-align: left;
     margin-bottom: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .industries-right .section-description {
     text-align: left;
     margin-bottom: 30px;
+    margin-top: 0px;
 }
 
 .industries-buttons {
     display: flex;
-    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin-top: -20px;
+}
+
+.projects-text {
+    font-size: 18px;
+    color: #4A5568;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .primary-btn {
     background: #FF6B35;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 15px 40px;
     border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease;
+    text-decoration: none;
 }
 
 .primary-btn:hover {
