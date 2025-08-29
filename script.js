@@ -98,6 +98,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auto-rotate every 5 seconds
     setInterval(nextTestimonial, 5000);
 
+    // Mobile Menu Functionality
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+    // Toggle mobile menu
+    if (mobileMenuToggle && mobileMenuOverlay) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuOverlay.classList.toggle('active');
+            header.classList.toggle('mobile-menu-open');
+            document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking outside
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                mobileMenuOverlay.classList.remove('active');
+                header.classList.remove('mobile-menu-open');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Mobile dropdown functionality
+    mobileDropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('active');
+            
+            // Rotate chevron icon
+            const chevron = this.querySelector('i');
+            if (chevron) {
+                chevron.style.transform = dropdownMenu.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+        });
+    });
+
     // Scroll-triggered animations
     const observerOptions = {
         threshold: 0.1,
@@ -181,27 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Newsletter subscription
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = this.querySelector('.newsletter-input').value;
-            if (email) {
-                const btn = this.querySelector('.newsletter-btn');
-                const originalText = btn.textContent;
-                btn.textContent = 'Subscribed!';
-                btn.style.background = '#10B981';
-                
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.style.background = '';
-                    this.reset();
-                }, 2000);
-            }
-        });
-    }
+
 
     // Button hover effects with ripple
     const buttons = document.querySelectorAll('button');
@@ -425,4 +443,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize slider
     initIndustrySlider();
+
+    // Initialize Swiper for Case Studies
+    new Swiper('.cs-swiper', {
+        loop: true,
+        spaceBetween: 24,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 3000, // 3 seconds (40% faster than 5 seconds)
+            disableOnInteraction: false, // Continue autoplay after user interaction
+            pauseOnMouseEnter: true // Pause on hover
+        },
+        pagination: { 
+            el: '.cs-dots', 
+            clickable: true 
+        },
+        breakpoints: {
+            640:  { slidesPerView: 1.1 },
+            768:  { slidesPerView: 1.5 },
+            1024: { slidesPerView: 2 }
+        }
+    });
 }); 
