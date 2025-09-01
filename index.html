@@ -20,19 +20,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Floating Particles Background -->
-    <div class="particles-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+
 
     <!-- Header -->
     <header class="header">
@@ -60,10 +48,16 @@
                         <a href="what_we_do.html">All Services</a>
                     </div>
                 </div>
-                <a href="#">How we do it</a>
-                <a href="#">Get in touch</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Our Process</a>
+                        <a href="#">Methodology</a>
+                        <a href="#">Best Practices</a>
+                        <a href="#">Quality Assurance</a>
+                    </div>
+                </div>
             </nav>
-            <button class="contact-btn">Contact Us</button>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 <span></span>
                 <span></span>
@@ -94,8 +88,15 @@
                     <a href="what_we_do.html">All Services</a>
                 </div>
             </div>
-            <a href="#" class="mobile-nav__link">How we do it</a>
-            <a href="#" class="mobile-nav__link">Get in touch</a>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">Our Process</a>
+                    <a href="#">Methodology</a>
+                    <a href="#">Best Practices</a>
+                    <a href="#">Quality Assurance</a>
+                </div>
+            </div>
             <button class="mobile-contact-btn">Contact Us</button>
         </nav>
     </div>

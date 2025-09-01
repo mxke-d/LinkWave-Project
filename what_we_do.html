@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <title>Linkwave Wireless - Reliable Wireless for Complex Spaces</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,28 +13,20 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Floating Particles Background -->
-    <div class="particles-container">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+
 
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="LinkWave_logo.png" alt="LinkWave Logo" style="height: 40px; width: auto;">
+                <img src="LinkWave_logo.png" alt="LinkWave Logo">
             </div>
             <nav class="nav">
                 <a href="index.html">Home</a>
@@ -51,19 +43,63 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle">What we do <i class="fas fa-chevron-down"></i></a>
-                </div>
-                <div class="dropdown">
-                    <a href="what_we_do.html" class="dropdown-toggle">How we do it<i class="fas fa-chevron-down"></i></a>
+                    <a href="what_we_do.html" class="dropdown-toggle">What we do <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
                         <a href="what_we_do.html">All Services</a>
                     </div>
                 </div>
-                <a href="#">Get in touch</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Our Process</a>
+                        <a href="#">Methodology</a>
+                        <a href="#">Best Practices</a>
+                        <a href="#">Quality Assurance</a>
+                    </div>
+                </div>
             </nav>
-            <button class="contact-btn">Contact Us</button>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav__link">Home</a>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle">Who we are <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">About Us</a>
+                    <a href="#">Description</a>
+                    <a href="#">Our Values</a>
+                    <a href="#">Mission & Vision</a>
+                    <a href="#">Our Partners</a>
+                    <a href="#">Our Clients</a>
+                    <a href="#">Our Certifications</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <a href="what_we_do.html" class="mobile-dropdown-toggle">What we do <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="what_we_do.html">All Services</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">Our Process</a>
+                    <a href="#">Methodology</a>
+                    <a href="#">Best Practices</a>
+                    <a href="#">Quality Assurance</a>
+                    </div>
+            </div>
+            <button class="mobile-contact-btn">Contact Us</button>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero hero--full">
@@ -187,32 +223,10 @@
         </div>
     </section>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
     
-    <script>
-        // Header scroll functionality
-        let lastScrollTop = 0;
-        const header = document.querySelector('.header');
-        const scrollThreshold = 100; // Minimum scroll distance before hiding header
-        
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > scrollThreshold) {
-                if (scrollTop > lastScrollTop) {
-                    // Scrolling down - hide header
-                    header.classList.add('header-hidden');
-                } else {
-                    // Scrolling up - show header
-                    header.classList.remove('header-hidden');
-                }
-            } else {
-                // Near top - always show header
-                header.classList.remove('header-hidden');
-            }
-            
-            lastScrollTop = scrollTop;
-        });
-    </script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
