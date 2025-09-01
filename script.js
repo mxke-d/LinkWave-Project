@@ -465,3 +465,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 }); 
+
+// Mission & Vision section animations
+function initMissionVisionAnimations() {
+    const missionVisionSection = document.getElementById('mission-vision');
+    if (!missionVisionSection) return;
+
+    const missionIcon = document.querySelector('.mission-icon');
+    const visionIcon = document.querySelector('.vision-icon');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+            // Add animation class when section comes into view
+            // Animations removed as requested
+        }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '-100px'
+    });
+
+    observer.observe(missionVisionSection);
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initMissionVisionAnimations();
+}); 

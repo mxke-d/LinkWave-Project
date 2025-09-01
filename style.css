@@ -2997,3 +2997,962 @@ html, body {
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
+/* About Us Section Styles */
+.about-section {
+    padding: 80px 0;
+    background: #f8fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-section .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #6B7A8F;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 2px;
+}
+
+.about-section .section-description {
+    font-size: 18px;
+    color: #4A5568;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 280px;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover::before {
+    transform: scaleX(1);
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px auto;
+    color: white;
+    font-size: 32px;
+    box-shadow: 0 12px 32px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease;
+}
+
+.about-card:hover .about-card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 16px 40px rgba(255, 107, 53, 0.4);
+}
+
+.about-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.about-card p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* Timeline Line Drawing Animation */
+@keyframes drawLine {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Timeline Circles Fade In Animation */
+@keyframes fadeInCircles {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade-up Animation Classes */
+.fade-up {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-0 {
+    animation-delay: 0s;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+/* Mobile Responsiveness for About Section */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .about-section .section-title {
+        font-size: 28px;
+    }
+    
+    .about-section .section-description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .about-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 20px;
+    }
+    
+    .about-card {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+    
+    .about-card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .about-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .about-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 0;
+    }
+    
+    .about-section .section-title {
+        font-size: 24px;
+    }
+    
+    .about-cards-grid {
+        padding: 0 15px;
+        gap: 1rem;
+    }
+    
+    .about-card {
+        padding: 20px 15px;
+    }
+}
+
+/* Our Values Section Styles */
+.values-section {
+    padding: 80px 0;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.values-section .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.values-section .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #6B7A8F;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.values-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 2px;
+}
+
+.values-section .section-description {
+    font-size: 18px;
+    color: #4A5568;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.values-timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    right: 50px;
+    height: 3px;
+    background: #ff6a29;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(255, 106, 41, 0.4), 0 0 40px rgba(255, 106, 41, 0.2);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: drawLine 1.2s ease-out 0.5s forwards;
+}
+
+.timeline-line::before,
+.timeline-line::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 9px;
+    height: 9px;
+    background: #ff6a29;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 106, 41, 0.6);
+    opacity: 0;
+}
+
+.timeline-line::before {
+    left: -4px;
+    animation: fadeInCircles 0.3s ease-out 0.5s forwards;
+}
+
+.timeline-line::after {
+    right: -4px;
+    animation: fadeInCircles 0.3s ease-out 1.7s forwards;
+}
+
+.value-node {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px auto;
+    color: white;
+    font-size: 32px;
+    box-shadow: 0 12px 32px rgba(255, 107, 53, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+}
+
+.value-icon::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.value-node:hover .value-icon {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+}
+
+.value-node:hover .value-icon::after {
+    opacity: 0.6;
+}
+
+.value-node h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.value-node p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Value Card Container */
+.value-card {
+    background: #fefefe;
+    border: 1px solid rgba(229, 231, 235, 0.8);
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 240px;
+    min-height: 140px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover::before {
+    transform: scaleX(1);
+}
+
+.value-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), 0 0 12px rgba(255, 106, 41, 0.25);
+    border-color: rgba(255, 107, 53, 0.3);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.value-card:hover h3 {
+    color: #FF6B35;
+}
+
+.value-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 1px;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 107, 53, 0.4);
+}
+
+.value-card:hover h3::after {
+    width: 60px;
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 0 12px rgba(255, 107, 53, 0.6);
+}
+
+.value-card p {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    word-break: keep-all;
+    word-spacing: 0.5px;
+    letter-spacing: 0.2px;
+            max-width: 200px;
+        padding: 0 8px;
+        white-space: pre-wrap; /* Preserves all spaces and line breaks exactly as typed */
+        transition: color 0.3s ease;
+}
+
+.value-card:hover p {
+    color: #2d3748;
+}
+
+/* Fade-up Animation Classes */
+.fade-up {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-0 {
+    animation-delay: 0s;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+/* Mobile Responsiveness for About Section */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-section .section-title {
+        font-size: 28px;
+    }
+
+    .about-section .section-description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .about-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 20px;
+    }
+
+    .about-card {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .about-card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .about-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 0;
+    }
+
+    .about-section .section-title {
+        font-size: 24px;
+    }
+
+    .about-section .section-title::after {
+        width: 60px;
+        height: 3px;
+    }
+
+    .about-cards-grid {
+        padding: 0 15px;
+        gap: 1rem;
+    }
+
+    .about-card {
+        padding: 20px 15px;
+    }
+}
+
+/* Mobile Responsiveness for Values Section */
+@media (max-width: 768px) {
+    .values-section {
+        padding: 60px 0;
+    }
+
+    .values-section .section-title {
+        font-size: 28px;
+    }
+
+    .values-section .section-description {
+        font-size: 16px;
+        margin-bottom: 60px;
+    }
+
+    .values-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .timeline-line {
+        display: none;
+    }
+
+    .value-node {
+        padding: 0;
+        max-width: 400px;
+    }
+
+    .value-node {
+        transform: translateY(0);
+    }
+
+    .value-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .value-node h3 {
+        font-size: 1.3rem;
+    }
+
+    .value-node p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+    
+    .value-card {
+        max-width: 100%;
+        padding: 18px 14px;
+        margin-top: 12px;
+    }
+    
+    .value-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .value-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .values-section {
+        padding: 40px 0;
+    }
+
+    .values-section .section-title {
+        font-size: 24px;
+    }
+
+    .values-section .section-title::after {
+        width: 60px;
+        height: 3px;
+    }
+
+    .values-timeline {
+        padding: 0 15px;
+        gap: 30px;
+    }
+
+    .value-node {
+        max-width: 100%;
+    }
+    
+    .value-card {
+        padding: 16px 12px;
+        margin-top: 10px;
+    }
+    
+    .value-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .value-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+    background-color: #f3f4f6;
+    color: #111827;
+    padding: 96px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.mission-vision-section .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.mission-vision-section .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #111827;
+}
+
+.mission-vision-section .section-header p {
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 672px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.mission-vision-cards {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.mission-vision-card {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    padding: 40px 32px 48px;
+    text-align: center;
+    flex: 1;
+    max-width: 400px;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-vision-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    border-color: #ff6600;
+    transform: translateY(-2px);
+}
+
+/* Gradient overlay animation */
+.card-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 102, 0, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.7s ease-in-out;
+    z-index: 0;
+}
+
+.mission-vision-card:hover .card-gradient-overlay {
+    transform: translateX(100%);
+}
+
+.card-content {
+    position: relative;
+    z-index: 10;
+}
+
+.mission-vision-card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.3), rgba(255, 102, 0, 0.1));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.card-icon {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container {
+    position: relative;
+    background-color: #ff6600;
+    padding: 16px;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container i {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: all 0.7s ease;
+}
+
+
+
+/* Vision icon blink animation */
+.vision-icon {
+    transition: transform 0.7s ease;
+}
+
+
+
+/* Scroll-based animation classes */
+
+
+.mission-vision-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: popIntoPlace 0.6s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.mission-vision-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FF6B35;
+    transition: width 0.3s ease;
+}
+
+.mission-vision-card:hover h3::after {
+    width: 100%;
+}
+
+.mission-vision-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #374151;
+    margin: 0;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: popIntoPlace 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    white-space: pre-line;
+}
+
+.mission-vision-card .font-medium {
+    font-weight: 500;
+}
+
+/* Keyframe animations */
+
+@keyframes popIntoPlace {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .mission-vision-section {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision-section {
+        padding: 60px 24px;
+    }
+    
+    .mission-vision-section .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-vision-cards {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    
+    .mission-vision-card {
+        max-width: 100%;
+        padding: 40px 24px 48px;
+    }
+    
+    .card-icon i {
+        font-size: 1.25rem;
+        width: 50px;
+        height: 50px;
+        line-height: 24px;
+        padding: 14px;
+    }
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .mission-vision-section {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision-section {
+        padding: 60px 24px;
+    }
+    
+    .mission-vision-section .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-vision-cards {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    
+    .mission-vision-card {
+        max-width: 100%;
+        padding: 40px 24px 48px;
+    }
+    
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        padding: 14px;
+    }
+    
+    .icon-container i {
+        font-size: 1.25rem;
+    }
+}
+
