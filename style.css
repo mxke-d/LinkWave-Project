@@ -451,6 +451,18 @@ html, body {
         box-sizing: border-box;
     }
     
+    /* Ensure logo is positioned to the left */
+    .header .logo {
+        order: 1;
+        margin-right: auto;
+    }
+    
+    /* Ensure mobile menu toggle is positioned to the right */
+    .header .mobile-menu-toggle {
+        order: 2;
+        margin-left: auto;
+    }
+    
     /* Hide desktop navigation on mobile */
     .nav {
         display: none;
@@ -511,8 +523,8 @@ html, body {
         visibility: hidden;
         transition: all 0.3s ease;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
     
     .mobile-menu-overlay.active {
@@ -525,20 +537,23 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
         text-align: center;
         width: 100%;
         max-width: 300px;
-        padding: 20px;
+        padding: 80px 20px 20px 20px;
+        margin: 0 auto;
     }
     
     .mobile-nav__link {
         text-decoration: none;
         color: #333;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
         transition: color 0.3s ease;
-        padding: 10px 0;
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
     }
     
     .mobile-nav__link:hover {
@@ -555,14 +570,16 @@ html, body {
         text-decoration: none;
         color: #333;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
         transition: color 0.3s ease;
-        padding: 10px 0;
+        padding: 8px 0;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
         cursor: pointer;
+        text-align: center;
+        width: 100%;
     }
     
     .mobile-dropdown-toggle:hover {
@@ -570,10 +587,10 @@ html, body {
     }
     
     .mobile-dropdown-menu {
-        margin-top: 15px;
+        margin-top: 10px;
         display: none;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
     
     .mobile-dropdown-menu.active {
@@ -584,9 +601,11 @@ html, body {
         text-decoration: none;
         color: #666;
         font-weight: 500;
-        font-size: 16px;
-        padding: 8px 0;
+        font-size: 14px;
+        padding: 6px 0;
         transition: color 0.3s ease;
+        text-align: center;
+        width: 100%;
     }
     
     .mobile-dropdown-menu a:hover {
@@ -598,14 +617,17 @@ html, body {
         background: #FF6B35;
         color: white;
         border: none;
-        padding: 15px 30px;
+        padding: 12px 24px;
         border-radius: 8px;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 14px;
         cursor: pointer;
         transition: all 0.3s ease;
         box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        margin-top: 20px;
+        margin-top: 15px;
+        text-align: center;
+        width: auto;
+        display: inline-block;
     }
     
     .mobile-contact-btn:hover {
@@ -618,9 +640,31 @@ html, body {
         padding-top: 60px; /* Reduced padding for mobile header */
     }
     
-    /* Move hero container up more on mobile */
-    .hero__container {
-        margin-top: 40px;
+    /* Fix mobile hero layout - position content at top instead of center */
+    .hero.hero--full {
+        min-height: auto; /* Remove 100vh constraint on mobile */
+        height: auto;
+        align-items: flex-start;
+        padding-top: 80px; /* Add top padding to account for header */
+    }
+    
+    .hero .hero__container {
+        margin-top: 0 !important;
+        height: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .hero .hero__content {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    
+    /* Mobile hero button sizing */
+    .hero__cta .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 14px;
+        border-radius: 35px;
     }
 }
 
@@ -634,6 +678,17 @@ html, body {
         padding: 0 10px;
     }
     
+    /* Ensure logo and menu positioning on small screens */
+    .header .logo {
+        order: 1;
+        margin-right: auto;
+    }
+    
+    .header .mobile-menu-toggle {
+        order: 2;
+        margin-left: auto;
+    }
+    
     .logo img {
         height: 35px;
     }
@@ -642,8 +697,36 @@ html, body {
         padding-top: 60px;
     }
     
-    .hero__container {
-        margin-top: 30px;
+    /* Further optimize hero layout for very small screens */
+    .hero.hero--full {
+        min-height: auto;
+        height: auto;
+        padding-top: 60px;
+    }
+    
+    .hero .hero__container {
+        margin-top: 0 !important;
+        padding: clamp(12px, 2.5vw, 16px);
+    }
+    
+    .hero .hero__content {
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    
+    .hero__title {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        margin-bottom: 20px;
+    }
+    
+    .hero__description {
+        font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+        margin-bottom: 25px;
+    }
+    
+    .hero__cta {
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
 }
 
@@ -661,6 +744,17 @@ html, body {
 @media (max-width: 360px) {
     .header .container {
         padding: 0 8px;
+    }
+    
+    /* Ensure logo and menu positioning on very small screens */
+    .header .logo {
+        order: 1;
+        margin-right: auto;
+    }
+    
+    .header .mobile-menu-toggle {
+        order: 2;
+        margin-left: auto;
     }
     
     .nav {
@@ -682,14 +776,45 @@ html, body {
         height: 30px;
     }
     
-    .hero__container {
-        padding: clamp(12px, 2.5vw, 16px);
+    /* Ensure hero content is properly positioned on very small screens */
+    .hero.hero--full {
+        min-height: auto;
+        height: auto;
+        padding-top: 50px;
     }
     
-    .hero__content {
-        max-width: 100%;
-        transform: translateY(40px);
+    .hero .hero__container {
+        padding: clamp(10px, 2vw, 14px);
     }
+    
+    .hero .hero__content {
+        max-width: 100%;
+        transform: none; /* Remove the translateY that was causing positioning issues */
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+    
+    .hero__title {
+        font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+        margin-bottom: 18px;
+    }
+    
+    .hero__description {
+        font-size: clamp(0.85rem, 1.4vw, 1rem);
+        margin-bottom: 20px;
+    }
+    
+    .hero__cta {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+         /* Extra small screen hero button sizing */
+     .hero__cta .btn {
+         padding: 0.5rem 1rem;
+         font-size: 13px;
+         border-radius: 30px;
+     }
 }
 
 @keyframes pulse {
@@ -2227,15 +2352,6 @@ html, body {
 }
 
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .nav {
-        gap: 20px;
-    }
-    
     /* Old hero title styles removed - now handled in hero.css */
     
     .contact-title {
@@ -2728,11 +2844,11 @@ html, body {
     overflow: hidden;
     box-shadow: var(--cs-shadow);
     transition: all 0.3s ease;
-    transform: scale(1);
+    transform: scale(0.95);
 }
 
 .cs-card:hover {
-    transform: scale(1.05);
+    transform: scale(1);
     box-shadow: 0 25px 50px rgba(0,0,0,.45);
     z-index: 10;
 }
@@ -2745,7 +2861,7 @@ html, body {
 }
 
 .cs-card:hover .cs-card-media {
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 
 .cs-card-overlay {
@@ -2821,6 +2937,30 @@ html, body {
     object-fit: cover;
     object-position: top;
     border-radius: 12px;
+}
+
+/* Mobile responsive image sizing for industries section */
+@media (max-width: 768px) {
+    .featured-industry img {
+        height: 100%;
+    }
+    
+    /* Fix service card button spacing on mobile */
+    .cs-card-body {
+        padding-bottom: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-industry img {
+        height: 100%;
+        width: 100%;
+    }
+    
+    /* Further improve service card spacing on small mobile */
+    .cs-card-body {
+        padding-bottom: 36px;
+    }
 }
 
 /* Partners Section Background */
