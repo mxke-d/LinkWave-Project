@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - Linkwave Wireless</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LinkWave_logo.png" alt="LinkWave Logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="who_we_are.html" class="dropdown-toggle active">Who we are <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">About Us</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Our Solutions</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="what_we_do.html" class="dropdown-toggle">What we do <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="what_we_do.html">Our Services</a>
+                        <a href="#projects">Our Projects</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Our Processes</a>
+                        <a href="#">Learn</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Careers <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Active Postings</a>
+                    </div>
+                </div>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav__link">Home</a>
+            <div class="mobile-dropdown">
+                <a href="who_we_are.html" class="mobile-dropdown-toggle active">Who we are <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Our Solutions</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <a href="what_we_do.html" class="mobile-dropdown-toggle">What we do <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="what_we_do.html">Our Services</a>
+                    <a href="#projects">Our Projects</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">Our Processes</a>
+                    <a href="#">Learn</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <a href="#" class="mobile-dropdown-toggle">Careers <i class="fas fa-chevron-down"></i></a>
+                <div class="mobile-dropdown-menu">
+                    <a href="#">Active Postings</a>
+                </div>
+            </div>
+            <button class="mobile-contact-btn">Contact Us</button>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero hero--full">
+        <!-- Background image -->
+        <picture class="hero__bg">
+            <img
+                src="index_images/5gnetworks.png"
+                alt="5G Networks and wireless connectivity"
+                loading="eager"
+                fetchpriority="high"
+            />
+        </picture>
+
+        <!-- Dark overlay for readability -->
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <!-- Centered content -->
+        <div class="hero__container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    Your Trusted Partner in Seamless Wireless Integration
+                </h1>
+                <p class="hero__description">
+                    At Linkwave, we bring wireless expertise to the most demanding environments. From design to deployment, we deliver high-performance, secure, and custom-tailored wireless solutions backed by Professional Engineers of Ontario. Experience connectivity that works — every time, everywhere.
+                </p>
+                <div class="hero__cta">
+                    <button class="btn btn--primary">Contact Us Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+         <!-- About Us Section -->
+     <section id="about-us" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-description">Discover the foundation, values, and innovation that drive Linkwave Wireless forward.</p>
+            </div>
+            
+            <div class="about-cards-grid">
+                <div class="about-card fade-up delay-0">
+                    <div class="about-card-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3>Our Foundation</h3>
+                    <p>Founded in the Greater Toronto Area by telecom professionals, Linkwave began with a mission to do things differently. Our roots are grounded in experience, local insight, and a commitment to delivering better solutions that last.</p>
+                </div>
+                
+                <div class="about-card fade-up delay-100">
+                    <div class="about-card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Built on Trust</h3>
+                    <p>We believe that every lasting partnership begins with trust. Our team values honesty, integrity, and clear communication. Through consistency and care, we aim to earn confidence and deliver reliable service that clients can count on.</p>
+                </div>
+                
+                <div class="about-card fade-up delay-200">
+                    <div class="about-card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Growth & Innovation</h3>
+                    <p>Linkwave continues to grow through curiosity, learning, and forward thinking. We stay flexible, track evolving technologies, and bring new ideas to every project to deliver solutions that are smarter, stronger, and ready for what's next.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Our Values Section -->
+     <section id="our-values" class="values-section">
+         <div class="container">
+             <div class="section-header">
+                 <h2 class="section-title">Our Values</h2>
+                 <p class="section-description">These principles guide everything we do — from how we design networks to how we build client partnerships.</p>
+             </div>
+             
+             <div class="values-timeline">
+                 <div class="timeline-line"></div>
+                 
+                 <div class="value-node fade-up delay-0">
+                     <div class="value-icon">
+                         <i class="fas fa-compass"></i>
+                     </div>
+                                             <div class="value-card">
+                            <h3>Integrity</h3>
+                            <p>We keep our word and own our choices. This value shapes how we build trust, work as a team, and serve each client with care.</p>
+                        </div>
+                 </div>
+                 
+                 <div class="value-node fade-up delay-100">
+                     <div class="value-icon">
+                         <i class="fas fa-cog"></i>
+                     </div>
+                                             <div class="value-card">
+                            <h3>Innovation</h3>
+                            <p>We think boldly and aim higher. By pushing ideas forward, we       design better systems that help clients lead the way.</p>
+                        </div>
+                 </div>
+                 
+                 <div class="value-node fade-up delay-200">
+                     <div class="value-icon">
+                         <i class="fas fa-broadcast-tower"></i>
+                     </div>
+                                             <div class="value-card">
+                            <h3>Reliability</h3>
+                            <p>Our systems are built to last. Clients count on us for stable         results and service that works every single time.</p>
+                        </div>
+                 </div>
+                 
+                 <div class="value-node fade-up delay-300">
+                     <div class="value-icon">
+                         <i class="fas fa-hands-helping"></i>
+                     </div>
+                                             <div class="value-card">
+                            <h3>Collaboration</h3>
+                            <p>We work closely with our team and clients. Clear goals, shared   effort, and open talk lead to real results that last.</p>
+                        </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="mission-vision-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mission & Vision</h2>
+                <p>What motivates us daily and defines the future we're building toward.</p>
+            </div>
+            
+            <div class="mission-vision-cards">
+                <!-- Mission Card -->
+                <div class="mission-vision-card group">
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-bullseye mission-icon" aria-label="Mission target"></i>
+                            </div>
+                        </div>
+                        <h3>MISSION</h3>
+                        <p>We're committed to making wireless systems simple, strong, and efficient through clear planning and proven results.<br><br>Our mission is to offer scalable, secure systems that build long-term trust with clients by providing steady service and smooth, stable connectivity at every step.</p>
+                    </div>
+                </div>
+                
+                <!-- Vision Card -->
+                <div class="mission-vision-card group">
+                    <div class="card-gradient-overlay"></div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-eye vision-icon" aria-label="Vision eye"></i>
+                            </div>
+                        </div>
+                        <h3>VISION</h3>
+                        <p>We imagine a world where wireless systems help people and teams stay close, work fast, and move freely in any space.<br><br>Our vision is to raise the bar for in-building wireless by leading with sharp ideas, clear goals, and a bold focus on how we shape the future of signal and speed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>
