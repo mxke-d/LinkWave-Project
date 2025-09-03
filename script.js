@@ -464,6 +464,31 @@ document.addEventListener('DOMContentLoaded', function() {
             1024: { slidesPerView: 2 }
         }
     });
+
+    // Initialize Swiper for Partners
+    new Swiper('.partners-swiper', {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 4000, // 4 seconds
+            disableOnInteraction: false, // Continue autoplay after user interaction
+            pauseOnMouseEnter: true // Pause on hover
+        },
+        navigation: {
+            nextEl: '.partners-next',
+            prevEl: '.partners-prev',
+        },
+        pagination: { 
+            el: '.partners-pagination', 
+            clickable: true 
+        },
+        breakpoints: {
+            640:  { slidesPerView: 2 },
+            768:  { slidesPerView: 2.5 },
+            1024: { slidesPerView: 3 }
+        }
+    });
 }); 
 
 // Mission & Vision section animations
