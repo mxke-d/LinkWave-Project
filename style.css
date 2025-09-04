@@ -7453,7 +7453,20 @@ html, body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #111827;
+    color: #6B7A8F;
+    position: relative;
+}
+
+.mission-vision-section .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 2px;
 }
 
 .mission-vision-section .section-header p {
