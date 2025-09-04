@@ -1,5 +1,17 @@
+// Reset page to top on reload
+window.addEventListener('beforeunload', function() {
+    window.scrollTo(0, 0);
+});
+
+// Ensure page starts at top on load
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
+
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Ensure page is at top when DOM is ready
+    window.scrollTo(0, 0);
     // Smooth scrolling for anchor links
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
