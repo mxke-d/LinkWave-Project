@@ -405,6 +405,51 @@ html, body {
     transform: translateY(-1px);
 }
 
+.btn--orange {
+    background: linear-gradient(135deg, #FF6B35, #ff8e4f);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(255, 140, 60, 0.4);
+}
+
+.btn--orange::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn--orange:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.6);
+    background: linear-gradient(135deg, #ff8e4f, #FF6B35);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn--orange:hover::before {
+    left: 100%;
+}
+
+.btn--orange:active {
+    transform: translateY(-1px);
+}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1683,11 +1728,10 @@ html, body {
 }
 
 .why-choose-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -2346,6 +2390,13 @@ html, body {
     }
     
     .why-choose-cards {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 500px;
+    }
+    
+    .home-feature-cards {
+        grid-template-columns: 1fr;
         gap: 30px;
         max-width: 500px;
     }
@@ -2447,6 +2498,13 @@ html, body {
     }
     
     .why-choose-cards {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .home-feature-cards {
+        grid-template-columns: 1fr;
         max-width: 100%;
         padding: 0 20px;
     }
@@ -4484,7 +4542,18 @@ html, body {
 .why-choose-cards {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Home page specific grid layout for feature cards */
+.home-feature-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .reason-card {
@@ -6817,6 +6886,11 @@ html, body {
     margin: 0 auto;
 }
 
+.about-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
 .about-card {
     background: white;
     border-radius: 20px;
@@ -7117,6 +7191,8 @@ html, body {
     transition: all 0.3s ease;
     position: relative;
     z-index: 3;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .value-icon::after {
@@ -7133,14 +7209,7 @@ html, body {
     transition: opacity 0.3s ease;
 }
 
-.value-node:hover .value-icon {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
-}
-
-.value-node:hover .value-icon::after {
-    opacity: 0.6;
-}
+/* Icons are always visible with no hover effects */
 
 .value-node h3 {
     font-size: 1.5rem;
@@ -7380,6 +7449,8 @@ html, body {
         height: 70px;
         font-size: 28px;
         margin-bottom: 20px;
+        opacity: 1;
+        transform: scale(1);
     }
 
     .value-node h3 {
@@ -7467,7 +7538,20 @@ html, body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #111827;
+    color: #6B7A8F;
+    position: relative;
+}
+
+.mission-vision-section .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    border-radius: 2px;
 }
 
 .mission-vision-section .section-header p {
