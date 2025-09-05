@@ -1973,16 +1973,42 @@ html, body {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 142, 83, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .tech-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 25px rgba(255, 107, 53, 0.2);
+}
+
+.tech-item:hover::before {
+    opacity: 1;
 }
 
 .tech-item:hover .tech-icon {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+    transform: scale(1.15) translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+}
+
+.tech-item:hover h3 {
+    color: #FF6B35;
+    transform: translateY(-2px);
 }
 
 .tech-icon {
@@ -1999,12 +2025,16 @@ html, body {
     box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
     position: relative;
     z-index: 2;
+    transition: all 0.3s ease;
 }
 
 .tech-item h3 {
     font-size: 16px;
     font-weight: 600;
     color: #2D3748;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 /* Contact Section */
@@ -2455,6 +2485,43 @@ html, body {
     
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tech-item:hover {
+        transform: translateY(-8px) scale(1.01);
+    }
+    
+    .tech-item:hover .tech-icon {
+        transform: scale(1.1) translateY(-6px);
+    }
+    
+    /* Touch device optimizations */
+    @media (hover: none) and (pointer: coarse) {
+        .tech-item:hover {
+            transform: none;
+        }
+        
+        .tech-item:hover .tech-icon {
+            transform: none;
+        }
+        
+        .tech-item:hover h3 {
+            transform: none;
+            color: #2D3748;
+        }
+        
+        .tech-item:active {
+            transform: translateY(-5px) scale(1.01);
+        }
+        
+        .tech-item:active .tech-icon {
+            transform: scale(1.1) translateY(-5px);
+        }
+        
+        .tech-item:active h3 {
+            color: #FF6B35;
+            transform: translateY(-2px);
+        }
     }
     
     .stats-grid {
