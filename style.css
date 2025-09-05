@@ -7902,7 +7902,7 @@ html, body {
 /* Projects Showcase Styles */
 .projects-showcase {
     padding: 100px 0;
-    background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 25%, #9ca3af 50%, #d1d5db 75%, #e5e7eb 100%);
+    background: linear-gradient(135deg, #fafbfc 0%, #f1f3f4 25%, #e8eaed 50%, #f1f3f4 75%, #fafbfc 100%);
     position: relative;
 }
 
