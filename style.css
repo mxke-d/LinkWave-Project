@@ -10,6 +10,7 @@ html, body {
     padding: 0;
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -35,6 +36,7 @@ html, body {
     padding: 0;
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -922,15 +924,23 @@ html, body {
     background: white;
     padding: 40px 0;
     border-top: 1px solid #E2E8F0;
+    overflow: hidden;
+}
+
+.partner-logos-wrapper {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    position: relative;
 }
 
 .partner-logos {
     display: flex;
     align-items: center;
-    gap: 60px;
-    overflow: hidden;
+    gap: 3rem;
     white-space: nowrap;
-    animation: scroll 30s linear infinite;
+    animation: scroll 20s linear infinite;
     width: max-content;
 }
 
@@ -939,7 +949,7 @@ html, body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 1.5rem));
     }
 }
 
@@ -2352,6 +2362,13 @@ html, body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .partner-logos-wrapper {
+        max-width: 90vw;
+        padding: 0 1.5rem;
+    }
+}
+
 @media (max-width: 1024px) {
     /* Hero responsive styles moved to hero.css */
     
@@ -2455,10 +2472,16 @@ html, body {
         gap: 15px;
     }
     
+    .partner-logos-wrapper {
+        max-width: 95vw;
+        padding: 0 1rem;
+    }
+    
     .partner-logos {
         justify-content: center;
         flex-direction: column;
         gap: 30px;
+        animation: none;
     }
     
     .partner-item {
