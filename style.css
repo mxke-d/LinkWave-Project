@@ -2063,7 +2063,7 @@ html, body {
 }
 
 .contact-title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
     color: #6B7A8F;
     line-height: 1.2;
@@ -2497,7 +2497,7 @@ html, body {
     /* Old hero title styles removed - now handled in hero.css */
     
     .contact-title {
-        font-size: 36px;
+        font-size: 28px;
     }
     
     .services-grid {
@@ -2768,1617 +2768,447 @@ html, body {
 
 /* Our Solutions Section */
 .our-solutions {
-    background: white;
-    padding: 80px 0;
+    background: #f8f9fa;
+    padding: 5rem 0;
     position: relative;
     overflow: hidden;
 }
 
-.solutions-description {
-    font-size: 20px;
-    color: #4A5568;
-    max-width: 800px;
-    margin-bottom: 20px;
-    line-height: 1.7;
-    font-weight: 400;
+/* ========================================
+   UNIFIED SERVICE SECTIONS STYLING
+   ======================================== */
+
+/* Base Service Section Styling */
+.service-section {
+    background: white;
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
+.service-section:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.service-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.75rem;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.service-layout.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.service-title {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    color: #6B7A8F;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.service-description {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: #4A5568;
+    line-height: 1.6;
+    margin-bottom: 1.875rem;
+    max-width: 31.25rem;
+}
+
+.service-link {
+    color: #FF6B35;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.service-link::after {
+    content: '';
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    background: #FF6B35;
+    transition: width 0.3s ease;
+}
+
+.service-link:hover {
+    color: #E55A2B;
+}
+
+.service-link:hover::after {
+    width: 100%;
+}
+
+.service-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Placeholder Box Styling */
+.placeholder-box {
+    width: 100%;
+    height: 30rem;
+    border: 0.1875rem solid #2D3748;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.placeholder-box:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.15);
+}
+
+.placeholder-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2D3748;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+}
+
+/* Responsive Design for Service Sections */
+@media (max-width: 64rem) {
+    .service-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+    
+    .service-layout.reverse {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-content {
+        text-align: center;
+    align-items: center;
+        order: 2;
+    }
+    
+    .service-layout.reverse .service-content {
+        order: 2;
+    }
+    
+    .service-visual {
+        order: 1;
+    }
+    
+    .service-layout.reverse .service-visual {
+        order: 1;
+    }
+    
+    .service-description {
+        max-width: 100%;
+    }
+    
+    .service-link {
+        align-self: center;
+    }
+    
+    .placeholder-box {
+        height: 25rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .service-section {
+        padding: 3.75rem 0;
+    }
+    
+    .placeholder-box {
+        height: 20rem;
+    }
+    
+    .placeholder-text {
+        font-size: 1.25rem;
+    }
+}
+
+.solutions-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.25rem;
+}
+
+.solutions-title {
+    font-size: clamp(2rem, 4vw, 2.625rem);
+    font-weight: 700;
+    color: #2D3748;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.solutions-description {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: #4A5568;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Solutions Tabs */
+.solutions-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 3rem auto;
+    background: white;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.08);
+    max-width: 37.5rem;
+    width: 100%;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    background: transparent;
+    color: #4A5568;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    color: #2D3748;
+    background: #f8f9fa;
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+    color: white;
+    box-shadow: 0 0.25rem 0.9375rem rgba(255, 107, 53, 0.3);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(1.25rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-description {
+    text-align: center;
+    margin: 1.5rem auto 3rem auto;
+    max-width: 43.75rem;
+    padding: 0 1.25rem;
+}
+
+.tab-description h3 {
+    font-size: clamp(1.5rem, 3vw, 1.75rem);
+    font-weight: 600;
+    color: #2D3748;
+    margin-bottom: 1rem;
+}
+
+.tab-description p {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    color: #4A5568;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Solutions Grid */
 .solutions-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(min(21.875rem, 100%), 1fr));
+    gap: 1.875rem;
+    max-width: 75rem;
     margin: 0 auto;
+    padding: 0 1.25rem;
 }
 
 .solution-card {
     background: white;
-    border: 2px solid #E2E8F0;
-    border-radius: 16px;
-    padding: 40px 30px;
-    text-align: center;
+    border-radius: 1rem;
+    padding: 1.875rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    border: 1px solid #E2E8F0;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.solution-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.solution-card:hover::before {
-    left: 100%;
 }
 
 .solution-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1.875rem rgba(0, 0, 0, 0.12);
     border-color: #FF6B35;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    gap: 1rem;
 }
 
 .solution-icon {
-    width: 80px;
-    height: 80px;
+    width: 3.75rem;
+    height: 3.75rem;
     background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
-    border-radius: 50%;
+    border-radius: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 30px auto;
+    font-size: 1.5rem;
     color: white;
-    font-size: 32px;
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    flex-shrink: 0;
     transition: all 0.3s ease;
 }
 
 .solution-card:hover .solution-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 0.25rem 0.9375rem rgba(255, 107, 53, 0.3);
 }
 
 .solution-title {
-    font-size: 24px;
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
     font-weight: 600;
     color: #2D3748;
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 0;
+    line-height: 1.3;
 }
 
 .solution-description {
-    font-size: 16px;
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
     color: #4A5568;
     line-height: 1.6;
-    text-align: center;
-    margin: 0;
+    margin: 0 0 1.5625rem 0;
+}
+
+/* Hardware Platforms */
+.hardware-platforms {
+    margin-top: 1.5625rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #E2E8F0;
+}
+
+.platforms-title {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    font-weight: 600;
+    color: #2D3748;
+    margin-bottom: 0.9375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03125rem;
+}
+
+.platforms-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.platform-tag {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.375rem 0.75rem;
+    border-radius: 1.25rem;
+    font-size: clamp(0.6875rem, 1.5vw, 0.75rem);
+    font-weight: 500;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.platform-tag:hover {
+    background: #FF6B35;
+    color: white;
+    border-color: #FF6B35;
+    transform: translateY(-0.0625rem);
 }
 
 /* Responsive Design for Our Solutions */
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
     .solutions-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 100%), 1fr));
+        gap: 1.5625rem;
+    }
+    
+    .solutions-tabs {
+        max-width: 31.25rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .our-solutions {
-        padding: 60px 0;
+        padding: 3.75rem 0;
     }
     
-    .solutions-title {
-        font-size: 28px;
+    .solutions-header {
+        margin-bottom: 2.5rem;
     }
     
-    .solutions-description {
-        font-size: 18px;
-        margin-bottom: 40px;
+    .solutions-tabs {
+        flex-direction: column;
+        max-width: 100%;
+        margin-bottom: 2.5rem;
     }
     
     .solutions-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 1.5625rem;
     }
     
     .solution-card {
-        padding: 30px 20px;
+        padding: 1.5625rem 1.25rem;
+    }
+    
+    .card-header {
+    flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
     }
     
     .solution-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 28px;
-        margin-bottom: 25px;
+        width: 3.125rem;
+        height: 3.125rem;
+        font-size: 1.25rem;
     }
     
-    .solution-title {
-        font-size: 20px;
+    .tab-description {
+        margin-bottom: 2.5rem;
     }
-    
-    .solution-description {
-        font-size: 15px;
-    }
-}
-
-/* Wireless Network Consulting Section */
-.consulting-section {
-    background: #f8f9fa;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.consulting-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.consulting-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.consulting-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.consulting-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.consulting-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.consulting-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.consulting-link:hover {
-    color: #E55A2B;
-}
-
-.consulting-link:hover::after {
-    width: 100%;
-}
-
-.consulting-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.consulting-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for Consulting Section */
-@media (max-width: 1024px) {
-    .consulting-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .consulting-content {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .consulting-description {
-        max-width: 100%;
-    }
-    
-    .consulting-link {
-        align-self: center;
-    }
-    
-    .consulting-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .consulting-section {
-        padding: 60px 0;
-    }
-    
-    .consulting-title {
-        font-size: 28px;
-    }
-    
-    .consulting-description {
-        font-size: 16px;
-    }
-    
-    .consulting-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* Cellular DAS Systems Section */
-.das-section {
-    background: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.das-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.das-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.das-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.das-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.das-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.das-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.das-link:hover {
-    color: #E55A2B;
-}
-
-.das-link:hover::after {
-    width: 100%;
-}
-
-.das-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.das-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.das-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for DAS Section */
-@media (max-width: 1024px) {
-    .das-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .das-content {
-        text-align: center;
-        align-items: center;
-        order: 2;
-    }
-    
-    .das-visual {
-        order: 1;
-    }
-    
-    .das-description {
-        max-width: 100%;
-    }
-    
-    .das-link {
-        align-self: center;
-    }
-    
-    .das-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .das-section {
-        padding: 60px 0;
-    }
-    
-    .das-title {
-        font-size: 28px;
-    }
-    
-    .das-description {
-        font-size: 16px;
-    }
-    
-    .das-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .das-visual .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* Enterprise Wi-Fi Solutions Section */
-.wifi-section {
-    background: #f8f9fa;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.wifi-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.wifi-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.wifi-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.wifi-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.wifi-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.wifi-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.wifi-link:hover {
-    color: #E55A2B;
-}
-
-.wifi-link:hover::after {
-    width: 100%;
-}
-
-.wifi-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wifi-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.wifi-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for Wi-Fi Section */
-@media (max-width: 1024px) {
-    .wifi-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .wifi-content {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .wifi-description {
-        max-width: 100%;
-    }
-    
-    .wifi-link {
-        align-self: center;
-    }
-    
-    .wifi-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .wifi-section {
-        padding: 60px 0;
-    }
-    
-    .wifi-title {
-        font-size: 28px;
-    }
-    
-    .wifi-description {
-        font-size: 16px;
-    }
-    
-    .wifi-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .wifi-visual .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* Public Safety Section */
-.safety-section {
-    background: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.safety-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.safety-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.safety-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.safety-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.safety-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.safety-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.safety-link:hover {
-    color: #E55A2B;
-}
-
-.safety-link:hover::after {
-    width: 100%;
-}
-
-.safety-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.safety-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.safety-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for Public Safety Section */
-@media (max-width: 1024px) {
-    .safety-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .safety-content {
-        text-align: center;
-        align-items: center;
-        order: 2;
-    }
-    
-    .safety-visual {
-        order: 1;
-    }
-    
-    .safety-description {
-        max-width: 100%;
-    }
-    
-    .safety-link {
-        align-self: center;
-    }
-    
-    .safety-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .safety-section {
-        padding: 60px 0;
-    }
-    
-    .safety-title {
-        font-size: 28px;
-    }
-    
-    .safety-description {
-        font-size: 16px;
-    }
-    
-    .safety-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .safety-visual .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* PSERN Section */
-.psern-section {
-    background: #f8f9fa;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.psern-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.psern-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.psern-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.psern-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.psern-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.psern-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.psern-link:hover {
-    color: #E55A2B;
-}
-
-.psern-link:hover::after {
-    width: 100%;
-}
-
-.psern-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.psern-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.psern-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for PSERN Section */
-@media (max-width: 1024px) {
-    .psern-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .psern-content {
-        text-align: center;
-        align-items: center;
-    }
-    
-    .psern-description {
-        max-width: 100%;
-    }
-    
-    .psern-link {
-        align-self: center;
-    }
-    
-    .psern-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .psern-section {
-        padding: 60px 0;
-    }
-    
-    .psern-title {
-        font-size: 28px;
-    }
-    
-    .psern-description {
-        font-size: 16px;
-    }
-    
-    .psern-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .psern-visual .placeholder-text {
-        font-size: 20px;
-    }
 }
 
-/* Testing Section */
-.testing-section {
-    background: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.testing-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.testing-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.testing-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.testing-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.testing-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.testing-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.testing-link:hover {
-    color: #E55A2B;
-}
-
-.testing-link:hover::after {
-    width: 100%;
-}
-
-.testing-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.testing-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.testing-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for Testing Section */
-@media (max-width: 1024px) {
-    .testing-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .testing-content {
-        text-align: center;
-        align-items: center;
-        order: 2;
-    }
-    
-    .testing-visual {
-        order: 1;
-    }
-    
-    .testing-description {
-        max-width: 100%;
-    }
-    
-    .testing-link {
-        align-self: center;
-    }
-    
-    .testing-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .testing-section {
-        padding: 60px 0;
-    }
-    
-    .testing-title {
-        font-size: 28px;
-    }
-    
-    .testing-description {
-        font-size: 16px;
-    }
-    
-    .testing-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .testing-visual .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* DAS Deployment Section */
-.das-deployment-section {
-    background: #f8f9fa;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.das-deployment-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.das-deployment-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.das-deployment-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.das-deployment-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.das-deployment-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.das-deployment-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.das-deployment-link:hover {
-    color: #E55A2B;
-}
-
-.das-deployment-link:hover::after {
-    width: 100%;
-}
-
-.das-deployment-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.das-deployment-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.das-deployment-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for DAS Deployment Section */
-@media (max-width: 1024px) {
-    .das-deployment-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .das-deployment-content {
-        text-align: center;
-        align-items: center;
-        order: 1;
-    }
-    
-    .das-deployment-visual {
-        order: 2;
-    }
-    
-    .das-deployment-description {
-        max-width: 100%;
-    }
-    
-    .das-deployment-link {
-        align-self: center;
-    }
-    
-    .das-deployment-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .das-deployment-section {
-        padding: 60px 0;
-    }
-    
-    .das-deployment-title {
-        font-size: 28px;
-    }
-    
-    .das-deployment-description {
-        font-size: 16px;
-    }
-    
-    .das-deployment-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .das-deployment-visual .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* Staffing Section */
-.staffing-section {
-    background: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.staffing-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.staffing-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.staffing-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.staffing-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.staffing-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.staffing-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.staffing-link:hover {
-    color: #E55A2B;
-}
-
-.staffing-link:hover::after {
-    width: 100%;
-}
-
-.staffing-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.staffing-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.staffing-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for Staffing Section */
-@media (max-width: 1024px) {
-    .staffing-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .staffing-content {
-        text-align: center;
-        align-items: center;
-        order: 2;
-    }
-    
-    .staffing-visual {
-        order: 1;
-    }
-    
-    .staffing-description {
-        max-width: 100%;
-    }
-    
-    .staffing-link {
-        align-self: center;
-    }
-    
-    .staffing-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .staffing-section {
-        padding: 60px 0;
-    }
-    
-    .staffing-title {
-        font-size: 28px;
-    }
-    
-    .staffing-description {
-        font-size: 16px;
-    }
-    
-    .staffing-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .staffing-visual .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* Training Services Section */
-.training-section {
-    background: #f8f9fa;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.training-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.training-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.training-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.training-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.training-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.training-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.training-link:hover {
-    color: #E55A2B;
-}
-
-.training-link:hover::after {
-    width: 100%;
-}
-
-.training-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.training-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.training-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for Training Services Section */
-@media (max-width: 1024px) {
-    .training-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .training-content {
-        text-align: center;
-        align-items: center;
-        order: 1;
-    }
-    
-    .training-visual {
-        order: 2;
-    }
-    
-    .training-description {
-        max-width: 100%;
-    }
-    
-    .training-link {
-        align-self: center;
-    }
-    
-    .training-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .training-section {
-        padding: 60px 0;
-    }
-    
-    .training-title {
-        font-size: 28px;
-    }
-    
-    .training-description {
-        font-size: 16px;
-    }
-    
-    .training-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .training-visual .placeholder-text {
-        font-size: 20px;
-    }
-}
-
-/* Private Networks Section */
-.private-networks-section {
-    background: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.private-networks-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.private-networks-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.private-networks-title {
-    font-size: 36px;
-    font-weight: 700;
-    color: #6B7A8F;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.private-networks-description {
-    font-size: 18px;
-    color: #4A5568;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.private-networks-link {
-    color: #FF6B35;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.private-networks-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #FF6B35;
-    transition: width 0.3s ease;
-}
-
-.private-networks-link:hover {
-    color: #E55A2B;
-}
-
-.private-networks-link:hover::after {
-    width: 100%;
-}
-
-.private-networks-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.private-networks-visual .placeholder-box {
-    width: 100%;
-    height: 400px;
-    border: 3px solid #2D3748;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.private-networks-visual .placeholder-text {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2D3748;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Responsive Design for Private Networks Section */
-@media (max-width: 1024px) {
-    .private-networks-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-    
-    .private-networks-content {
-        text-align: center;
-        align-items: center;
-        order: 2;
-    }
-    
-    .private-networks-visual {
-        order: 1;
-    }
-    
-    .private-networks-description {
-        max-width: 100%;
-    }
-    
-    .private-networks-link {
-        align-self: center;
-    }
-    
-    .private-networks-visual .placeholder-box {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .private-networks-section {
-        padding: 60px 0;
-    }
-    
-    .private-networks-title {
-        font-size: 28px;
-    }
-    
-    .private-networks-description {
-        font-size: 16px;
-    }
-    
-    .private-networks-visual .placeholder-box {
-        height: 250px;
-    }
-    
-    .private-networks-visual .placeholder-text {
-        font-size: 20px;
+@media (max-width: 30rem) {
+    .solution-card {
+        padding: 1.25rem 0.9375rem;
     }
 }
 
@@ -8437,4 +7267,5 @@ html, body {
         font-size: 0.8rem;
     }
 }
+
 

@@ -144,47 +144,166 @@
         <div class="container">
             <div class="solutions-header" id="our-solutions">
                 <h2 class="solutions-title">Our Solutions</h2>
-                <p class="solutions-description">Comprehensive wireless infrastructure solutions that transform complex connectivity challenges into seamless, reliable networks. From initial assessment to ongoing optimization, we deliver end-to-end solutions tailored to your unique requirements and business objectives.</p>
+                <p class="solutions-description">Comprehensive wireless infrastructure solutions that transform complex connectivity challenges into seamless, reliable networks.</p>
             </div>
             
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="solution-title">Assessment & Planning</h3>
-                    <p class="solution-description">Comprehensive site analysis and strategic planning to identify optimal wireless solutions for your specific needs.</p>
+            <!-- Solutions Tabs -->
+            <div class="solutions-tabs">
+                <button class="tab-button active" data-tab="commercial">Commercial Solutions</button>
+                <button class="tab-button" data-tab="enterprise">Enterprise Solutions</button>
+            </div>
+
+            <!-- Commercial Solutions Tab -->
+            <div class="tab-content active" id="commercial">
+                <div class="tab-description">
+                    <h3>Commercial Solutions</h3>
+                    <p>Tailored wireless infrastructure for commercial environments including retail, hospitality, healthcare, and office buildings.</p>
                 </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="card-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </div>
+                            <h4 class="solution-title">Cellular DAS Systems</h4>
+                        </div>
+                        <p class="solution-description">Distributed Antenna Systems for seamless cellular coverage in commercial buildings.</p>
+                        <div class="hardware-platforms">
+                            <h5 class="platforms-title">Hardware Platforms</h5>
+                            <div class="platforms-grid">
+                                <span class="platform-tag">CommScope ION-B</span>
+                                <span class="platform-tag">Corning ONE Wireless</span>
+                                <span class="platform-tag">SOLiD ALLIANCE</span>
+                                <span class="platform-tag">Nokia Flexi Zone</span>
+                                <span class="platform-tag">BTI Wireless DAS</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="solution-title">Implementation</h3>
-                    <p class="solution-description">Expert installation and configuration of wireless infrastructure with minimal disruption to your operations.</p>
-                </div>
-                
-                <div class="solution-card">
-                    <div class="solution-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    
+                    <div class="solution-card">
+                        <div class="card-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <h4 class="solution-title">Enterprise Wi-Fi</h4>
+                        </div>
+                        <p class="solution-description">High-performance wireless networks for commercial environments.</p>
+                        <div class="hardware-platforms">
+                            <h5 class="platforms-title">Hardware Platforms</h5>
+                            <div class="platforms-grid">
+                                <span class="platform-tag">Cisco Catalyst 9000</span>
+                                <span class="platform-tag">Aruba 600 Series</span>
+                                <span class="platform-tag">Ruckus R750</span>
+                                <span class="platform-tag">Ubiquiti UniFi</span>
+                                <span class="platform-tag">Meraki MR Series</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="solution-title">Support & Maintenance</h3>
-                    <p class="solution-description">Ongoing monitoring, maintenance, and support to ensure your wireless network performs at peak efficiency.</p>
+                    
+                    <div class="solution-card">
+                        <div class="card-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="solution-title">Public Safety</h4>
+                        </div>
+                        <p class="solution-description">Critical communication infrastructure for emergency services.</p>
+                        <div class="hardware-platforms">
+                            <h5 class="platforms-title">Hardware Platforms</h5>
+                            <div class="platforms-grid">
+                                <span class="platform-tag">Motorola Solutions</span>
+                                <span class="platform-tag">Harris Corporation</span>
+                                <span class="platform-tag">Kenwood NEXEDGE</span>
+                                <span class="platform-tag">Icom IDAS</span>
+                                <span class="platform-tag">EF Johnson</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Enterprise Solutions Tab -->
+            <div class="tab-content" id="enterprise">
+                <div class="tab-description">
+                    <h3>Enterprise Solutions</h3>
+                    <p>Advanced wireless infrastructure for large-scale enterprise environments including manufacturing, transportation, and critical infrastructure.</p>
+                </div>
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="card-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h4 class="solution-title">Private Networks</h4>
+                        </div>
+                        <p class="solution-description">Dedicated private network solutions for secure, high-performance connectivity.</p>
+                        <div class="hardware-platforms">
+                            <h5 class="platforms-title">Hardware Platforms</h5>
+                            <div class="platforms-grid">
+                                <span class="platform-tag">Nokia 5G Private</span>
+                                <span class="platform-tag">Ericsson Private 5G</span>
+                                <span class="platform-tag">Samsung Private 5G</span>
+                                <span class="platform-tag">CommScope Private LTE</span>
+                                <span class="platform-tag">Corning Private</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <div class="card-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h4 class="solution-title">Industrial IoT</h4>
+                        </div>
+                        <p class="solution-description">Wireless connectivity for industrial automation and IoT applications.</p>
+                        <div class="hardware-platforms">
+                            <h5 class="platforms-title">Hardware Platforms</h5>
+                            <div class="platforms-grid">
+                                <span class="platform-tag">Honeywell Industrial</span>
+                                <span class="platform-tag">Schneider EcoStruxure</span>
+                                <span class="platform-tag">Siemens Industrial</span>
+                                <span class="platform-tag">Rockwell Automation</span>
+                                <span class="platform-tag">ABB Wireless</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="solution-card">
+                        <div class="card-header">
+                            <div class="solution-icon">
+                                <i class="fas fa-train"></i>
+                            </div>
+                            <h4 class="solution-title">Transportation</h4>
+                        </div>
+                        <p class="solution-description">Wireless solutions for transportation infrastructure and vehicles.</p>
+                        <div class="hardware-platforms">
+                            <h5 class="platforms-title">Hardware Platforms</h5>
+                            <div class="platforms-grid">
+                                <span class="platform-tag">Icomera Mobile</span>
+                                <span class="platform-tag">Nokia Transportation</span>
+                                <span class="platform-tag">CommScope Rail</span>
+                                <span class="platform-tag">Corning Transportation</span>
+                                <span class="platform-tag">SOLiD Rail</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Wireless Network Consulting Section -->
-    <section class="consulting-section">
+    <section class="service-section">
         <div class="container">
-            <div class="consulting-layout">
-                <div class="consulting-content">
-                    <h2 class="consulting-title">Wireless Network Consulting</h2>
-                    <p class="consulting-description">Expert guidance and strategic planning for your wireless infrastructure needs. Our consulting services help you navigate complex connectivity challenges and make informed decisions about your network architecture.</p>
-                    <a href="consulting.html" class="consulting-link">Learn More About Our Consulting Services</a>
+            <div class="service-layout">
+                <div class="service-content">
+                    <h2 class="service-title">Wireless Network Consulting</h2>
+                    <p class="service-description">Expert guidance and strategic planning for your wireless infrastructure needs. Our consulting services help you navigate complex connectivity challenges and make informed decisions about your network architecture.</p>
+                    <a href="consulting.html" class="service-link">Learn More About Our Consulting Services</a>
                 </div>
-                <div class="consulting-visual">
+                <div class="service-visual">
                     <div class="placeholder-box">
                         <span class="placeholder-text">placeholder</span>
                     </div>
@@ -194,33 +313,33 @@
     </section>
 
     <!-- Cellular DAS Systems Section -->
-    <section class="das-section">
+    <section class="service-section">
         <div class="container">
-            <div class="das-layout">
-                <div class="das-visual">
+            <div class="service-layout reverse">
+                <div class="service-visual">
                     <div class="placeholder-box">
                         <span class="placeholder-text">placeholder</span>
                     </div>
                 </div>
-                <div class="das-content">
-                    <h2 class="das-title">Cellular DAS Systems</h2>
-                    <p class="das-description">Distributed Antenna Systems (DAS) that provide seamless cellular coverage throughout your facility. Our DAS solutions ensure reliable connectivity for voice, data, and emergency communications in challenging indoor environments.</p>
-                    <a href="das-systems.html" class="das-link">Explore Our DAS Solutions</a>
+                <div class="service-content">
+                    <h2 class="service-title">Cellular DAS Systems</h2>
+                    <p class="service-description">Distributed Antenna Systems (DAS) that provide seamless cellular coverage throughout your facility. Our DAS solutions ensure reliable connectivity for voice, data, and emergency communications in challenging indoor environments.</p>
+                    <a href="das-systems.html" class="service-link">Explore Our DAS Solutions</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Enterprise Wi-Fi Solutions Section -->
-    <section class="wifi-section">
+    <section class="service-section">
         <div class="container">
-            <div class="wifi-layout">
-                <div class="wifi-content">
-                    <h2 class="wifi-title">Enterprise Wi-Fi Solutions</h2>
-                    <p class="wifi-description">Advanced Wi-Fi infrastructure designed for enterprise environments. Our solutions provide secure, high-performance wireless connectivity that scales with your business needs and supports mission-critical applications.</p>
-                    <a href="wifi-solutions.html" class="wifi-link">Discover Our Wi-Fi Solutions</a>
+            <div class="service-layout">
+                <div class="service-content">
+                    <h2 class="service-title">Enterprise Wi-Fi Solutions</h2>
+                    <p class="service-description">Advanced Wi-Fi infrastructure designed for enterprise environments. Our solutions provide secure, high-performance wireless connectivity that scales with your business needs and supports mission-critical applications.</p>
+                    <a href="wifi-solutions.html" class="service-link">Discover Our Wi-Fi Solutions</a>
                 </div>
-                <div class="wifi-visual">
+                <div class="service-visual">
                     <div class="placeholder-box">
                         <span class="placeholder-text">placeholder</span>
                     </div>
@@ -230,126 +349,73 @@
     </section>
 
     <!-- Public Safety Section -->
-    <section class="safety-section">
+    <section class="service-section">
         <div class="container">
-            <div class="safety-layout">
-                <div class="safety-visual">
+            <div class="service-layout reverse">
+                <div class="service-visual">
                     <div class="placeholder-box">
                         <span class="placeholder-text">placeholder</span>
                     </div>
                 </div>
-                <div class="safety-content">
-                    <h2 class="safety-title">Public Safety</h2>
-                    <p class="safety-description">Critical communication infrastructure for emergency services and public safety organizations. Our solutions ensure reliable, secure connectivity for first responders, enabling rapid response and coordinated emergency operations when every second counts.</p>
-                    <a href="public-safety.html" class="safety-link">Learn About Our Public Safety Solutions</a>
+                <div class="service-content">
+                    <h2 class="service-title">Public Safety</h2>
+                    <p class="service-description">Critical communication infrastructure for emergency services and public safety organizations. Our solutions ensure reliable, secure connectivity for first responders, enabling rapid response and coordinated emergency operations when every second counts.</p>
+                    <a href="public-safety.html" class="service-link">Learn About Our Public Safety Solutions</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PSERN Section -->
-    <section class="psern-section">
-        <div class="container">
-            <div class="psern-layout">
-                <div class="psern-content">
-                    <h2 class="psern-title">PSERN</h2>
-                    <p class="psern-description">Public Safety Emergency Radio Network (PSERN) solutions that provide mission-critical communication infrastructure for emergency services. Our expertise in PSERN implementation ensures seamless integration and reliable connectivity for first responders across multiple agencies.</p>
-                    <a href="psern.html" class="psern-link">Explore Our PSERN Solutions</a>
-                </div>
-                <div class="psern-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testing Section -->
-    <section class="testing-section">
-        <div class="container">
-            <div class="testing-layout">
-                <div class="testing-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
-                    </div>
-                </div>
-                <div class="testing-content">
-                    <h2 class="testing-title">Testing</h2>
-                    <p class="testing-description">Comprehensive testing and validation services for wireless infrastructure. Our testing solutions ensure optimal performance, compliance, and reliability of your network systems through rigorous analysis, RF testing, and performance validation.</p>
-                    <a href="testing.html" class="testing-link">Learn About Our Testing Services</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DAS Deployment Section -->
-    <section class="das-deployment-section">
-        <div class="container">
-            <div class="das-deployment-layout">
-                <div class="das-deployment-content">
-                    <h2 class="das-deployment-title">DAS Deployment</h2>
-                    <p class="das-deployment-description">Professional deployment and installation of Distributed Antenna Systems (DAS) for optimal cellular coverage. Our deployment services ensure seamless integration, minimal disruption, and maximum performance across your entire facility with expert project management and quality assurance.</p>
-                    <a href="das-deployment.html" class="das-deployment-link">Explore Our DAS Deployment Services</a>
-                </div>
-                <div class="das-deployment-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Staffing Section -->
-    <section class="staffing-section">
+    <section class="service-section">
         <div class="container">
-            <div class="staffing-layout">
-                <div class="staffing-visual">
+            <div class="service-layout">
+                <div class="service-content">
+                    <h2 class="service-title">Staffing</h2>
+                    <p class="service-description">Expert staffing solutions for wireless infrastructure projects. Our team of certified professionals provides specialized talent for DAS installation, network engineering, project management, and technical support, ensuring your projects are completed with the highest level of expertise and efficiency.</p>
+                    <a href="staffing.html" class="service-link">Learn About Our Staffing Solutions</a>
+                </div>
+                <div class="service-visual">
                     <div class="placeholder-box">
                         <span class="placeholder-text">placeholder</span>
                     </div>
-                </div>
-                <div class="staffing-content">
-                    <h2 class="staffing-title">Staffing</h2>
-                    <p class="staffing-description">Expert staffing solutions for wireless infrastructure projects. Our team of certified professionals provides specialized talent for DAS installation, network engineering, project management, and technical support, ensuring your projects are completed with the highest level of expertise and efficiency.</p>
-                    <a href="staffing.html" class="staffing-link">Learn About Our Staffing Solutions</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Training Services Section -->
-    <section class="training-section">
+    <section class="service-section">
         <div class="container">
-            <div class="training-layout">
-                <div class="training-content">
-                    <h2 class="training-title">Training Services</h2>
-                    <p class="training-description">Comprehensive training programs for wireless infrastructure professionals. Our training services provide hands-on education in DAS systems, network design, installation techniques, and maintenance procedures, empowering your team with the knowledge and skills needed to excel in wireless technology implementation.</p>
-                    <a href="training.html" class="training-link">Explore Our Training Programs</a>
-                </div>
-                <div class="training-visual">
+            <div class="service-layout reverse">
+                <div class="service-visual">
                     <div class="placeholder-box">
                         <span class="placeholder-text">placeholder</span>
                     </div>
+                </div>
+                <div class="service-content">
+                    <h2 class="service-title">Training Services</h2>
+                    <p class="service-description">Comprehensive training programs for wireless infrastructure professionals. Our training services provide hands-on education in DAS systems, network design, installation techniques, and maintenance procedures, empowering your team with the knowledge and skills needed to excel in wireless technology implementation.</p>
+                    <a href="training.html" class="service-link">Explore Our Training Programs</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Private Networks Section -->
-    <section class="private-networks-section">
+    <section class="service-section">
         <div class="container">
-            <div class="private-networks-layout">
-                <div class="private-networks-visual">
+            <div class="service-layout">
+                <div class="service-content">
+                    <h2 class="service-title">Private Networks</h2>
+                    <p class="service-description">Dedicated private network solutions for secure, high-performance connectivity. Our private network services deliver customized wireless infrastructure designed for enterprise environments, ensuring enhanced security, dedicated bandwidth, and complete control over your network operations for mission-critical applications.</p>
+                    <a href="private-networks.html" class="service-link">Discover Our Private Network Solutions</a>
+                </div>
+                <div class="service-visual">
                     <div class="placeholder-box">
                         <span class="placeholder-text">placeholder</span>
                     </div>
-                </div>
-                <div class="private-networks-content">
-                    <h2 class="private-networks-title">Private Networks</h2>
-                    <p class="private-networks-description">Dedicated private network solutions for secure, high-performance connectivity. Our private network services deliver customized wireless infrastructure designed for enterprise environments, ensuring enhanced security, dedicated bandwidth, and complete control over your network operations for mission-critical applications.</p>
-                    <a href="private-networks.html" class="private-networks-link">Discover Our Private Network Solutions</a>
                 </div>
             </div>
         </div>
