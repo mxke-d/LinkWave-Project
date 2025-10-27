@@ -99,7 +99,7 @@ html, body {
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
     display: block;
 }
@@ -297,6 +297,11 @@ html, body {
     z-index: -2;
     width: 100% !important;
     height: 100% !important;
+    transform: translateZ(0); /* Force GPU acceleration */
+    backface-visibility: hidden; /* Reduce flicker */
+    image-rendering: -webkit-optimize-contrast; /* Better scaling */
+    image-rendering: crisp-edges; /* Sharper edges */
+    image-rendering: high-quality; /* Better quality rendering */
 }
 
 .hero .hero__bg img {
@@ -748,7 +753,7 @@ html, body {
     }
     
     .logo img {
-        height: 35px;
+        height: 55px;
     }
     
     /* Further optimize hero layout for very small screens */
@@ -826,7 +831,7 @@ html, body {
     }
     
     .logo img {
-        height: 30px;
+        height: 50px;
     }
     
     /* Ensure hero content is properly positioned on very small screens */
