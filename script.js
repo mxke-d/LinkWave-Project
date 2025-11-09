@@ -401,98 +401,30 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.width = scrollPercent + '%';
     });
 
-    // Industry Slider Functionality
-    function initIndustrySlider() {
-        const slider = document.querySelector('.industry-slider');
-        if (!slider) return;
-        
-        const slides = slider.querySelectorAll('.slide');
-        const dots = slider.querySelectorAll('.slider-dots .dot');
-        const prevBtn = slider.querySelector('.prev-btn');
-        const nextBtn = slider.querySelector('.next-btn');
-        
-        let currentSlide = 0;
-        
-        function showSlide(index) {
-            // Hide all slides
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-            
-            // Remove active class from all dots
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            // Show current slide
-            slides[index].classList.add('active');
-            dots[index].classList.add('active');
-            
-            // Update button states
-            prevBtn.disabled = index === 0;
-            nextBtn.disabled = index === slides.length - 1;
-        }
-        
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-        
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-        
-        // Event listeners
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-        
-        // Dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-            });
-        });
-        
-        // Auto-advance slider
-        let autoSlide = setInterval(nextSlide, 5000);
-        
-        // Pause auto-advance on hover
-        slider.addEventListener('mouseenter', () => {
-            clearInterval(autoSlide);
-        });
-        
-        slider.addEventListener('mouseleave', () => {
-            autoSlide = setInterval(nextSlide, 5000);
-        });
-        
-        // Initialize first slide
-        showSlide(0);
-    }
+    // Initialize Swipers for Case Studies and Industries
+    const csSwiperElements = document.querySelectorAll('.cs-swiper');
+    csSwiperElements.forEach(swiperEl => {
+        const paginationEl = swiperEl.parentElement.querySelector('.cs-dots');
 
-    // Initialize slider
-    initIndustrySlider();
-
-    // Initialize Swiper for Case Studies
-    new Swiper('.cs-swiper', {
-        loop: true,
-        spaceBetween: 24,
-        slidesPerView: 1,
-        autoplay: {
-            delay: 3000, // 3 seconds (40% faster than 5 seconds)
-            disableOnInteraction: false, // Continue autoplay after user interaction
-            pauseOnMouseEnter: true // Pause on hover
-        },
-        pagination: { 
-            el: '.cs-dots', 
-            clickable: true 
-        },
-        breakpoints: {
-            640:  { slidesPerView: 1.1 },
-            768:  { slidesPerView: 1.5 },
-            1024: { slidesPerView: 2 }
-        }
+        new Swiper(swiperEl, {
+            loop: true,
+            spaceBetween: 24,
+            slidesPerView: 1,
+            autoplay: {
+                delay: 3000, // 3 seconds (40% faster than 5 seconds)
+                disableOnInteraction: false, // Continue autoplay after user interaction
+                pauseOnMouseEnter: true // Pause on hover
+            },
+            pagination: {
+                el: paginationEl,
+                clickable: true
+            },
+            breakpoints: {
+                640:  { slidesPerView: 1.1 },
+                768:  { slidesPerView: 1.5 },
+                1024: { slidesPerView: 2 }
+            }
+        });
     });
 
     // Initialize Swiper for Partners
