@@ -95,15 +95,13 @@
 
     <!-- Hero Section -->
     <section class="hero hero--full">
-        <!-- Background image -->
-        <picture class="hero__bg">
-            <img
-                src="index_images/EDC_bg.png"
-                alt="5G Networks and wireless connectivity"
-                loading="eager"
-                fetchpriority="high"
-            />
-        </picture>
+        <!-- Background video -->
+        <div class="hero__bg">
+            <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="index_images/EDC_bg.png">
+                <source src="index_images/Homepage_Banner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
         <!-- Dark overlay for readability -->
         <div class="hero__overlay" aria-hidden="true"></div>
@@ -112,43 +110,34 @@
         <div class="hero__container">
             <div class="hero__content">
                 <h1 class="hero__title">
-                    Reliable Wireless for Complex Spaces
+                    Wireless That Works Where Others Don’t
                 </h1>
-                <p class="hero__description">
-                    Wireless network integration, RFPs, and RFQs by Professional Engineers of Ontario.<br><br>
-                    Stay connected with ease, anywhere, anytime. From design and development to optimization and installation. Experience seamless connectivity with Linkwave, your reliable DAS integrator!
+                <p class="hero__subtitle">
+                    Expert DAS, Wi-Fi, and Private Networks—designed for tough environments, built to perform.
                 </p>
-                <div class="hero__cta">
-                    <a href="#contact" class="btn btn--primary">Contact Us Now</a>
-                </div>
             </div>
         </div>
     </section>
 
         <!-- Industries Section -->
         <section id="industries" class="industries">
-            <div class="container">
-                <div class="industries-layout">
-                    <div class="industries-left">
-                        <div class="featured-industry">
-                            <img src="index_images/linkwavethumbs up.png" alt="Linkwave thumbs up">
-                        </div>
-                    </div>
-                    
-                    <div class="industries-right">
-                        <h2 class="section-title">Industries we serve</h2>
-                        <p class="section-description">From seamless in-building connectivity to critical communication systems, our expert team designs, installs, and maintains networks that ensure reliability, security, and performance.</p>
-                        <p class="section-description">Whether it's a hospital, office, or large facility, we provide custom solutions to meet your unique wireless needs.</p>
-                        
-                        <p class="projects-text">Take a look at some of our projects below.</p>
-                    </div>
+            <div class="industries-wrapper">
+                <div class="industries-intro">
+                    <h2 class="industries-heading">Industries We Serve</h2>
+                    <p class="industries-lead">
+                        We build tailored wireless networks for demanding environments such as hospitals, transit hubs, energy plants, and commercial towers.
+                    </p>
+                    <p class="industries-lead">
+                        Explore some of our featured projects across Ontario.
+                    </p>
                 </div>
-                
+
                 <div class="industries-slider">
                     <div class="swiper cs-swiper">
                         <div class="swiper-wrapper">
                             <article class="swiper-slide cs-card">
                                 <div class="cs-card-media" style="--cs-bg:url('index_images/powerade center.jpg')">
+                                    <span class="industry-tag">Sports &amp; Entertainment</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
                                         <h3 class="cs-card-title">Powerade Centre</h3>
@@ -163,12 +152,13 @@
 
                             <article class="swiper-slide cs-card">
                                 <div class="cs-card-media" style="--cs-bg:url('index_images/Ontario power generation.jpg')">
+                                    <span class="industry-tag">Energy</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
                                         <h3 class="cs-card-title">Ontario Power Generation</h3>
                                         <p class="cs-card-text">
-                                            Long-term cellular solution for Darlington Energy Complex. New DAS
-                                            designed & commissioned by Linkwave, scalable as OPG expands.
+                                            Long-term cellular solution for Darlington Energy Complex. New DAS designed &amp;
+                                            commissioned by Linkwave, scalable as OPG expands.
                                         </p>
                                         <a href="our_projects/ontario-power-generation.html" class="cs-btn">Read More</a>
                                     </div>
@@ -177,12 +167,13 @@
 
                             <article class="swiper-slide cs-card">
                                 <div class="cs-card-media" style="--cs-bg:url('index_images/humber river hospital.jpg')">
+                                    <span class="industry-tag">Healthcare</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
                                         <h3 class="cs-card-title">Humber River Hospital</h3>
                                         <p class="cs-card-text">
-                                            One of Canada's largest acute care hospitals. Full in-building DAS to
-                                            support 3,300 staff, 700 physicians, and critical healthcare services.
+                                            One of Canada's largest acute care hospitals. Full in-building DAS to support
+                                            3,300 staff, 700 physicians, and critical healthcare services.
                                         </p>
                                         <a href="our_projects/humber-river-hospital.html" class="cs-btn">Read More</a>
                                     </div>
@@ -191,12 +182,13 @@
 
                             <article class="swiper-slide cs-card">
                                 <div class="cs-card-media" style="--cs-bg:url('index_images/toronto dominion center.jpg')">
+                                    <span class="industry-tag">Commercial</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
                                         <h3 class="cs-card-title">Toronto Dominion Centre</h3>
                                         <p class="cs-card-text">
-                                            Multi-tower DAS deployment with strict PIM testing and tight deadlines.
-                                            Delivered successfully for Bell Mobility and national operators.
+                                            Multi-tower DAS deployment with strict PIM testing and tight deadlines. Delivered
+                                            successfully for Bell Mobility and national operators.
                                         </p>
                                         <a href="our_projects/toronto-dominion-centre.html" class="cs-btn">Read More</a>
                                     </div>
@@ -205,11 +197,12 @@
 
                             <article class="swiper-slide cs-card">
                                 <div class="cs-card-media" style="--cs-bg:url('index_images/metrolinx.jpg')">
+                                    <span class="industry-tag">Transportation</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
                                         <h3 class="cs-card-title">Metrolinx Wi-Fi Installation</h3>
                                         <p class="cs-card-text">
-                                            GO Transit buses & trains equipped with Icomera's platform. Fleet-wide
+                                            GO Transit buses &amp; trains equipped with Icomera's platform. Fleet-wide
                                             connectivity across the GTA delivered by Linkwave.
                                         </p>
                                         <a href="our_projects/metrolinx-go-transit.html" class="cs-btn">Read More</a>
@@ -218,7 +211,6 @@
                             </article>
                         </div>
                     </div>
-
                     <div class="swiper-pagination cs-dots"></div>
                 </div>
             </div>
@@ -280,60 +272,37 @@
         <!-- Our Solutions Section -->
         <section id="solutions" class="solutions-section">
             <div class="container">
-                <div class="solutions-header">
-                    <h2 class="section-title">Our Solutions</h2>
-                    <p class="section-description">
-                        Comprehensive wireless services engineered to deliver resilient coverage, regulatory compliance, and measurable performance for every environment you operate in.
+                <div class="solutions-intro">
+                    <h2 class="solutions-intro__title">Wireless expertise tailored for today's digital environments</h2>
+                    <p class="solutions-intro__description">
+                        From enterprise campuses to high-security sites, our wireless solutions are designed for performance, reliability, and compliance. Whether you're scaling infrastructure or building from the ground up, we bring deep industry experience to every deployment.
                     </p>
                 </div>
 
-                <div class="solutions-grid">
-                    <article class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>Custom Wireless Solutions</h3>
-                        <p>From site surveys and engineering to system approvals, we tailor every deployment to your specific technical and operational requirements.</p>
+                <div class="solutions-offerings">
+                    <article class="solutions-offering">
+                        <div class="solutions-offering__icon" data-feather="message-circle"></div>
+                        <h3 class="solutions-offering__label">Wireless Consulting</h3>
                     </article>
 
-                    <article class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-wifi"></i>
-                        </div>
-                        <h3>Maximum Reliable Connectivity</h3>
-                        <p>Keep mission-critical operations online with secure architectures designed for high availability, redundancy, and continuous uptime.</p>
+                    <article class="solutions-offering">
+                        <div class="solutions-offering__icon" data-feather="wifi"></div>
+                        <h3 class="solutions-offering__label">Enterprise WiFi</h3>
                     </article>
 
-                    <article class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Fast Deployment</h3>
-                        <p>Accelerate rollout schedules with streamlined project management, vendor coordination, and certified installation teams delivering excellence.</p>
+                    <article class="solutions-offering">
+                        <div class="solutions-offering__icon" data-feather="radio"></div>
+                        <h3 class="solutions-offering__label">Cellular &amp; Public Safety</h3>
                     </article>
 
-                    <article class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Enterprise Security</h3>
-                        <p>Protect sensitive communications with hardened infrastructure, encrypted backhaul, and compliance with industry regulations.</p>
+                    <article class="solutions-offering">
+                        <div class="solutions-offering__icon" data-feather="lock"></div>
+                        <h3 class="solutions-offering__label">Private 5G</h3>
                     </article>
 
-                    <article class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-signal"></i>
-                        </div>
-                        <h3>Cellular DAS Infrastructure</h3>
-                        <p>Deliver clear, consistent signal strength with advanced Distributed Antenna Systems engineered for enterprise campuses and public venues.</p>
-                    </article>
-
-                    <article class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-broadcast-tower"></i>
-                        </div>
-                        <h3>Public Safety DAS Coverage</h3>
-                        <p>Ensure first responders stay connected with code-compliant DAS networks purpose-built for fire, police, and emergency communications.</p>
+                    <article class="solutions-offering">
+                        <div class="solutions-offering__icon" data-feather="book-open"></div>
+                        <h3 class="solutions-offering__label">Training</h3>
                     </article>
                 </div>
             </div>
@@ -370,52 +339,6 @@
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
-                </div>
-            </div>
-            <div class="contact-offices">
-                <h3 class="contact-offices__title">Our Office Locations</h3>
-                <div class="contact-offices__grid">
-                    <div class="contact-offices__map">
-                        <img src="index_images/maplinkwave.png" alt="Linkwave office locations map">
-                    </div>
-                    <ul class="contact-offices__list">
-                        <li class="contact-offices__item">
-                            <div class="contact-offices__icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-offices__details">
-                                <h4>Toronto, North York</h4>
-                                <p>155 Gordon Baker Rd, Unit 302, North York, ON, M2H 3N5</p>
-                            </div>
-                        </li>
-                        <li class="contact-offices__item">
-                            <div class="contact-offices__icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-offices__details">
-                                <h4>White Rock, BC</h4>
-                                <p>208 - 14022 North Bluff Road, White Rock, BC V4B 0A7</p>
-                            </div>
-                        </li>
-                        <li class="contact-offices__item">
-                            <div class="contact-offices__icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-offices__details">
-                                <h4>Montreal, QC</h4>
-                                <p>86 Chemin du Grand-Moulin, Deux-Montagnes, QC J7R 3C7</p>
-                            </div>
-                        </li>
-                        <li class="contact-offices__item">
-                            <div class="contact-offices__icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-offices__details">
-                                <h4>Wilmington, DE</h4>
-                                <p>300 Delaware Ave, Suite 210, Wilmington, DE 19801</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -479,9 +402,8 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/feather-icons@4.29.0/dist/feather.min.js"></script>
     <script src="script.js"></script>
-    
-    <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>

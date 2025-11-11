@@ -98,6 +98,26 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(statsSection);
     }
 
+    // Industries reveal animation
+    const industriesSection = document.querySelector('.industries');
+    if (industriesSection) {
+        const industriesTargets = [
+            industriesSection.querySelector('.industries__content'),
+            industriesSection.querySelector('.industries__media')
+        ].filter(Boolean);
+
+        const industriesObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4, rootMargin: '0px 0px -80px 0px' });
+
+        industriesTargets.forEach(target => industriesObserver.observe(target));
+    }
+
     // Testimonials Slider
     const testimonialCards = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.dot');
@@ -509,6 +529,12 @@ function initFAQAccordion() {
 
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.feather) {
+        feather.replace({
+            width: 36,
+            height: 36
+        });
+    }
     initMissionVisionAnimations();
     initFAQAccordion();
 }); 
