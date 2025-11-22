@@ -1,0 +1,375 @@
+# LinkWave Wireless - Web Development Rules
+
+## Project Overview
+This is a multi-page HTML website for LinkWave Wireless, a wireless network consulting company. The project uses vanilla HTML, CSS, and JavaScript with external libraries (Swiper, Font Awesome, Google Fonts).
+
+## Code Style & Standards
+
+### HTML
+- Use semantic HTML5 elements (header, nav, section, article, footer, etc.)
+- Always include proper meta tags (charset, viewport)
+- Use descriptive alt text for all images
+- Maintain consistent indentation (spaces, not tabs)
+- Keep HTML structure clean and well-organized
+- Use meaningful class and ID names following BEM or similar naming conventions
+- Ensure all links have proper href attributes
+- Include lang attribute on html tag
+
+### CSS
+- Follow consistent naming conventions (use existing patterns in style.css)
+- Use CSS custom properties (variables) for colors, spacing, and other repeated values
+- Write mobile-first responsive CSS
+- Use flexbox and grid appropriately
+- Keep styles organized by component/section
+- Avoid inline styles unless absolutely necessary
+- Use meaningful class names that describe purpose, not appearance
+- Ensure proper vendor prefixes when needed
+
+### JavaScript
+- Use modern ES6+ syntax
+- Write clean, readable code with meaningful variable names
+- Add comments for complex logic
+- Handle errors appropriately
+- Keep functions small and focused on single responsibilities
+- Use const/let appropriately (avoid var)
+
+## Project Structure
+- HTML files are in the root directory
+- Images are organized in folders by page/section (e.g., index_images/, our_services_images/)
+- Shared CSS is in style.css
+- Shared JavaScript is in script.js
+- Maintain consistent file naming (lowercase with underscores)
+
+## Design & UX Guidelines
+- Maintain consistent design language across all pages
+- Ensure responsive design works on mobile, tablet, and desktop
+- Use the established color scheme and typography (Open Sans and Poppins fonts)
+- Follow accessibility best practices (WCAG guidelines)
+- Ensure proper contrast ratios for text
+- Make interactive elements clearly identifiable
+- Use smooth transitions and animations where appropriate
+
+## Best Practices
+- Always test changes across different browsers
+- Ensure images are optimized for web
+- Keep file sizes reasonable
+- Maintain consistent spacing and alignment
+- Use the existing component patterns (headers, dropdowns, sections)
+- When adding new features, follow the existing code patterns
+- Preserve existing functionality when making changes
+- Add comments for complex sections or non-obvious code
+
+## External Dependencies
+- Google Fonts: Open Sans and Poppins
+- Font Awesome 6.5.1 (via CDN)
+- Swiper 10 (via CDN)
+
+## When Making Changes
+- Maintain consistency with existing code style
+- Test responsive behavior after changes
+- Ensure navigation and links work correctly
+- Check that images load properly
+- Verify that external libraries are still functioning
+- Keep the header and footer consistent across pages
+
+## Accessibility
+- Use proper heading hierarchy (h1, h2, h3, etc.)
+- Ensure all interactive elements are keyboard accessible
+- Provide alt text for all images
+- Use ARIA labels where appropriate
+- Ensure sufficient color contrast
+- Make sure focus states are visible
+
+## Performance
+- Optimize images before adding them
+- Minimize external HTTP requests
+- Use efficient CSS selectors
+- Avoid blocking JavaScript when possible
+- Consider lazy loading for images below the fold
+
+## Colors
+
+### Color Philosophy
+Colors affect us in many different ways but all colors create a specific frame of mind for people–it's called a mood. Having people be in the most receptive mood is essential for their engagement with your brand. Color sets the mood of brand expression, and more importantly, creates mental associations to the meaning of your brand within the context of the world it lives in.
+
+### Brand Color Palette
+
+**Sandy Orange** - `#FF9E4E`
+- Represents energy and innovation, reflecting Linkwave's focus on cutting-edge wireless solutions in a dynamic and approachable way
+- Use for: Accent elements, highlights, energetic sections
+
+**Dark Purple** - `#200029`
+- Symbolizes expertise and stability, reinforcing Linkwave's trusted reputation with a touch of sophistication
+- Use for: Primary backgrounds, headers, professional elements, main navigation
+
+**Pumpkin** - `#F57822`
+- Bold and attention-grabbing, Pumpkin highlights Linkwave's proactive approach
+- Use for: Call-to-action (CTA) buttons, important interactive elements, emphasis points
+
+**White Smoke** - `#F4F4F4`
+- A clean, neutral tone that adds clarity and balance, ensuring focus on key messaging and a professional look
+- Use for: Backgrounds, card backgrounds, subtle dividers, neutral spaces
+
+### Color Usage Guidelines
+- Always use the exact hex codes provided above
+- Ensure proper contrast ratios when using colors for text (WCAG AA minimum)
+- Use Pumpkin (#F57822) specifically for CTAs and primary action buttons
+- Dark Purple (#200029) should be used sparingly for maximum impact
+- White Smoke (#F4F4F4) provides balance and should be used to create visual breathing room
+- Sandy Orange (#FF9E4E) works well for secondary accents and highlights
+
+## Typography
+
+### Typography Philosophy
+Typography is a powerful tool to maintain brand consistency. Together, these fonts form a cohesive, professional typographic system that enhances Linkwave's brand identity.
+
+### Brand Typography System
+
+**Open Sans - Primary Headings**
+- **Use:** Primary Headings (h1, main page titles)
+- **Weight:** Extra Bold / 800
+- **Line Height:** 1.2em
+- **Letter Spacing:** -3%
+- **Style:** Capitalized (first letter of each word)
+- **Purpose:** Bold, capitalized headings ensure headings are striking and authoritative, reinforcing Linkwave's modern and professional image
+
+**Open Sans - Subheadings**
+- **Use:** Subheadings (h2, h3, section titles)
+- **Weight:** Bold / 600
+- **Line Height:** 1.2em
+- **Letter Spacing:** 15%
+- **Style:** Uppercase (all caps)
+- **Purpose:** The uppercase style creates emphasis and clarity in subheadings, enhancing the visual hierarchy and aligning with Linkwave's sleek aesthetic
+
+**Poppins - Body Text**
+- **Use:** Body text and supporting copy (paragraphs, descriptions, general content)
+- **Weight:** Regular / 400
+- **Line Height:** 1.4em
+- **Letter Spacing:** 0%
+- **Style:** None (standard case)
+- **Purpose:** Clean, straightforward design ensures readability, allowing detailed information to be conveyed clearly and consistently
+
+### Typography Usage Guidelines
+- Always use Open Sans Extra Bold (800) for primary headings with capitalized style
+- Always use Open Sans Bold (600) in uppercase for subheadings
+- Always use Poppins Regular (400) for body text and supporting copy
+- Maintain the specified line heights and letter spacing for consistency
+- Ensure proper font loading with Google Fonts preconnect
+- Use semantic HTML heading tags (h1, h2, h3, etc.) to maintain hierarchy
+- Test typography at different screen sizes to ensure readability
+
+## Logo
+
+### Logo Spacing Guidelines
+
+**Minimum Size**
+- To maintain full legibility, the minimum size at which the logo may appear is 2" (approximately 144-192px) in width for all printing materials
+- For web/digital use, maintain a minimum width that ensures the logo remains legible and recognizable (typically 120-150px minimum)
+- There is no maximum size limit, but use discretion when sizing the logo
+- The logo should never be the most dominant element on the page, but instead should live comfortably and clearly as an identifying mark
+- The minimum size guideline applies only to the primary logo, not the icon if used on its own
+
+**Clear Space**
+- To protect the brand visual integrity, the logo should be sufficiently isolated from illustrations, texts, and images that might detract from its prominence
+- To ensure that clear space is maintained around the logo for legibility and prominence, all graphic elements must follow the guidelines illustrated here
+- The required clear space around the logo on all sides should be equal to the width (or height) of the orange wireless signal icon (the 'i' dot from the logo)
+- Use the width of the surrounding clear space lines as a measuring tool to help maintain clearance
+- No text, images, or other graphic elements should intrude into this clear space area
+
+### Approved Logo Color Variations
+
+**Contrast Philosophy**
+Contrast is the spice that makes your brand visually appetizing. Logos and color variations with ample contrast don't just stand out; they're easier to read and more accessible, especially for those with visual impairments. High contrast ensures that your brand remains impactful across various backgrounds, be it a dark-themed website or a light-colored brochure. It's like wearing a tuxedo to a black-tie event; you not only fit in, but you also stand out.
+
+**Approved Variations:**
+
+1. **On White/White Smoke (#F4F4F4) backgrounds:**
+   - Full logo in black (text and wireless signal icon)
+   - Logo text in black with Sandy Orange (#FF9E4E) wireless signal icon
+   - Full logo in Sandy Orange (#FF9E4E)
+
+2. **On Sandy Orange (#FF9E4E) background:**
+   - Full logo in Dark Purple (#200029)
+
+3. **On Pumpkin (#F57822) background:**
+   - Full logo in Dark Purple (#200029)
+
+4. **On Dark Purple (#200029) background:**
+   - Logo text in White Smoke (#F4F4F4) with Sandy Orange (#FF9E4E) wireless signal icon
+
+### Colors to Avoid
+
+**Why Poor Contrast Should Be Avoided**
+Poor contrast strains the eyes, dilutes brand impact, makes elements less memorable, and can alienate audiences, especially those with visual impairments. In a digital world, poor contrast can lead to a scroll past rather than engagement.
+
+**Avoid These Combinations:**
+- Light orange/muted orange logo on dark backgrounds (low contrast)
+- Muted orange logo on dark purple background (very low contrast)
+- Light orange logo on white background (extremely low contrast, almost invisible)
+- Any color combination that doesn't meet WCAG AA contrast ratio standards (minimum 4.5:1 for normal text, 3:1 for large text)
+
+**Contrast Testing:**
+- Always test logo contrast against its background
+- Ensure minimum WCAG AA contrast ratios are met
+- When in doubt, use approved color variations listed above
+- Test logo visibility on both light and dark backgrounds
+- Consider users with visual impairments when selecting color combinations
+
+### Logo Usage Guidelines
+- Always maintain the minimum size requirements to ensure legibility
+- Always respect the clear space requirements around the logo
+- Ensure the logo has sufficient contrast against its background
+- Only use approved color variations listed above
+- Do not distort, rotate, or modify the logo proportions
+- Use the full logo (with "WIRELESS SOLUTIONS INC.") when space allows
+- Maintain consistent logo placement across all pages (typically in header/navigation)
+- Test logo contrast in different lighting conditions and on various devices
+
+## Photography
+
+### Photography Style Guidelines
+
+**Overall Aesthetic**
+- Maintain a clean, modern aesthetic that reflects Linkwave's brand identity
+- Focus on showcasing advanced technology and wireless solutions
+- Highlight skilled professionals in diverse settings (hospitals, industrial environments, data centers, etc.)
+- Emphasize the brand's core values: innovation, expertise, and reliability
+- Maintain a confident, professional tone throughout all photography
+
+**Color Integration**
+- Subtly incorporate vibrant accent colors (Sandy Orange #FF9E4E, Dark Purple #200029, Pumpkin #F57822) to maintain cohesive visual identity
+- Use brand colors as overlays, UI elements, or environmental accents when appropriate
+- Ensure brand colors appear naturally within the context of technology, equipment, or interfaces
+- White Smoke (#F4F4F4) can be used for clean, neutral backgrounds in photography
+
+**Subject Matter**
+- Feature professionals working with technology, server racks, control panels, and wireless equipment
+- Showcase diverse work environments: hospitals, industrial settings, data centers, office spaces
+- Include collaborative moments: teams examining blueprints, reviewing data, working together
+- Highlight the human element: skilled professionals focused on their work
+- Capture the technical sophistication of wireless solutions and network infrastructure
+
+**Visual Style**
+- Use rounded corners for image presentation when appropriate
+- Maintain consistent image quality and professional composition
+- Ensure proper lighting that enhances the professional atmosphere
+- Balance between technical detail and human presence
+- Create visual interest through composition, perspective, and color accents
+
+### Photography Usage Guidelines
+- Always use high-quality, professional photography
+- Ensure images align with the brand's values and messaging
+- When using color overlays or filters, maintain brand color consistency
+- Test image quality and loading performance on the web
+- Provide descriptive alt text for all photographs
+- Consider responsive image sizing for different screen sizes
+- Use photography that reinforces Linkwave's expertise and innovation
+
+## Brand Content & Messaging
+
+### Brand Story
+
+Linkwave Wireless is a trusted leader in providing innovative and reliable wireless communication solutions across Canada. Based in the Greater Toronto Area (GTA), we specialize in designing, implementing, and optimizing in-building wireless systems, ensuring seamless connectivity for a wide range of industries. Our mission is simple: to deliver customized, secure, and scalable wireless networks that meet the unique needs of our clients, from healthcare facilities to transportation hubs, energy complexes, and more.
+
+We pride ourselves on being a dynamic, fast-growing company with deep roots in the telecommunications industry. Our success stems from a commitment to fundamental principles—honesty, integrity, and hard work—coupled with a dedication to continuous learning and innovation. This approach has made us one of Canada's most trusted DAS (Distributed Antenna Systems) integrators.
+
+With a team of experienced engineers and wireless network specialists, we offer end-to-end solutions—from consultation and design to installation and testing. Our expertise extends to complex, large-scale projects, such as the Humber River Hospital and Toronto Dominion Centre, where we have delivered cutting-edge, high-performance DAS systems. We also ensure public safety through advanced E-Comm 911 and PSERN systems, making sure first responders have reliable communication when it matters most.
+
+At Linkwave Wireless, we go beyond simply deploying wireless networks—we create future-proof solutions that maximize connectivity, improve operational efficiency, and enhance safety. Our partnerships with top industry vendors and our ability to deliver fast and organized deployments make us the go-to choice for businesses looking to unlock the full potential of their in-building wireless infrastructure.
+
+Whether you need to enhance connectivity in a busy hospital, a transportation system, or an office tower, Linkwave Wireless is your partner in creating reliable, secure, and innovative wireless solutions.
+
+### Brand Pillars
+
+**Innovation**
+At Linkwave Wireless Solutions, innovation drives our approach to wireless network consulting and deployment. We incorporate cutting-edge technologies such as Distributed Antenna Systems (DAS) and public safety networks like PSERN to ensure our clients experience seamless connectivity. Our focus on technological advancements enables us to deliver the most reliable and scalable in-building wireless solutions across various industries, from healthcare to public transit.
+
+**Expertise**
+Our team of experienced engineers and wireless network professionals is committed to providing top-tier solutions tailored to each client's specific needs. With years of experience across diverse industries, including energy, healthcare, and government, we ensure the highest standards in design, implementation, and optimization. Whether it's a large-scale DAS deployment or ensuring public safety communication compliance, our expertise guarantees exceptional performance and reliability.
+
+**Reliability**
+Linkwave prioritizes building networks that are secure, resilient, and dependable. Our solutions are crafted to meet industry standards while addressing challenges like coverage gaps and complex building structures. Whether optimizing enterprise Wi-Fi or enhancing emergency communication systems, we ensure that our clients receive uninterrupted connectivity for critical operations.
+
+**Customization**
+We believe that every client's wireless needs are unique. That's why we provide tailored solutions that align with the specific requirements of each project. From site surveys and system design to ongoing testing and optimization, Linkwave creates custom wireless systems that ensure maximum coverage, efficiency, and compliance with regulatory standards.
+
+**Integrity**
+Integrity is at the core of our business. We foster strong, lasting relationships with our clients through honest communication, transparency, and dedication to delivering on our promises. Whether we are working with healthcare institutions, large enterprises, or public safety agencies, we are committed to ensuring secure, scalable, and compliant wireless solutions, backed by our trusted reputation.
+
+### Mission, Vision, and Values
+
+**Mission**
+At Linkwave Wireless Solutions, our mission is to lead the way in delivering secure, reliable, and innovative wireless communication solutions. We are dedicated to building lasting partnerships with our clients, providing them with customized support that drives their success. By fostering a culture of continuous improvement and collaboration, we ensure that our team, clients, and partners work together seamlessly to meet the evolving challenges of wireless connectivity. Our commitment to trust, integrity, and excellence is at the core of everything we do.
+
+**Vision**
+Our vision is to become the trusted leader in wireless communications across North America, known for our exceptional customer relationships, groundbreaking technology, and industry expertise. We aspire to build a future where connectivity is never a barrier but a powerful tool for growth, efficiency, and safety. By staying ahead of industry trends and continuously enhancing our capabilities, we aim to set the standard for how businesses and communities stay connected, ensuring that Linkwave Wireless is synonymous with reliability and innovation.
+
+**Values**
+At Linkwave Wireless Solutions, our values guide how we approach every relationship and project. **Integrity** is the foundation of our company, ensuring that we operate with honesty, transparency, and fairness in all interactions. We believe in **innovation**, constantly pushing the boundaries of what's possible with advanced wireless solutions to meet the demands of an ever-changing technological landscape. Our **expertise** is what sets us apart, as we bring deep industry knowledge and technical skill to every project, delivering results that our clients can rely on.
+
+We also value **customization**, understanding that every client's needs are unique, and we pride ourselves on tailoring solutions that fit those needs perfectly. **Reliability** is paramount in our work, and we are committed to creating systems that perform consistently and securely under any circumstances. Finally, we believe in the power of **collaboration**, both within our team and with our clients and partners. By working together, we create wireless systems that empower businesses and communities to achieve their goals with confidence.
+
+### Brand Taglines
+- "Nobody DAS it better."
+- "DAS You Can Depend On"
+- "Connecting You with Seamless Wireless Solutions"
+
+### Brand Personality
+
+Linkwave Wireless Solutions embodies a brand personality that is innovative, reliable, and collaborative. Our communication is clear, professional, and focused on building strong, long-term relationships with our clients and partners. We emphasize trust and expertise, ensuring every interaction reflects our commitment to delivering wireless solutions that are tailored, secure, and effective.
+
+Our approach is characterized by technical precision and a customer-first mindset. We are viewed as dependable problem-solvers—a company that prioritizes understanding the unique needs of our clients and delivering solutions that exceed expectations. At Linkwave, we pride ourselves on our responsiveness and ability to stay at the forefront of wireless technology, helping businesses and industries stay connected in the most efficient and secure ways.
+
+We resonate with clients who value innovation, integrity, and expertise. Our brand is seen as a trusted partner in wireless communication, offering advanced solutions that enhance connectivity and operational efficiency. We aim to simplify complex challenges, ensuring that our clients can rely on us for a seamless and productive experience.
+
+### Voice Guidelines
+
+Linkwave Wireless Solutions communicates with a confident, professional, and approachable voice, reflecting our commitment to delivering reliable, cutting-edge wireless solutions for businesses across industries. Our tone is clear, direct, and focused, designed to be accessible and informative for both technical professionals and decision-makers. We blend technical expertise with practical insights, providing straightforward information that emphasizes the value of our services without overwhelming the reader with jargon.
+
+Our messaging centers on building trust through dependable solutions, highlighting our collaborative approach and focus on long-term success. We prioritize clarity and precision, ensuring that every communication instills confidence in our ability to meet our clients' unique connectivity needs. Our voice is knowledgeable and solutions-driven, addressing complex challenges with ease and creating a sense of assurance for our clients.
+
+We engage with our clients by emphasizing innovation and reliability, ensuring that every interaction conveys our expertise in creating seamless, secure, and scalable wireless networks. Our voice embodies our core values of innovation, integrity, and collaboration, creating a cohesive and trustworthy brand identity that resonates with businesses looking for tailored wireless solutions that meet industry standards and future-proof their operations.
+
+### Writing Style
+
+Linkwave Wireless Solutions' writing style is professional, straightforward, and confident, designed to convey our expertise and reliability. We prioritize clarity, ensuring that our communications are easy to understand, especially in highly technical contexts. Our messaging reflects our commitment to cutting-edge solutions, emphasizing the efficiency and benefits we bring to each project.
+
+We aim to be informative while concise, presenting technical details in a way that showcases our proficiency without overwhelming the reader. Our language is inclusive and industry-appropriate, focusing on the key pain points of our clients and how we solve them with precision and efficiency. Through our communications, we embody our core values of innovation, reliability, and collaboration, ensuring each message underscores our dedication to high-quality, secure wireless solutions.
+
+### Content Guidelines
+- Always reflect the brand personality: innovative, reliable, and collaborative
+- Use a confident, professional, and approachable voice
+- Prioritize clarity and precision in all communications
+- Balance technical expertise with accessibility
+- Emphasize trust, expertise, and long-term relationships
+- Highlight innovation, integrity, and collaboration
+- Focus on solving client pain points with precision and efficiency
+- Use industry-appropriate language without excessive jargon
+- Ensure all content aligns with brand values and messaging
+- When writing copy, consider using approved taglines where appropriate
+
+### Communication Dos and Don'ts
+
+**Dos:**
+- Do use clear and engaging language to make technical information accessible to both decision-makers and technical professionals
+- Do emphasize reliability, scalability, and security to showcase Linkwave's commitment to delivering high-quality wireless solutions
+- Do maintain consistency across all platforms to ensure uniform brand voice and messaging in every communication
+- Do highlight the company's innovative solutions and technical expertise to build trust with clients
+- Do foster positive dialogue by engaging with industry partners and clients across various communication channels
+- Do address customer concerns with transparency and offer tailored solutions to meet their specific needs
+- Do focus on providing customized, solution-driven services that align with the client's business objectives
+- Do respond constructively to feedback and use it as an opportunity to improve services and client relationships
+- Do showcase the latest technology and cutting-edge solutions to reinforce Linkwave's position as a leader in the wireless solutions industry
+- Do prioritize clarity and simplicity when explaining technical processes to non-technical stakeholders
+
+**Don'ts:**
+- Don't overwhelm clients with excessive technical jargon that may confuse or alienate decision-makers
+- Don't make exaggerated claims about capabilities or project outcomes without proven examples
+- Don't ignore client concerns; always address them openly, providing reassurance and solutions
+- Don't neglect consistency in messaging across different platforms and client communications
+- Don't stray from the brand's professional, knowledgeable, and solutions-driven personality
+- Don't overlook the importance of security and compliance in wireless network discussions
+- Don't assume all clients understand the complexities of wireless systems; offer detailed yet easy-to-understand explanations
+- Don't dismiss client input during project planning and execution; collaboration is key to success
+- Don't forget to emphasize Linkwave's industry partnerships and collaborative approach to delivering top-tier services
+- Don't forget that relationships are built one at a time online, with trust earned through consistent and meaningful interactions
