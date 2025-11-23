@@ -43,7 +43,7 @@ This is a multi-page HTML website for LinkWave Wireless, a wireless network cons
 ## Design & UX Guidelines
 - Maintain consistent design language across all pages
 - Ensure responsive design works on mobile, tablet, and desktop
-- Use the established color scheme and typography (Open Sans and Poppins fonts)
+- Use the established color scheme and typography (Inter for titles, Poppins for body text)
 - Follow accessibility best practices (WCAG guidelines)
 - Ensure proper contrast ratios for text
 - Make interactive elements clearly identifiable
@@ -60,7 +60,7 @@ This is a multi-page HTML website for LinkWave Wireless, a wireless network cons
 - Add comments for complex sections or non-obvious code
 
 ## External Dependencies
-- Google Fonts: Open Sans and Poppins
+- Google Fonts: Inter (for titles/headings) and Poppins (for body text)
 - Font Awesome 6.5.1 (via CDN)
 - Swiper 10 (via CDN)
 
@@ -125,34 +125,27 @@ Typography is a powerful tool to maintain brand consistency. Together, these fon
 
 ### Brand Typography System
 
-**Open Sans - Primary Headings**
-- **Use:** Primary Headings (h1, main page titles)
-- **Weight:** Extra Bold / 800
-- **Line Height:** 1.2em
-- **Letter Spacing:** -3%
-- **Style:** Capitalized (first letter of each word)
-- **Purpose:** Bold, capitalized headings ensure headings are striking and authoritative, reinforcing Linkwave's modern and professional image
+**Inter - Titles and Headings**
+- **Use:** All titles and headings (h1, h2, h3, h4, h5, h6, section titles, card titles)
+- **Weight:** Various weights (400, 500, 600, 700, 800, 900) depending on hierarchy
+- **Purpose:** Inter provides a modern, professional look for all titles and headings, ensuring consistency across the site
 
-**Open Sans - Subheadings**
-- **Use:** Subheadings (h2, h3, section titles)
-- **Weight:** Bold / 600
-- **Line Height:** 1.2em
-- **Letter Spacing:** 15%
-- **Style:** Uppercase (all caps)
-- **Purpose:** The uppercase style creates emphasis and clarity in subheadings, enhancing the visual hierarchy and aligning with Linkwave's sleek aesthetic
-
-**Poppins - Body Text**
-- **Use:** Body text and supporting copy (paragraphs, descriptions, general content)
-- **Weight:** Regular / 400
-- **Line Height:** 1.4em
+**Poppins - Body Text and Small Text**
+- **Use:** Body text, paragraphs, descriptions, small text, supporting copy, and all non-heading content
+- **Weight:** Regular / 400 (and lighter weights 300 for small text when needed)
+- **Line Height:** 1.4em (or appropriate for readability)
 - **Letter Spacing:** 0%
 - **Style:** None (standard case)
 - **Purpose:** Clean, straightforward design ensures readability, allowing detailed information to be conveyed clearly and consistently
 
 ### Typography Usage Guidelines
-- Always use Open Sans Extra Bold (800) for primary headings with capitalized style
-- Always use Open Sans Bold (600) in uppercase for subheadings
-- Always use Poppins Regular (400) for body text and supporting copy
+- Always use Inter font family for all titles and headings (h1-h6)
+- Always use Poppins font family for body text, paragraphs, and small text
+- Use appropriate font weights to establish visual hierarchy
+- Maintain consistent line heights for readability
+- Ensure proper font loading with Google Fonts preconnect
+- Use semantic HTML heading tags (h1, h2, h3, etc.) to maintain hierarchy
+- Test typography at different screen sizes to ensure readability
 - Maintain the specified line heights and letter spacing for consistency
 - Ensure proper font loading with Google Fonts preconnect
 - Use semantic HTML heading tags (h1, h2, h3, etc.) to maintain hierarchy

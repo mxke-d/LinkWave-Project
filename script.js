@@ -30,7 +30,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Header background on scroll
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', function() {
+    const isNewHome = document.body.classList.contains('new-home');
+
+    function updateHeaderStyles() {
+        if (!header) return;
+
+        if (isNewHome) {
+            if (window.scrollY > 80) {
+                header.classList.add('header--scrolled');
+            } else {
+                header.classList.remove('header--scrolled');
+            }
+            return;
+        }
+
         if (window.scrollY > 100) {
             header.style.background = 'rgba(255, 255, 255, 0.98)';
             header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
@@ -38,7 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.background = 'rgba(255, 255, 255, 0.95)';
             header.style.boxShadow = 'none';
         }
-    });
+    }
+
+    if (isNewHome) {
+        updateHeaderStyles();
+    }
+    window.addEventListener('scroll', updateHeaderStyles);
 
     // Solutions Tab Functionality
     const tabButtons = document.querySelectorAll('.tab-button');
