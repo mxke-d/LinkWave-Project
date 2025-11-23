@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animated Counter for Stats
     const statNumbers = document.querySelectorAll('.stat-number');
+    const heroStatNumbers = document.querySelectorAll('.hero-stat-number');
     
     function animateCounter(element) {
         const target = parseInt(element.getAttribute('data-target'));
@@ -114,6 +115,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const statsSection = document.querySelector('.stats-section');
     if (statsSection) {
         statsObserver.observe(statsSection);
+    }
+
+    function animateHeroStat(element) {
+        const target = parseFloat(element.getAttribute('data-target')) || 0;
+        const suffix = element.getAttribute('data-suffix') || '';
+        const decimals = parseInt(element.getAttribute('data-decimals') || '0', 10);
+        const duration = 1500;
+        let start = null;
+
+        function frame(timestamp) {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / duration, 1);
+            const currentValue = progress * target;
+            const displayValue = decimals > 0 ? currentValue.toFixed(decimals) : Math.round(currentValue);
+            const withSuffix = progress >= 1 ? `${displayValue}${suffix}` : displayValue;
+            element.textContent = withSuffix;
+
+            if (progress < 1) {
+                requestAnimationFrame(frame);
+            }
+        }
+
+        requestAnimationFrame(frame);
+    }
+
+    if (heroStatNumbers.length) {
+        const defaultDelayStep = 150;
+        heroStatNumbers.forEach((stat, index) => {
+            const customDelay = parseInt(stat.getAttribute('data-delay') || '', 10);
+            const delay = Number.isFinite(customDelay) ? customDelay : index * defaultDelayStep;
+            setTimeout(() => animateHeroStat(stat), delay);
+        });
     }
 
     // Industries reveal animation
