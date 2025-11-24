@@ -55,8 +55,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (isNewHome) {
         updateHeaderStyles();
+        initViewportAnimations();
     }
     window.addEventListener('scroll', updateHeaderStyles);
+
+    function initViewportAnimations() {
+        const animatedElements = document.querySelectorAll('[data-animate]');
+        if (!animatedElements.length) return;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+            animatedElements.forEach(el => el.classList.add('is-visible'));
+            return;
+        }
+
+        const animationObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                const target = entry.target;
+                const animateOnce = target.getAttribute('data-animate-once');
+
+                if (entry.isIntersecting) {
+                    target.classList.add('is-visible');
+                    if (animateOnce !== 'false') {
+                        observer.unobserve(target);
+                    }
+                } else if (animateOnce === 'false') {
+                    target.classList.remove('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -10% 0px'
+        });
+
+        animatedElements.forEach(el => {
+            const delay = parseInt(el.getAttribute('data-animate-delay') || '', 10);
+            if (!Number.isNaN(delay)) {
+                el.style.transitionDelay = `${delay / 1000}s`;
+            }
+
+            const duration = parseInt(el.getAttribute('data-animate-duration') || '', 10);
+            if (!Number.isNaN(duration)) {
+                el.style.transitionDuration = `${duration / 1000}s`;
+            }
+
+            animationObserver.observe(el);
+        });
+    }
 
     // Solutions Tab Functionality
     const tabButtons = document.querySelectorAll('.tab-button');
