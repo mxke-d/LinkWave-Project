@@ -30,27 +30,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Header background on scroll
     const header = document.querySelector('.header');
+    const headerLogo = header ? header.querySelector('.logo img') : null;
+    const headerLogoDefaultSrc = headerLogo ? headerLogo.getAttribute('src') : null;
     const isNewHome = document.body.classList.contains('new-home');
+
+    function updateHeaderLogo(isHeaderScrolled) {
+        if (!headerLogo) return;
+
+        const darkLogoSrc = headerLogo.dataset.logoDark || headerLogoDefaultSrc;
+        const lightLogoSrc = headerLogo.dataset.logoLight || headerLogoDefaultSrc;
+        const targetSrc = isHeaderScrolled ? lightLogoSrc : darkLogoSrc;
+
+        if (targetSrc && headerLogo.getAttribute('src') !== targetSrc) {
+            headerLogo.setAttribute('src', targetSrc);
+        }
+    }
 
     function updateHeaderStyles() {
         if (!header) return;
 
+        let isHeaderOnLightBackground = false;
+
         if (isNewHome) {
-            if (window.scrollY > 80) {
-                header.classList.add('header--scrolled');
+            isHeaderOnLightBackground = window.scrollY > 80;
+            header.classList.toggle('header--scrolled', isHeaderOnLightBackground);
+        } else {
+            isHeaderOnLightBackground = window.scrollY > 100;
+
+            if (isHeaderOnLightBackground) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             } else {
-                header.classList.remove('header--scrolled');
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
             }
-            return;
         }
 
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-            header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = 'none';
-        }
+        updateHeaderLogo(isHeaderOnLightBackground);
     }
 
     if (isNewHome) {
@@ -124,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animated Counter for Stats
     const statNumbers = document.querySelectorAll('.stat-number');
-    const heroStatNumbers = document.querySelectorAll('.hero-stat-number');
     
     function animateCounter(element) {
         const target = parseInt(element.getAttribute('data-target'));
@@ -161,38 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const statsSection = document.querySelector('.stats-section');
     if (statsSection) {
         statsObserver.observe(statsSection);
-    }
-
-    function animateHeroStat(element) {
-        const target = parseFloat(element.getAttribute('data-target')) || 0;
-        const suffix = element.getAttribute('data-suffix') || '';
-        const decimals = parseInt(element.getAttribute('data-decimals') || '0', 10);
-        const duration = 1500;
-        let start = null;
-
-        function frame(timestamp) {
-            if (!start) start = timestamp;
-            const progress = Math.min((timestamp - start) / duration, 1);
-            const currentValue = progress * target;
-            const displayValue = decimals > 0 ? currentValue.toFixed(decimals) : Math.round(currentValue);
-            const withSuffix = progress >= 1 ? `${displayValue}${suffix}` : displayValue;
-            element.textContent = withSuffix;
-
-            if (progress < 1) {
-                requestAnimationFrame(frame);
-            }
-        }
-
-        requestAnimationFrame(frame);
-    }
-
-    if (heroStatNumbers.length) {
-        const defaultDelayStep = 150;
-        heroStatNumbers.forEach((stat, index) => {
-            const customDelay = parseInt(stat.getAttribute('data-delay') || '', 10);
-            const delay = Number.isFinite(customDelay) ? customDelay : index * defaultDelayStep;
-            setTimeout(() => animateHeroStat(stat), delay);
-        });
     }
 
     // Industries reveal animation
