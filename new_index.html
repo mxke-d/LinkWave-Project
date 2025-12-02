@@ -19,6 +19,55 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Force smaller header for new landing page -->
+    <style>
+        html body.new-home header.header,
+        html body.new-home .header {
+            padding: 2px 0 !important;
+            min-height: auto !important;
+            height: auto !important;
+            max-height: none !important;
+        }
+        html body.new-home header.header .logo img,
+        html body.new-home .header .logo img,
+        html body.new-home .header .logo > img {
+            height: 50px !important;
+            max-height: 50px !important;
+            min-height: 50px !important;
+            width: auto !important;
+            display: block !important;
+        }
+        html body.new-home .header .nav a,
+        html body.new-home header.header .nav a {
+            padding: 3px 0 !important;
+            font-size: 14px !important;
+        }
+        @media (max-width: 768px) {
+            html body.new-home .header .logo img,
+            html body.new-home header.header .logo img {
+                height: 45px !important;
+                max-height: 45px !important;
+                min-height: 45px !important;
+            }
+        }
+        @media (max-width: 480px) {
+            html body.new-home .header .logo img,
+            html body.new-home header.header .logo img {
+                height: 40px !important;
+                max-height: 40px !important;
+                min-height: 40px !important;
+            }
+        }
+        @media (max-width: 360px) {
+            html body.new-home .header .logo img,
+            html body.new-home header.header .logo img {
+                height: 35px !important;
+                max-height: 35px !important;
+                min-height: 35px !important;
+            }
+        }
+    </style>
 </head>
 <body class="new-home">
     <!-- Header -->
@@ -109,7 +158,7 @@
             <div class="container new-hero__inner">
                 <div class="new-hero__content">
                     <p class="eyebrow" data-animate="fade-up">Enterprise DAS &amp; Public Safety Networks</p>
-                    <h1 id="hero-title" data-animate="fade-up" data-animate-delay="120">Engineered DAS for Every Mission-Critical Square Foot.</h1>
+                    <h1 id="hero-title" data-animate="fade-up" data-animate-delay="120">Connecting You with Seamless Wireless Solutions</h1>
                     <p class="new-hero__subhead" data-animate="fade-up" data-animate-delay="220">
                         From RF modeling to carrier integration, Linkwave makes compliant, future-ready DAS a reality for every environment you manage.
                     </p>
@@ -130,17 +179,20 @@
         <!-- Industries Section -->
         <section id="industries" class="industries">
             <div class="industries-wrapper">
-                <div class="industries-intro">
-                    <h2 class="industries-heading" data-animate="fade-up" data-animate-delay="100">Industries We Serve</h2>
-                    <p class="industries-lead" data-animate="fade-up" data-animate-delay="180">
+                <div class="industries-intro" data-animate="fade-up" data-animate-delay="360">
+                    <p class="industries-eyebrow">WHAT WE DO</p>
+                    <h2 class="industries-heading">Our projects</h2>
+                    <h3 class="industries-subheading" data-animate="fade-up" data-animate-delay="80">Wireless expertise tailored for today's digital environments</h3>
+                    <p class="industries-lead">
                         We build tailored wireless networks for demanding environments such as hospitals, transit hubs, energy plants, and commercial towers.
                     </p>
-                    <p class="industries-lead" data-animate="fade-up" data-animate-delay="260">
+                    <p class="industries-lead">
                         Explore some of our featured projects across Ontario.
                     </p>
+                    <a href="our_projects.html" class="industries-cta-btn">Read More</a>
                 </div>
 
-                <div class="industries-slider" data-animate="fade-up" data-animate-delay="360">
+                <div class="industries-slider" data-animate="fade-up" data-animate-delay="100">
                     <div class="swiper cs-swiper">
                         <div class="swiper-wrapper">
                             <article class="swiper-slide cs-card">
@@ -227,48 +279,29 @@
         <!-- Why Choose Section -->
         <section id="about" class="why-choose">
             <div class="container">
-                <div class="why-choose-intro">
-                    <h2 class="why-choose-heading-title" data-animate="fade-up" data-animate-delay="100">Why Choose Linkwave?</h2>
-                </div>
                 <div class="why-choose-wrapper">
                     <div class="why-choose-left">
+                        <p class="why-choose-eyebrow" data-animate="fade-up">WHO ARE WE?</p>
+                        <h2 class="why-choose-heading-title" data-animate="fade-up" data-animate-delay="100">Why Choose Linkwave?</h2>
                         <div class="why-choose-heading">
-                            <h2 class="why-choose-title" data-animate="fade-up">Built on Trust &amp; Proven Results</h2>
-                            <span class="why-choose-underline" aria-hidden="true"></span>
                             <p class="why-choose-subtitle" data-animate="fade-up" data-animate-delay="120">
-                                With proven wireless expertise and engineering precision, Linkwave delivers certified, performance-driven networks trusted by top enterprises and public institutions.
+                                Choosing Linkwave as your wireless network partner ensures you have a dedicated team of professionals who are committed to creating tailored, reliable and secure solutions for your business needs. With our fast and efficient deployment process, you can get your wireless network up and running in no time.
                             </p>
                         </div>
-                        <div class="why-choose-card-grid">
-                            <article class="why-choose-card" data-animate="fade-up" data-animate-delay="100">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-briefcase"></i>
+                        <div class="why-choose-buttons" data-animate="fade-up" data-animate-delay="200">
+                            <a href="our_services.html" class="why-choose-btn why-choose-btn--primary">Our Services</a>
+                            <div class="dropdown">
+                                <a href="about_us.html" class="why-choose-btn why-choose-btn--secondary dropdown-toggle">About us <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                                <div class="dropdown-menu">
+                                    <a href="about_us.html">About Us</a>
+                                    <a href="our_team.html">Our Team</a>
                                 </div>
-                                <h3>Our Experience</h3>
-                                <p>Decades of multi-industry wireless deployments spanning healthcare, transportation, government, and enterprise environments.</p>
-                            </article>
-                            <article class="why-choose-card" data-animate="fade-up" data-animate-delay="200">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-award"></i>
-                                </div>
-                                <h3>Our Credentials</h3>
-                                <p>Certified Professional Engineers of Ontario and trusted partner to leading vendors—compliance and safety always guaranteed nationwide.</p>
-                            </article>
-                            <article class="why-choose-card" data-animate="fade-up" data-animate-delay="300">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <h3>KPI Guarantee</h3>
-                                <p>Every project is delivered to the KPIs you need—coverage, uptime, and reliability validated before final handoff.</p>
-                            </article>
+                            </div>
                         </div>
-                        <a class="text-link why-choose-link" href="our_services.html" data-animate="fade-up" data-animate-delay="360">
-                            Explore our turnkey services
-                        </a>
                     </div>
                     <div class="why-choose-right">
-                        <div class="why-choose-cutout" data-animate="fade-left">
-                            <span class="placeholder-text">Placeholder Image</span>
+                        <div class="why-choose-image-wrapper" data-animate="fade-left">
+                            <img src="index_images/man sitting.png" alt="Professional working on wireless solutions" class="why-choose-image">
                         </div>
                     </div>
                 </div>
@@ -279,7 +312,7 @@
         <section id="solutions" class="solutions-section">
             <div class="container">
                 <div class="solutions-intro">
-                    <h2 class="solutions-intro__title" data-animate="fade-up" data-animate-delay="80">Wireless expertise tailored for today's digital environments</h2>
+                    <h2 class="solutions-intro__title" data-animate="fade-up">Wireless expertise tailored for today's digital environments</h2>
                     <p class="solutions-intro__description" data-animate="fade-up" data-animate-delay="160">
                         From enterprise campuses to high-security sites, our wireless solutions are designed for performance, reliability, and compliance. Whether you're scaling infrastructure or building from the ground up, we bring deep industry experience to every deployment.
                     </p>
