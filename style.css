@@ -26,7 +26,7 @@ html, body {
 body {
     font-family: var(--font-body);
     line-height: 1.6;
-    color: #333;
+    color: #200029;
     width: 100%;
     max-width: 100%;
     position: relative;
@@ -78,8 +78,8 @@ body.new-home .header {
 }
 
 body.new-home .header .logo img {
-    height: 80px;
-    min-height: 80px;
+    height: var(--logo-height-desktop);
+    min-height: var(--logo-height-desktop);
     max-height: none;
     width: auto;
     display: block;
@@ -114,7 +114,7 @@ body.new-home .nav a:hover {
 }
 
 body.new-home .header.header--scrolled .nav a {
-    color: #333;
+    color: #200029;
 }
 
 body.new-home .header.header--scrolled .nav a:hover {
@@ -166,7 +166,7 @@ body.new-home .header .container {
 
 .nav a {
     text-decoration: none;
-    color: #333;
+    color: #200029;
     font-weight: 500;
     font-size: 14px;
     transition: all 0.3s ease;
@@ -256,7 +256,7 @@ body.new-home .header .container {
 .dropdown-menu a {
     display: block;
     padding: 16px 24px;
-    color: #333 !important;
+    color: #200029 !important;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
@@ -560,8 +560,8 @@ body.new-home .header .container {
     }
     
     body.new-home .header .logo img {
-        height: 80px;
-        max-height: 80px;
+        height: var(--logo-height-tablet);
+        max-height: var(--logo-height-tablet);
     }
     
     .header .container {
@@ -668,7 +668,7 @@ body.new-home .header .container {
     
     .mobile-nav__link {
         text-decoration: none;
-        color: #333;
+        color: #200029;
         font-weight: 600;
         font-size: 16px;
         transition: color 0.3s ease;
@@ -689,7 +689,7 @@ body.new-home .header .container {
     
     .mobile-dropdown-toggle {
         text-decoration: none;
-        color: #333;
+        color: #200029;
         font-weight: 600;
         font-size: 16px;
         transition: color 0.3s ease;
@@ -720,7 +720,7 @@ body.new-home .header .container {
     
     .mobile-dropdown-menu a {
         text-decoration: none;
-        color: #666;
+        color: #200029;
         font-weight: 500;
         font-size: 14px;
         padding: 6px 0;
@@ -797,8 +797,8 @@ body.new-home .header .container {
     }
     
     body.new-home .header .logo img {
-        height: 70px;
-        max-height: 70px;
+        height: var(--logo-height-mobile);
+        max-height: var(--logo-height-mobile);
     }
     
     .header .container {
@@ -898,8 +898,8 @@ body.new-home .header .container {
     }
     
     body.new-home .header .logo img {
-        height: 60px;
-        max-height: 60px;
+        height: var(--logo-height-small);
+        max-height: var(--logo-height-small);
     }
     
     /* Ensure hero content is properly positioned on very small screens */
@@ -1010,7 +1010,7 @@ body.new-home .header .container {
 .partner-logo {
     font-size: 16px;
     font-weight: 600;
-    color: #4A5568;
+    color: #200029;
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
@@ -1056,14 +1056,14 @@ body.new-home .header .container {
 .section-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .section-description {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     text-align: center;
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -1276,7 +1276,7 @@ body.new-home .header .container {
 
 .feature-card p {
     font-size: 1rem;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.6;
     margin-bottom: 25px;
     text-align: center;
@@ -1336,7 +1336,7 @@ body.new-home .header .container {
 
 .industries-lead--secondary {
     font-weight: 400 !important;
-    color: #4A5568 !important;
+    color: #200029 !important;
     margin-top: 0.5rem;
 }
 
@@ -1386,7 +1386,7 @@ body.new-home .header .container {
 .industries-lead {
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #4A5568;
+    color: #200029;
     margin-bottom: 10px;
 }
 
@@ -1704,7 +1704,7 @@ body.new-home .header .container {
 
 .author-info span {
     font-size: 14px;
-    color: #4A5568;
+    color: #200029;
 }
 
 .testimonial-dots {
@@ -1780,7 +1780,7 @@ body.new-home section {
 }
 
 .section-heading p {
-    color: #4f4864;
+    color: #200029;
     font-size: 1rem;
 }
 
@@ -2048,7 +2048,7 @@ body.new-home [data-animate] {
 
 .partners-strip__heading p {
     text-align: center;
-    color: #3b3350;
+    color: #200029;
     margin-bottom: 32px;
     font-weight: 500;
 }
@@ -2065,7 +2065,7 @@ body.new-home [data-animate] {
     border-radius: 16px;
     border: 1px dashed rgba(32, 0, 41, 0.25);
     background: white;
-    color: #6e6488;
+    color: #3d1a4a;
     font-weight: 600;
     text-align: center;
     padding: 0 16px;
@@ -2126,7 +2126,7 @@ body.new-home [data-animate] {
 }
 
 .approach-card p {
-    color: #4f4864;
+    color: #200029;
 }
 
 .new-services {
@@ -2216,7 +2216,7 @@ body.new-home [data-animate] {
     background: var(--lw-white-smoke);
     border: 1px solid rgba(32, 0, 41, 0.12);
     font-weight: 500;
-    color: #3b3350;
+    color: #200029;
 }
 
 .why-linkwave {
@@ -2363,7 +2363,7 @@ body.new-home [data-animate] {
 .cta-form label {
     font-weight: 600;
     font-size: 0.9rem;
-    color: #443a5b;
+    color: #200029;
 }
 
 .cta-form input,
@@ -2376,7 +2376,7 @@ body.new-home [data-animate] {
 
 .cta-form small {
     font-size: 0.8rem;
-    color: #6a627d;
+    color: #3d1a4a;
 }
 
 .insights-resources {
@@ -2482,100 +2482,6 @@ body.new-home [data-animate] {
     z-index: 1;
 }
 
-/* Feature Callouts */
-.why-choose-callout {
-    position: absolute;
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    max-width: 220px;
-    z-index: 2;
-}
-
-.why-choose-callout-content {
-    background: transparent;
-    text-align: center;
-}
-
-.why-choose-callout-content h4 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #1a202c;
-    margin: 0 0 6px 0;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.3;
-}
-
-.why-choose-callout-content p {
-    font-size: 0.8rem;
-    color: #4a5568;
-    line-height: 1.5;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-.why-choose-callout-icon {
-    flex-shrink: 0;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #F57822;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
-    box-shadow: 0 8px 20px rgba(245, 120, 34, 0.35);
-    position: relative;
-}
-
-/* Callout connector lines */
-.why-choose-callout::after {
-    content: '';
-    position: absolute;
-    background: #F57822;
-    height: 2px;
-    z-index: 0;
-}
-
-.why-choose-callout--top {
-    top: 8%;
-    right: -5%;
-    flex-direction: row;
-}
-
-.why-choose-callout--top::after {
-    width: 60px;
-    left: -70px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.why-choose-callout--middle {
-    top: 38%;
-    right: -8%;
-    flex-direction: row;
-}
-
-.why-choose-callout--middle::after {
-    width: 80px;
-    left: -90px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.why-choose-callout--bottom {
-    top: 68%;
-    right: -5%;
-    flex-direction: row;
-}
-
-.why-choose-callout--bottom::after {
-    width: 60px;
-    left: -70px;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
 /* Text Side (Right) */
 .why-choose-text-side {
@@ -2590,10 +2496,10 @@ body.new-home [data-animate] {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    font-weight: 700;
-    color: #1A202C;
+    font-weight: 400;
+    color: #200029;
     margin-bottom: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .why-choose-heading-title {
@@ -2704,7 +2610,7 @@ body.new-home [data-animate] {
 
 .why-choose-card p {
     font-size: 1rem;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.65;
     margin: 0;
     text-align: center;
@@ -2826,7 +2732,7 @@ body.new-home [data-animate] {
 
 .why-choose-feature-content p {
     font-size: 0.875rem;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.5;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -3022,24 +2928,6 @@ body.new-home [data-animate] {
         margin-bottom: 30px;
     }
 
-    .why-choose-left,
-    .why-choose-right {
-        flex: 1 1 auto;
-    }
-
-    .why-choose-image-wrapper {
-        max-width: 100%;
-        margin-left: 0;
-        height: auto;
-    }
-
-    .why-choose-features {
-        padding: 20px;
-    }
-
-    .why-choose-feature {
-        max-width: 240px;
-    }
 }
 
 @media (max-width: 640px) {
@@ -3202,7 +3090,7 @@ body.new-home [data-animate] {
 
 .solutions-offering__description {
     font-size: 0.875rem;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.6;
     margin-top: 0.5rem;
 }
@@ -3332,7 +3220,7 @@ body.new-home [data-animate] {
 
 .why-work-subtitle {
     font-size: 1.25rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -3355,7 +3243,7 @@ body.new-home [data-animate] {
 .benefits-title {
     font-size: 2.25rem;
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 1.5rem;
     font-family: var(--font-title);
     text-align: left;
@@ -3364,7 +3252,7 @@ body.new-home [data-animate] {
 .benefits-description {
     font-size: 1.125rem;
     line-height: 1.8;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 2rem;
     text-align: left;
 }
@@ -3412,14 +3300,14 @@ body.new-home [data-animate] {
 .benefit-content h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 0.5rem;
     font-family: var(--font-title);
     text-align: center;
 }
 
 .benefit-content p {
-    color: #6B7A8F;
+    color: #3d1a4a;
     line-height: 1.6;
     margin: 0;
     text-align: center;
@@ -3527,7 +3415,7 @@ body.new-home [data-animate] {
 .president-title {
     font-size: 2.25rem;
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 1.5rem;
     font-family: var(--font-title);
     text-align: left;
@@ -3536,7 +3424,7 @@ body.new-home [data-animate] {
 .president-quote {
     font-size: 1.125rem;
     line-height: 1.8;
-    color: #6B7A8F;
+    color: #3d1a4a;
     font-style: italic;
     margin: 0 0 2rem 0;
     padding: 0;
@@ -3555,7 +3443,7 @@ body.new-home [data-animate] {
 
 .president-name {
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     font-size: 1.125rem;
 }
 
@@ -3579,7 +3467,7 @@ body.new-home [data-animate] {
 .culture-title {
     font-size: 2.25rem;
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 1.5rem;
     font-family: var(--font-title);
 }
@@ -3587,7 +3475,7 @@ body.new-home [data-animate] {
 .culture-description {
     font-size: 1.125rem;
     line-height: 1.8;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin: 0;
 }
 
@@ -3725,7 +3613,7 @@ body.new-home [data-animate] {
 
 .contact-intro__description {
     font-size: clamp(1rem, 1.5vw, 1.125rem);
-    color: #4A5568;
+    color: #200029;
     line-height: 1.7;
     margin: 0 auto;
 }
@@ -3777,7 +3665,7 @@ body.new-home [data-animate] {
 
 .contact-info-content p {
     font-size: 0.95rem;
-    color: #4A5568;
+    color: #200029;
     margin: 0;
     font-family: var(--font-body);
 }
@@ -3813,14 +3701,14 @@ body.new-home .contact {
 .contact-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     line-height: 1.2;
     margin-bottom: 30px;
 }
 
 .contact-description {
     font-size: 18px;
-    color: #6B7A8F;
+    color: #3d1a4a;
     line-height: 1.6;
     margin-bottom: 40px;
 }
@@ -3870,7 +3758,7 @@ body.new-home .contact-cta-btn:hover {
 
 .contact-support-text span {
     font-size: 14px;
-    color: #6B7A8F;
+    color: #3d1a4a;
 }
 
 .contact-phone {
@@ -3966,7 +3854,7 @@ body.new-home .contact-cta-btn:hover {
 
 .contact-offices__details p {
     font-size: 15px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.5;
     margin: 0;
 }
@@ -4146,7 +4034,7 @@ body.new-home .contact-form {
 
 .office-content p {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.5;
 }
 
@@ -4733,14 +4621,14 @@ body.new-home .contact-form {
 .service-title {
     font-size: clamp(1.75rem, 4vw, 2.25rem);
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 1.25rem;
     line-height: 1.2;
 }
 
 .service-description {
     font-size: clamp(1rem, 2vw, 1.125rem);
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin-bottom: 1.875rem;
     max-width: 31.25rem;
@@ -4885,7 +4773,7 @@ body.new-home .contact-form {
 
 .solutions-description {
     font-size: clamp(1rem, 2vw, 1.125rem);
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -4908,7 +4796,7 @@ body.new-home .contact-form {
     padding: 1rem 1.5rem;
     border: none;
     background: transparent;
-    color: #4A5568;
+    color: #200029;
     font-family: var(--font-title);
     font-size: clamp(0.875rem, 2vw, 1rem);
     font-weight: 500;
@@ -4960,7 +4848,7 @@ body.new-home .contact-form {
 
 .tab-description p {
     font-size: clamp(0.875rem, 2vw, 1rem);
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
 }
@@ -5028,7 +4916,7 @@ body.new-home .contact-form {
 
 .solution-description {
     font-size: clamp(0.875rem, 2vw, 0.9375rem);
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0 0 1.5625rem 0;
 }
@@ -5057,7 +4945,7 @@ body.new-home .contact-form {
 
 .platform-tag {
     background: #f1f5f9;
-    color: #475569;
+    color: #200029;
     padding: 0.375rem 0.75rem;
     border-radius: 1.25rem;
     font-size: clamp(0.6875rem, 1.5vw, 0.75rem);
@@ -5148,7 +5036,7 @@ body.new-home .contact-form {
 .impact-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 20px;
     position: relative;
 }
@@ -5167,7 +5055,7 @@ body.new-home .contact-form {
 
 .impact-description {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
@@ -5210,7 +5098,7 @@ body.new-home .contact-form {
 
 .side-subtitle {
     font-size: 16px;
-    color: #6B7A8F;
+    color: #3d1a4a;
     font-weight: 500;
 }
 
@@ -5238,7 +5126,7 @@ body.new-home .contact-form {
 
 .divider-text {
     background: white;
-    color: #6B7A8F;
+    color: #3d1a4a;
     font-size: 18px;
     font-weight: 700;
     padding: 12px 16px;
@@ -5333,7 +5221,7 @@ body.new-home .contact-form {
 
 .impact-card-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
 }
@@ -5450,7 +5338,7 @@ body.new-home .contact-form {
 .why-choose-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 20px;
     line-height: 1.2;
     text-align: left;
@@ -5458,7 +5346,7 @@ body.new-home .contact-form {
 
 .why-choose-description {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     max-width: 500px;
 }
@@ -5573,7 +5461,7 @@ body.new-home .contact-form {
 
 .top-feature-card p {
     font-size: 1rem;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.6;
     margin-bottom: 25px;
     text-align: center;
@@ -5650,7 +5538,7 @@ body.new-home .contact-form {
 
 .reason-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.5;
     margin: 0;
 }
@@ -5849,7 +5737,7 @@ body.new-home .contact-form {
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
 }
 
 .services-grid {
@@ -5893,7 +5781,7 @@ body.new-home .contact-form {
 }
 
 .service-card p {
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     font-size: 0.95rem;
 }
@@ -5909,7 +5797,7 @@ body.new-home .contact-form {
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
 }
 
 .features-grid {
@@ -5940,7 +5828,7 @@ body.new-home .contact-form {
 }
 
 .feature p {
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     font-size: 0.95rem;
 }
@@ -6041,13 +5929,13 @@ body.new-home .contact-form {
 .cs-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .cs-sub {
-    color: #444;
+    color: #200029;
     font-size: clamp(15px, 1.4vw, 18px);
     max-width: 820px;
     text-align: center;
@@ -6209,7 +6097,7 @@ body.new-home .contact-form {
 .partners-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 20px;
     position: relative;
 }
@@ -6228,7 +6116,7 @@ body.new-home .contact-form {
 
 .partners-subtitle {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
@@ -6295,7 +6183,7 @@ body.new-home .contact-form {
 .partner-photo-text {
     font-size: 12px;
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     text-align: center;
     transition: color 0.3s ease;
 }
@@ -6337,7 +6225,7 @@ body.new-home .contact-form {
 .partner-text {
     font-size: 24px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     text-align: center;
     transition: color 0.3s ease;
     line-height: 1.2;
@@ -6352,7 +6240,7 @@ body.new-home .contact-form {
 .partner-description {
     font-size: 16px;
     font-weight: 400;
-    color: #4A5568;
+    color: #200029;
     text-align: center;
     line-height: 1.6;
     margin: 0;
@@ -6507,7 +6395,7 @@ body.new-home .contact-form {
 .clients-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 20px;
     position: relative;
 }
@@ -6526,7 +6414,7 @@ body.new-home .contact-form {
 
 .clients-subtitle {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
@@ -6620,7 +6508,7 @@ body.new-home .contact-form {
 .certifications-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 20px;
     position: relative;
 }
@@ -6639,7 +6527,7 @@ body.new-home .contact-form {
 
 .certifications-subtitle {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
@@ -6776,7 +6664,7 @@ body.new-home .contact-form {
 .team-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 20px;
     position: relative;
 }
@@ -6795,7 +6683,7 @@ body.new-home .contact-form {
 
 .team-subtitle {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
@@ -6852,7 +6740,7 @@ body.new-home .contact-form {
 
 .team-member-1-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -6915,7 +6803,7 @@ body.new-home .contact-form {
 
 .team-member-2-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -6978,7 +6866,7 @@ body.new-home .contact-form {
 
 .team-member-3-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -7041,7 +6929,7 @@ body.new-home .contact-form {
 
 .team-member-4-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -7104,7 +6992,7 @@ body.new-home .contact-form {
 
 .team-member-5-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -7167,7 +7055,7 @@ body.new-home .contact-form {
 
 .team-member-6-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -7230,7 +7118,7 @@ body.new-home .contact-form {
 
 .team-member-7-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     text-align: left;
@@ -7315,7 +7203,7 @@ body.new-home .contact-form {
 
 .solutions-subtitle {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.7;
     margin: 0;
     font-weight: 400;
@@ -7393,7 +7281,7 @@ body.new-home .contact-form {
 
 .das-products-subtitle {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.7;
     margin: 0;
     font-weight: 400;
@@ -7468,7 +7356,7 @@ body.new-home .contact-form {
 
 .das-product-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     font-weight: 400;
@@ -7640,7 +7528,7 @@ body.new-home .contact-form {
 
 .residential-das-subtitle {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.7;
     margin: 0;
     font-weight: 400;
@@ -7705,7 +7593,7 @@ body.new-home .contact-form {
 
 .residential-das-card-description {
     font-size: 16px;
-    color: #4A5568;
+    color: #200029;
     line-height: 1.6;
     margin: 0;
     font-weight: 400;
@@ -7984,11 +7872,11 @@ body.new-home .contact-form {
 
 /* Partners Section Text Colors */
 .partners .section-title {
-    color: #6B7A8F;
+    color: #3d1a4a;
 }
 
 .partners .section-description {
-    color: #555555;
+    color: #200029;
 }
 
 /* Partner Logo Text Color */
@@ -8026,7 +7914,7 @@ body.new-home .contact-form {
 .about-section .section-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     text-align: center;
     margin-bottom: 20px;
     position: relative;
@@ -8046,7 +7934,7 @@ body.new-home .contact-form {
 
 .about-section .section-description {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
@@ -8138,7 +8026,7 @@ body.new-home .contact-form {
 
 .about-card p {
     font-size: 1rem;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.6;
     margin-bottom: 25px;
     text-align: center;
@@ -8262,7 +8150,7 @@ body.new-home .contact-form {
 .values-section .section-title {
     font-size: 36px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     text-align: center;
     margin-bottom: 20px;
     position: relative;
@@ -8282,7 +8170,7 @@ body.new-home .contact-form {
 
 .values-section .section-description {
     font-size: 18px;
-    color: #4A5568;
+    color: #200029;
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
@@ -8396,7 +8284,7 @@ body.new-home .contact-form {
 
 .value-node p {
     font-size: 1rem;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.5;
     text-align: center;
     max-width: 240px;
@@ -8480,7 +8368,7 @@ body.new-home .contact-form {
 
 .value-card p {
     font-size: 16px;
-    color: #4a5568;
+    color: #200029;
     line-height: 1.6;
     text-align: center;
     margin: 0;
@@ -8713,7 +8601,7 @@ body.new-home .contact-form {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #6B7A8F;
+    color: #3d1a4a;
     position: relative;
 }
 
@@ -8731,7 +8619,7 @@ body.new-home .contact-form {
 
 .mission-vision-section .section-header p {
     font-size: 1.125rem;
-    color: #4b5563;
+    color: #200029;
     max-width: 672px;
     margin: 0 auto;
     line-height: 1.6;
@@ -8875,7 +8763,7 @@ body.new-home .contact-form {
 .mission-vision-card p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #374151;
+    color: #200029;
     margin: 0;
     max-width: 320px;
     margin: 0 auto;
@@ -9007,7 +8895,7 @@ body.new-home .contact-form {
 
 .projects-header .section-description {
     font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-    color: #666;
+    color: #200029;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -9086,7 +8974,7 @@ body.new-home .contact-form {
 
 .project-description {
     font-size: 1.1rem;
-    color: #555;
+    color: #200029;
     line-height: 1.7;
     margin-bottom: 30px;
 }
@@ -9113,7 +9001,7 @@ body.new-home .contact-form {
 
 .stat-label {
     font-size: 0.9rem;
-    color: #666;
+    color: #200029;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -9315,7 +9203,7 @@ body.new-home .contact-form {
 
 .our-process-section .section-description {
     font-size: 1.25rem;
-    color: #64748b;
+    color: #3d1a4a;
     max-width: 900px;
     margin: 0 auto 40px auto;
     line-height: 1.8;
@@ -9325,7 +9213,7 @@ body.new-home .contact-form {
 .why-process-section .section-title {
     font-size: 42px;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     text-align: left;
     margin-bottom: 25px;
     position: relative;
@@ -9344,7 +9232,7 @@ body.new-home .contact-form {
 
 .why-process-section .section-description {
     font-size: 1.1rem;
-    color: #666;
+    color: #200029;
     margin-bottom: 50px;
     line-height: 1.8;
 }
@@ -9434,7 +9322,7 @@ body.new-home .contact-form {
 
 .image-placeholder span {
     font-size: 1rem;
-    color: #64748b;
+    color: #3d1a4a;
     font-weight: 500;
     text-align: center;
     padding: 0 20px;
@@ -9492,7 +9380,7 @@ body.new-home .contact-form {
 
 .step-description {
     font-size: 1rem;
-    color: #64748b;
+    color: #3d1a4a;
     margin-bottom: 32px;
     line-height: 1.7;
     text-align: center;
@@ -9520,7 +9408,7 @@ body.new-home .contact-form {
 }
 
 .feature-item span {
-    color: #475569;
+    color: #200029;
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -9594,7 +9482,7 @@ body.new-home .contact-form {
 
 .why-process-section .section-description {
     font-size: 1.25rem;
-    color: #64748b;
+    color: #3d1a4a;
     max-width: 900px;
     margin: 0 auto;
     line-height: 1.8;
@@ -9691,7 +9579,7 @@ body.new-home .contact-form {
 }
 
 .benefit-description {
-    color: #64748b;
+    color: #3d1a4a;
     line-height: 1.7;
     font-size: 1rem;
 }
@@ -9716,7 +9604,7 @@ body.new-home .contact-form {
 
 .comparison-subtitle {
     font-size: 1.2rem;
-    color: #64748b;
+    color: #3d1a4a;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -9810,7 +9698,7 @@ body.new-home .contact-form {
 
 .feature-name {
     font-weight: 600;
-    color: #475569;
+    color: #200029;
     font-size: 0.95rem;
     min-width: 120px;
 }
@@ -9839,7 +9727,7 @@ body.new-home .contact-form {
 }
 
 .competitor-value span {
-    color: #64748b;
+    color: #3d1a4a;
     font-size: 0.9rem;
     font-weight: 500;
 }
@@ -9869,7 +9757,7 @@ body.new-home .contact-form {
 
 .stat-highlight .stat-label {
     font-size: 1rem;
-    color: #64748b;
+    color: #3d1a4a;
     font-weight: 600;
 }
 
@@ -10235,7 +10123,7 @@ body.new-home .contact-form {
 .faq-question i {
     font-size: 0.9rem;
     transition: transform 0.3s ease;
-    color: #6c757d;
+    color: #3d1a4a;
 }
 
 .faq-question.active i {
@@ -10258,7 +10146,7 @@ body.new-home .contact-form {
     padding: 0 1.5rem 1.5rem;
     margin: 0;
     line-height: 1.6;
-    color: #495057;
+    color: #200029;
     font-size: 1rem;
 }
 
@@ -10368,7 +10256,7 @@ body.new-home .contact-form {
 
 .careers-description {
     font-size: 1.25rem;
-    color: #495057;
+    color: #200029;
     line-height: 1.6;
     margin-bottom: 2.5rem;
     max-width: 500px;
@@ -10450,7 +10338,7 @@ body.new-home .contact-form {
 
 .placeholder-content {
     text-align: center;
-    color: #6c757d;
+    color: #3d1a4a;
     z-index: 1;
     position: relative;
 }
@@ -10465,7 +10353,7 @@ body.new-home .contact-form {
 .placeholder-content span {
     font-size: 1.1rem;
     font-weight: 500;
-    color: #495057;
+    color: #200029;
 }
 
 @keyframes shimmer {
@@ -10568,7 +10456,7 @@ body.new-home .contact-form {
 
 .postings-description {
     font-size: 1.2rem;
-    color: #495057;
+    color: #200029;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
@@ -10647,7 +10535,7 @@ body.new-home .contact-form {
 
 .job-location {
     font-size: 1rem;
-    color: #6c757d;
+    color: #3d1a4a;
     margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
@@ -10776,7 +10664,7 @@ body.new-home .contact-form {
 
 .career-growth-description {
     font-size: 1.2rem;
-    color: #495057;
+    color: #200029;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -10810,7 +10698,7 @@ body.new-home .contact-form {
 
 .company-culture-description {
     font-size: 1.1rem;
-    color: #6c757d;
+    color: #3d1a4a;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
@@ -10914,7 +10802,7 @@ body.new-home .contact-form {
 
 .benefit-item p {
     font-size: 0.95rem;
-    color: #495057;
+    color: #200029;
     line-height: 1.5;
     margin: 0;
 }
@@ -11056,7 +10944,7 @@ body.new-home .contact-form {
 
 .career-growth-subtitle {
     font-size: 1.375rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.7;
@@ -11172,7 +11060,7 @@ body.new-home .contact-form {
 .marker-number {
     font-size: 0.875rem;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
 }
 
 .timeline-content {
@@ -11270,13 +11158,13 @@ body.new-home .contact-form {
 .timeline-title {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 1rem;
 }
 
 .timeline-description {
     font-size: 1.125rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -11326,7 +11214,7 @@ body.new-home .contact-form {
 
 .stat-label {
     font-size: 0.875rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     font-weight: 500;
 }
 
@@ -11339,7 +11227,7 @@ body.new-home .contact-form {
 .support-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 3rem;
 }
 
@@ -11383,13 +11271,13 @@ body.new-home .contact-form {
 .support-card h4 {
     font-size: 1.375rem;
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 1rem;
 }
 
 .support-card p {
     font-size: 1rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     line-height: 1.6;
 }
 
@@ -11592,7 +11480,7 @@ body.new-home .contact-form {
 
 .culture-subtitle {
     font-size: 1.25rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     max-width: 600px;
     margin: 0;
     line-height: 1.6;
@@ -11680,13 +11568,13 @@ body.new-home .contact-form {
 .feature-content h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #6B7A8F;
+    color: #3d1a4a;
     margin-bottom: 0.75rem;
 }
 
 .feature-content p {
     font-size: 1rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     line-height: 1.6;
 }
 
@@ -11783,7 +11671,7 @@ body.new-home .contact-form {
 
 .video-subtitle {
     font-size: 1.25rem;
-    color: #6B7A8F;
+    color: #3d1a4a;
     max-width: 600px;
     margin: 0 0 0 auto;
     line-height: 1.6;
