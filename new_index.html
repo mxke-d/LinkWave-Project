@@ -19,55 +19,6 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Force smaller header for new landing page -->
-    <style>
-        html body.new-home header.header,
-        html body.new-home .header {
-            padding: 2px 0 !important;
-            min-height: auto !important;
-            height: auto !important;
-            max-height: none !important;
-        }
-        html body.new-home header.header .logo img,
-        html body.new-home .header .logo img,
-        html body.new-home .header .logo > img {
-            height: 50px !important;
-            max-height: 50px !important;
-            min-height: 50px !important;
-            width: auto !important;
-            display: block !important;
-        }
-        html body.new-home .header .nav a,
-        html body.new-home header.header .nav a {
-            padding: 3px 0 !important;
-            font-size: 14px !important;
-        }
-        @media (max-width: 768px) {
-            html body.new-home .header .logo img,
-            html body.new-home header.header .logo img {
-                height: 45px !important;
-                max-height: 45px !important;
-                min-height: 45px !important;
-            }
-        }
-        @media (max-width: 480px) {
-            html body.new-home .header .logo img,
-            html body.new-home header.header .logo img {
-                height: 40px !important;
-                max-height: 40px !important;
-                min-height: 40px !important;
-            }
-        }
-        @media (max-width: 360px) {
-            html body.new-home .header .logo img,
-            html body.new-home header.header .logo img {
-                height: 35px !important;
-                max-height: 35px !important;
-                min-height: 35px !important;
-            }
-        }
-    </style>
 </head>
 <body class="new-home">
     <!-- Header -->
@@ -163,16 +114,6 @@
                         From RF modeling to carrier integration, Linkwave makes compliant, future-ready DAS a reality for every environment you manage.
                     </p>
                 </div>
-                <!-- <div class="new-hero__media" aria-label="Hero media showing wireless deployment">
-                    <div class="new-hero__media-frame">
-                        <div class="hero-media hero-media--primary image-placeholder">
-                            <span>Image Placeholder</span>
-                        </div>
-                        <div class="hero-media hero-media--secondary image-placeholder">
-                            <span>Image Placeholder</span>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
 
@@ -276,38 +217,6 @@
             </div>
         </section>
 
-        <!-- Why Choose Section -->
-        <section id="about" class="why-choose">
-            <div class="container">
-                <div class="why-choose-wrapper">
-                    <div class="why-choose-left">
-                        <p class="why-choose-eyebrow" data-animate="fade-up">WHO ARE WE?</p>
-                        <h2 class="why-choose-heading-title" data-animate="fade-up" data-animate-delay="100">Why Choose Linkwave?</h2>
-                        <div class="why-choose-heading">
-                            <p class="why-choose-subtitle" data-animate="fade-up" data-animate-delay="120">
-                                Choosing Linkwave as your wireless network partner ensures you have a dedicated team of professionals who are committed to creating tailored, reliable and secure solutions for your business needs. With our fast and efficient deployment process, you can get your wireless network up and running in no time.
-                            </p>
-                        </div>
-                        <div class="why-choose-buttons" data-animate="fade-up" data-animate-delay="200">
-                            <a href="our_services.html" class="why-choose-btn why-choose-btn--primary">Our Services</a>
-                            <div class="dropdown">
-                                <a href="about_us.html" class="why-choose-btn why-choose-btn--secondary dropdown-toggle">About us <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
-                                <div class="dropdown-menu">
-                                    <a href="about_us.html">About Us</a>
-                                    <a href="our_team.html">Our Team</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="why-choose-right">
-                        <div class="why-choose-image-wrapper" data-animate="fade-left">
-                            <img src="index_images/man sitting.png" alt="Professional working on wireless solutions" class="why-choose-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Our Solutions Section -->
         <section id="solutions" class="solutions-section">
             <div class="container">
@@ -343,6 +252,37 @@
                         <div class="solutions-offering__icon" data-feather="book-open"></div>
                         <h3 class="solutions-offering__label">Training</h3>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section id="about" class="why-choose">
+            <div class="why-choose-wrapper">
+                <!-- Image Side (Left) -->
+                <div class="why-choose-image-side" data-animate="fade-up">
+                    <div class="why-choose-image-container">
+                        <img src="index_images/man_sitting_orange_chair.png" alt="Professional working on laptop in orange bean bag chair" class="why-choose-person-img">
+                    </div>
+                </div>
+
+                <!-- Text Side (Right) -->
+                <div class="why-choose-text-side" data-animate="fade-up" data-animate-delay="100">
+                    <p class="why-choose-eyebrow">WHO ARE WE?</p>
+                    <h2 class="why-choose-heading-title">Why Choose<br>Linkwave?</h2>
+                    <p class="why-choose-subtitle">
+                        Choosing Linkwave as your wireless network partner ensures you have a dedicated team of professionals who are committed to creating tailored, reliable and secure solutions for your business needs. With our fast and efficient deployment process, you can get your wireless network up and running in no time.
+                    </p>
+                    <div class="why-choose-buttons">
+                        <a href="our_services.html" class="why-choose-btn why-choose-btn--primary">Our Services</a>
+                        <div class="dropdown">
+                            <a href="about_us.html" class="why-choose-btn why-choose-btn--secondary dropdown-toggle">About us <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="about_us.html">About Us</a>
+                                <a href="our_team.html">Our Team</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -406,6 +346,7 @@
                         <div class="footer-links-group">
                             <h3 class="footer-heading">Company</h3>
                             <ul>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="about_us.html">About Us</a></li>
                                 <li><a href="our_team.html">Our Team</a></li>
                                 <li><a href="careers.html">Careers</a></li>
@@ -414,8 +355,9 @@
                         <div class="footer-links-group">
                             <h3 class="footer-heading">Solutions &amp; Projects</h3>
                             <ul>
-                                <li><a href="our_projects.html">Our Projects</a></li>
                                 <li><a href="our_services.html">Turnkey Services</a></li>
+                                <li><a href="our_projects.html">Our Projects</a></li>
+                                <li><a href="our_process.html">Our Process</a></li>
                                 <li><a href="wireless_network_consulting.html">Wireless Consulting</a></li>
                             </ul>
                         </div>
@@ -423,17 +365,17 @@
                             <h3 class="footer-heading">Resources</h3>
                             <ul>
                                 <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="#resources">Insights</a></li>
-                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="our_solutions.html">Our Solutions</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="footer-social">
-                    <a href="#" aria-label="LinkedIn" class="footer-social-link">
+                    <a href="https://www.linkedin.com/company/linkwave-wireless/" aria-label="LinkedIn" class="footer-social-link">
                         <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                     </a>
-                    <a href="#" aria-label="Twitter" class="footer-social-link">
+                    <a href="https://twitter.com/" aria-label="Twitter" class="footer-social-link">
                         <i class="fab fa-twitter" aria-hidden="true"></i>
                     </a>
                 </div>

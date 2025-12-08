@@ -6,16 +6,6 @@ window.addEventListener('beforeunload', function() {
 // Ensure page starts at top on load
 window.addEventListener('load', function() {
     window.scrollTo(0, 0);
-    // Force small header on new-home page
-    if (document.body.classList.contains('new-home')) {
-        const header = document.querySelector('.header');
-        const logo = header ? header.querySelector('.logo img') : null;
-        if (header) header.style.padding = '2px 0';
-        if (logo) {
-            logo.style.height = '50px';
-            logo.style.maxHeight = '50px';
-        }
-    }
 });
 
 // Smooth scrolling for navigation links
@@ -23,32 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ensure page is at top when DOM is ready
     window.scrollTo(0, 0);
     
-    // Immediately force small header on new-home page
-    if (document.body.classList.contains('new-home')) {
-        function forceSmallHeader() {
-            const header = document.querySelector('.header') || document.querySelector('header.header');
-            if (header) {
-                header.style.setProperty('padding', '2px 0', 'important');
-                header.style.setProperty('min-height', 'auto', 'important');
-                header.style.setProperty('height', 'auto', 'important');
-            }
-            const logo = header ? (header.querySelector('.logo img') || header.querySelector('img')) : null;
-            if (logo) {
-                logo.style.setProperty('height', '50px', 'important');
-                logo.style.setProperty('max-height', '50px', 'important');
-                logo.style.setProperty('min-height', '50px', 'important');
-            }
-            const navLinks = header ? header.querySelectorAll('.nav a') : [];
-            navLinks.forEach(link => {
-                link.style.setProperty('padding', '3px 0', 'important');
-                link.style.setProperty('font-size', '14px', 'important');
-            });
-        }
-        forceSmallHeader();
-        // Run again after a short delay to ensure it sticks
-        setTimeout(forceSmallHeader, 100);
-        setTimeout(forceSmallHeader, 500);
-    }
     // Smooth scrolling for anchor links
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
@@ -71,20 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerLogoDefaultSrc = headerLogo ? headerLogo.getAttribute('src') : null;
     const isNewHome = document.body.classList.contains('new-home');
     
-    // Force header to be smaller on new-home page
-    if (isNewHome && header) {
-        header.style.padding = '2px 0';
-        if (headerLogo) {
-            headerLogo.style.height = '50px';
-            headerLogo.style.maxHeight = '50px';
-        }
-        // Also set nav link styles
-        const navLinks = header.querySelectorAll('.nav a');
-        navLinks.forEach(link => {
-            link.style.padding = '3px 0';
-            link.style.fontSize = '14px';
-        });
-    }
 
     function updateHeaderLogo(isHeaderScrolled) {
         if (!headerLogo) return;
@@ -100,15 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateHeaderStyles() {
         if (!header) return;
-
-        // Always enforce small header on new-home page
-        if (isNewHome) {
-            header.style.padding = '2px 0';
-            if (headerLogo) {
-                headerLogo.style.height = '50px';
-                headerLogo.style.maxHeight = '50px';
-            }
-        }
 
         let isHeaderOnLightBackground = false;
 
@@ -131,24 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (isNewHome) {
-        // Ensure header stays small
-        function enforceSmallHeader() {
-            if (header) {
-                header.style.padding = '2px 0';
-            }
-            if (headerLogo) {
-                headerLogo.style.height = '50px';
-                headerLogo.style.maxHeight = '50px';
-            }
-        }
-        enforceSmallHeader();
         updateHeaderStyles();
         initViewportAnimations();
-        // Re-enforce on scroll
-        window.addEventListener('scroll', function() {
-            enforceSmallHeader();
-            updateHeaderStyles();
-        });
+        window.addEventListener('scroll', updateHeaderStyles);
     } else {
         window.addEventListener('scroll', updateHeaderStyles);
     }
