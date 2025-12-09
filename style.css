@@ -6,6 +6,10 @@
     --logo-height-tablet: 72px;
     --logo-height-mobile: 60px;
     --logo-height-small: 52px;
+    
+    /* Layout consistency */
+    --container-max-width: 1400px;
+    --container-padding: clamp(20px, 4vw, 50px);
 }
 
 /* Reset and Base Styles */
@@ -38,9 +42,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--container-padding);
     width: 100%;
     box-sizing: border-box;
 }
@@ -117,14 +121,10 @@ body.new-home .header.header--scrolled .nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
-    padding: 0 40px;
+    max-width: var(--container-max-width);
+    padding: 0 var(--container-padding);
     height: auto;
     min-height: auto;
-}
-
-body.new-home .header .container {
-    padding: 0 50px;
 }
 
 .logo {
@@ -1954,6 +1954,9 @@ body.new-home [data-animate] {
     gap: 48px;
     align-items: center;
     justify-content: space-between;
+    max-width: var(--container-max-width);
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
 }
 
 .new-hero__content {
