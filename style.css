@@ -77,14 +77,6 @@ body.new-home .header {
     padding: 12px 0;
 }
 
-body.new-home .header .logo img {
-    height: var(--logo-height-desktop);
-    min-height: var(--logo-height-desktop);
-    max-height: none;
-    width: auto;
-    display: block;
-}
-
 body.new-home .header .logo {
     height: auto;
     min-height: auto;
@@ -148,7 +140,7 @@ body.new-home .header .container {
 }
 
 .logo img {
-    height: var(--logo-height-desktop);
+    height: 6rem;
     min-height: var(--logo-height-desktop);
     max-height: none;
     width: auto;
@@ -1343,7 +1335,7 @@ body.new-home .header .container {
 .industries-heading {
     font-size: clamp(2rem, 3.5vw, 2.75rem);
     font-weight: 800;
-    color: #1A202C;
+    color: #F57822;
     margin-bottom: 16px;
     position: relative;
     display: inline-flex;
@@ -2996,7 +2988,7 @@ body.new-home [data-animate] {
 }
 
 .solutions-intro__title {
-    color: var(--lw-pumpkin);
+    color: #200029;
     font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 800;
     line-height: 1.2;
@@ -3006,7 +2998,7 @@ body.new-home [data-animate] {
 }
 
 .solutions-intro__description {
-    color: rgba(32, 0, 41, 0.85);
+    color: #1A202C;
     font-size: clamp(0.95rem, 1.1vw, 1.1rem);
     font-weight: 400;
     line-height: 1.7;
@@ -3708,7 +3700,7 @@ body.new-home .contact {
 
 .contact-description {
     font-size: 18px;
-    color: #3d1a4a;
+    color: #1A202C;
     line-height: 1.6;
     margin-bottom: 40px;
 }
@@ -4067,7 +4059,7 @@ body.new-home .contact-form {
 }
 
 .footer-logo img {
-    height: 42px;
+    height: 6.5rem;
     width: auto;
     display: block;
     filter: drop-shadow(0 6px 12px rgba(15, 23, 42, 0.45));
