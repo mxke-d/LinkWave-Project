@@ -48,7 +48,7 @@
                     <a href="our_process.html" class="dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
                         <a href="our_process.html">Our Processes</a>
-                        <a href="#">Learn</a>
+                        <a href="learn.html">Learn</a>
                         <a href="faq.html">FAQ</a>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                 <a href="our_process.html" class="mobile-dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
                 <div class="mobile-dropdown-menu">
                     <a href="our_process.html">Our Processes</a>
-                    <a href="#">Learn</a>
+                    <a href="learn.html">Learn</a>
                     <a href="faq.html">FAQ</a>
                 </div>
             </div>
@@ -94,315 +94,342 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero hero--full">
-        <!-- Background image -->
-        <picture class="hero__bg">
-            <img
-                src="our_services_images/hero_bg.png"
-                alt="Wireless connectivity and network solutions"
-                loading="eager"
-                fetchpriority="high"
-            />
-        </picture>
-
-        <!-- Dark overlay for readability -->
-        <div class="hero__overlay" aria-hidden="true"></div>
-
-        <!-- Centered content -->
-        <div class="hero__container" id="what-we-do-hero">
-            <div class="hero__content">
-                <h1 class="hero__title">
-                    Your Connection, Our Priority
-                </h1>
-                <p class="hero__description">
-                    Delivering cutting-edge connectivity solutions that keep your business connected, secure, and ahead of the curve.
+    <section class="hero new-hero services-hero" aria-labelledby="services-hero-title">
+        <div class="new-hero__background">
+            <div class="new-hero__gradient"></div>
+        </div>
+        <div class="container new-hero__inner">
+            <div class="new-hero__content">
+                <p class="eyebrow">Comprehensive Wireless Solutions</p>
+                <h1 id="services-hero-title" class="hero__title">Your Connection, Our Priority</h1>
+                <p class="new-hero__subhead">
+                    Delivering cutting-edge connectivity solutions that keep your business connected, secure, and ahead of the curve. From 5G to private networks, we provide comprehensive wireless infrastructure that powers your success.
                 </p>
-                <p class="hero__description">
-                    From 5G to private networks, we provide comprehensive wireless infrastructure that powers your success.
-                </p>
-                <div class="hero__cta">
-                    <a href="#our-solutions" class="btn btn--primary">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Audit Services Section -->
+    <section class="system-audit-section" id="system-audit">
+        <div class="container">
+            <div class="audit-layout">
+                <div class="audit-content">
+                    <div class="audit-content-inner">
+                        <div class="audit-badge">
+                            <span>System Analysis</span>
+                        </div>
+                        <h2 class="audit-title">System Audit Services</h2>
+                        <p class="audit-description">Our comprehensive wireless network audit services help you identify cost-saving opportunities, optimize performance, and ensure your infrastructure operates at peak efficiency. We analyze every aspect of your system to deliver actionable insights that drive results.</p>
+                        <div class="audit-visual-element">
+                            <div class="audit-image-placeholder">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Network Analysis Placeholder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="audit-cards-wrapper">
+                    <div class="audit-services-grid">
+                        <div class="audit-service-card">
+                            <div class="audit-card-header">
+                                <div class="audit-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="audit-service-title">RF Survey & Analysis</h3>
+                            </div>
+                    <div class="audit-card-content">
+                        <p class="audit-service-description">Comprehensive radio frequency analysis that maps and measures signals across Wi-Fi, cellular, and IoT networks. We identify coverage gaps, interference issues, and optimization opportunities, delivering a detailed report that pinpoints exactly where improvements are needed to achieve reliable, high-performance connectivity throughout your facility.</p>
+                    </div>
+                </div>
+                
+                <div class="audit-service-card">
+                    <div class="audit-card-header">
+                        <div class="audit-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="audit-service-title">Complete System Audit</h3>
+                    </div>
+                    <div class="audit-card-content">
+                        <p class="audit-service-description">Thorough examination of your entire wireless infrastructure from multiple angles. We verify billing accuracy to catch overcharges, conduct physical hardware inventory to identify underutilized assets, and review network configurations for security vulnerabilities. Our comprehensive approach ensures maximum value from your investment while maintaining operational health and security compliance.</p>
+                    </div>
+                </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Solutions Section -->
-    <section class="our-solutions">
+    <!-- Design Services Section -->
+    <section class="design-services-section">
         <div class="container">
-            <div class="solutions-header" id="our-solutions">
-                <h2 class="solutions-title">Our Solutions</h2>
-                <p class="solutions-description">Comprehensive wireless infrastructure solutions that transform complex connectivity challenges into seamless, reliable networks.</p>
+            <div class="design-header">
+                <div class="design-badge">
+                    <span>Engineering Excellence</span>
+                </div>
+                <h2 class="design-title">Design Services</h2>
+                <p class="design-description">Transform your wireless infrastructure vision into reality with our comprehensive design and engineering services. From initial site surveys to detailed technical blueprints, we deliver the precise documentation and specifications your team needs for successful network deployment.</p>
             </div>
             
-            <!-- Solutions Tabs -->
-            <div class="solutions-tabs">
-                <button class="tab-button active" data-tab="commercial">Commercial Solutions</button>
-                <button class="tab-button" data-tab="enterprise">Enterprise Solutions</button>
-            </div>
-
-            <!-- Commercial Solutions Tab -->
-            <div class="tab-content active" id="commercial">
-                <div class="tab-description">
-                    <h3>Commercial Solutions</h3>
-                    <p>Tailored wireless infrastructure for commercial environments including retail, hospitality, healthcare, and office buildings.</p>
-                </div>
-                <div class="solutions-grid">
-                    <div class="solution-card">
-                        <div class="card-header">
-                            <div class="solution-icon">
-                                <i class="fas fa-broadcast-tower"></i>
-                            </div>
-                            <h4 class="solution-title">Cellular DAS Systems</h4>
+            <div class="design-services-grid">
+                <div class="design-service-card">
+                    <div class="design-card-header">
+                        <div class="design-icon">
+                            <i class="fas fa-file-alt"></i>
                         </div>
-                        <p class="solution-description">Distributed Antenna Systems for seamless cellular coverage in commercial buildings.</p>
-                        <div class="hardware-platforms">
-                            <h5 class="platforms-title">Hardware Platforms</h5>
-                            <div class="platforms-grid">
-                                <span class="platform-tag">CommScope ION-B</span>
-                                <span class="platform-tag">Corning ONE Wireless</span>
-                                <span class="platform-tag">SOLiD ALLIANCE</span>
-                                <span class="platform-tag">Nokia Flexi Zone</span>
-                                <span class="platform-tag">BTI Wireless DAS</span>
-                            </div>
-                        </div>
+                        <h3 class="design-service-title">RF Survey Reports</h3>
                     </div>
-                    
-                    <div class="solution-card">
-                        <div class="card-header">
-                            <div class="solution-icon">
-                                <i class="fas fa-wifi"></i>
-                            </div>
-                            <h4 class="solution-title">Enterprise Wi-Fi</h4>
-                        </div>
-                        <p class="solution-description">High-performance wireless networks for commercial environments.</p>
-                        <div class="hardware-platforms">
-                            <h5 class="platforms-title">Hardware Platforms</h5>
-                            <div class="platforms-grid">
-                                <span class="platform-tag">Cisco Catalyst 9000</span>
-                                <span class="platform-tag">Aruba 600 Series</span>
-                                <span class="platform-tag">Ruckus R750</span>
-                                <span class="platform-tag">Ubiquiti UniFi</span>
-                                <span class="platform-tag">Meraki MR Series</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <div class="card-header">
-                            <div class="solution-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <h4 class="solution-title">Public Safety</h4>
-                        </div>
-                        <p class="solution-description">Critical communication infrastructure for emergency services.</p>
-                        <div class="hardware-platforms">
-                            <h5 class="platforms-title">Hardware Platforms</h5>
-                            <div class="platforms-grid">
-                                <span class="platform-tag">Motorola Solutions</span>
-                                <span class="platform-tag">Harris Corporation</span>
-                                <span class="platform-tag">Kenwood NEXEDGE</span>
-                                <span class="platform-tag">Icom IDAS</span>
-                                <span class="platform-tag">EF Johnson</span>
-                            </div>
-                        </div>
+                    <div class="design-card-content">
+                        <p class="design-service-description">Detailed technical report delivered after completing an RF site survey, serving as your network blueprint. Contains all critical data needed for installation, optimization, and troubleshooting, including signal strength maps, coverage analysis, interference identification, and actionable recommendations to ensure optimal wireless system performance.</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Enterprise Solutions Tab -->
-            <div class="tab-content" id="enterprise">
-                <div class="tab-description">
-                    <h3>Enterprise Solutions</h3>
-                    <p>Advanced wireless infrastructure for large-scale enterprise environments including manufacturing, transportation, and critical infrastructure.</p>
-                </div>
-                <div class="solutions-grid">
-                    <div class="solution-card">
-                        <div class="card-header">
-                            <div class="solution-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <h4 class="solution-title">Private Networks</h4>
+                
+                <div class="design-service-card">
+                    <div class="design-card-header">
+                        <div class="design-icon">
+                            <i class="fas fa-drafting-compass"></i>
                         </div>
-                        <p class="solution-description">Dedicated private network solutions for secure, high-performance connectivity.</p>
-                        <div class="hardware-platforms">
-                            <h5 class="platforms-title">Hardware Platforms</h5>
-                            <div class="platforms-grid">
-                                <span class="platform-tag">Nokia 5G Private</span>
-                                <span class="platform-tag">Ericsson Private 5G</span>
-                                <span class="platform-tag">Samsung Private 5G</span>
-                                <span class="platform-tag">CommScope Private LTE</span>
-                                <span class="platform-tag">Corning Private</span>
-                            </div>
-                        </div>
+                        <h3 class="design-service-title">Design Survey & Reports</h3>
                     </div>
-                    
-                    <div class="solution-card">
-                        <div class="card-header">
-                            <div class="solution-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <h4 class="solution-title">Industrial IoT</h4>
-                        </div>
-                        <p class="solution-description">Wireless connectivity for industrial automation and IoT applications.</p>
-                        <div class="hardware-platforms">
-                            <h5 class="platforms-title">Hardware Platforms</h5>
-                            <div class="platforms-grid">
-                                <span class="platform-tag">Honeywell Industrial</span>
-                                <span class="platform-tag">Schneider EcoStruxure</span>
-                                <span class="platform-tag">Siemens Industrial</span>
-                                <span class="platform-tag">Rockwell Automation</span>
-                                <span class="platform-tag">ABB Wireless</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="solution-card">
-                        <div class="card-header">
-                            <div class="solution-icon">
-                                <i class="fas fa-train"></i>
-                            </div>
-                            <h4 class="solution-title">Transportation</h4>
-                        </div>
-                        <p class="solution-description">Wireless solutions for transportation infrastructure and vehicles.</p>
-                        <div class="hardware-platforms">
-                            <h5 class="platforms-title">Hardware Platforms</h5>
-                            <div class="platforms-grid">
-                                <span class="platform-tag">Icomera Mobile</span>
-                                <span class="platform-tag">Nokia Transportation</span>
-                                <span class="platform-tag">CommScope Rail</span>
-                                <span class="platform-tag">Corning Transportation</span>
-                                <span class="platform-tag">SOLiD Rail</span>
-                            </div>
-                        </div>
+                    <div class="design-card-content">
+                        <p class="design-service-description">Pre-construction assessment that identifies every physical requirement for your network build. We map equipment locations, plan cable pathways, and document mounting specifications. The resulting design report provides installers with exact hardware lists, precise mounting instructions, and comprehensive project specifications—eliminating guesswork and ensuring smooth, efficient installation.</p>
                     </div>
                 </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Wireless Network Consulting Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="service-layout">
-                <div class="service-content">
-                    <h2 class="service-title">Wireless Network Consulting</h2>
-                    <p class="service-description">Expert guidance and strategic planning for your wireless infrastructure needs. Our consulting services help you navigate complex connectivity challenges and make informed decisions about your network architecture.</p>
-                    <a href="wireless_network_consulting.html" class="service-link">Learn More About Our Consulting Services</a>
+                
+                <div class="design-service-card">
+                    <div class="design-card-header">
+                        <div class="design-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="design-service-title">RF Network Design</h3>
+                    </div>
+                    <div class="design-card-content">
+                        <p class="design-service-description">Complete wireless network architecture tailored to your specific coverage, capacity, and performance needs. Using advanced mathematical modeling and specialized simulation software, we predict how radio waves will behave in your environment before hardware installation. This proactive approach ensures your network meets all requirements from day one, reducing costly post-installation adjustments.</p>
+                    </div>
                 </div>
-                <div class="service-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
+                
+                <div class="design-service-card">
+                    <div class="design-card-header">
+                        <div class="design-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="design-service-title">Equipment & System Engineering</h3>
+                    </div>
+                    <div class="design-card-content">
+                        <p class="design-service-description">Seamless integration of all network components through careful selection and specification of physical hardware—from equipment racks and cabling to power systems—while engineering the logical software layer including protocols, routing, and network configurations. The result is a unified, high-performance communication system where every component works in perfect harmony.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cellular DAS Systems Section -->
-    <section class="service-section">
+    <!-- Construction Services Section -->
+    <section class="construction-services-section">
         <div class="container">
-            <div class="service-layout reverse">
-                <div class="service-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
+            <div class="construction-header">
+                <div class="construction-badge">
+                    <span>Project Execution</span>
+                </div>
+                <h2 class="construction-title">Construction Services</h2>
+                <p class="construction-description">From initial planning to final handover, our comprehensive construction services ensure your network deployment is executed flawlessly. We manage every phase of the build process, turning engineering designs into fully operational infrastructure.</p>
+            </div>
+
+            <!-- Construction Process Timeline -->
+            <div class="construction-timeline">
+                <div class="construction-track"></div>
+                
+                <!-- Step 1: Project/Construction Management -->
+                <div class="construction-item" data-step="1">
+                    <div class="construction-marker">
+                        <div class="construction-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="construction-number">1</div>
+                    </div>
+                    <div class="construction-content">
+                        <h3 class="construction-step-title">Project/Construction Management</h3>
+                        <p class="construction-step-description">Oversight of network deployment from planning to completion, ensuring builds stay on schedule, within budget, and meet safety standards. We coordinate vendors, secure permits, and manage site crews to turn engineering designs into fully functional physical infrastructure.</p>
                     </div>
                 </div>
-                <div class="service-content">
-                    <h2 class="service-title">Cellular DAS Systems</h2>
-                    <p class="service-description">Distributed Antenna Systems (DAS) that provide seamless cellular coverage throughout your facility. Our DAS solutions ensure reliable connectivity for voice, data, and emergency communications in challenging indoor environments.</p>
-                    <a href="das-systems.html" class="service-link">Explore Our DAS Solutions</a>
+
+                <!-- Step 2: Procurement -->
+                <div class="construction-item" data-step="2">
+                    <div class="construction-marker">
+                        <div class="construction-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="construction-number">2</div>
+                    </div>
+                    <div class="construction-content">
+                        <h3 class="construction-step-title">Procurement</h3>
+                        <p class="construction-step-description">Sourcing, negotiating, and purchasing the hardware, software, and services required to build or maintain a network. We ensure all equipment meets technical specifications while optimizing costs and maintaining a reliable supply chain for your project.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Installation -->
+                <div class="construction-item" data-step="3">
+                    <div class="construction-marker">
+                        <div class="construction-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="construction-number">3</div>
+                    </div>
+                    <div class="construction-content">
+                        <h3 class="construction-step-title">Installation</h3>
+                        <p class="construction-step-description">Physical deployment and assembly of telecom hardware, including mounting antennas, running cables, and connecting power systems according to engineering specifications. The process concludes with commissioning, where equipment is powered on and tested to ensure proper communication with the network.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Commissioning -->
+                <div class="construction-item" data-step="4">
+                    <div class="construction-marker">
+                        <div class="construction-icon">
+                            <i class="fas fa-power-off"></i>
+                        </div>
+                        <div class="construction-number">4</div>
+                    </div>
+                    <div class="construction-content">
+                        <h3 class="construction-step-title">Commissioning</h3>
+                        <p class="construction-step-description">Powering up, configuring, and verifying that newly installed telecom equipment operates correctly according to system design. We run diagnostic tests and software updates to ensure hardware is fully integrated into the live network environment.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5: Close-Out Documentation -->
+                <div class="construction-item" data-step="5">
+                    <div class="construction-marker">
+                        <div class="construction-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div class="construction-number">5</div>
+                    </div>
+                    <div class="construction-content">
+                        <h3 class="construction-step-title">Close-Out Documentation</h3>
+                        <p class="construction-step-description">Final package of records including "as-built" drawings, test results, and site photos that prove a project was completed to specification. This official hand-over from construction to operations provides essential data for future maintenance and audits.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6: Acceptance Testing / Network Integration -->
+                <div class="construction-item" data-step="6">
+                    <div class="construction-marker">
+                        <div class="construction-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="construction-number">6</div>
+                    </div>
+                    <div class="construction-content">
+                        <h3 class="construction-step-title">Acceptance Testing / Network Integration</h3>
+                        <p class="construction-step-description">Final validation phase where individual components are connected into a unified system and tested against performance KPIs. This confirms the new infrastructure communicates seamlessly with the existing network and is ready to handle live subscriber traffic.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Enterprise Wi-Fi Solutions Section -->
-    <section class="service-section">
+    <!-- Support and Maintenance Section -->
+    <section class="support-maintenance-section">
         <div class="container">
-            <div class="service-layout">
-                <div class="service-content">
-                    <h2 class="service-title">Enterprise Wi-Fi Solutions</h2>
-                    <p class="service-description">Advanced Wi-Fi infrastructure designed for enterprise environments. Our solutions provide secure, high-performance wireless connectivity that scales with your business needs and supports mission-critical applications.</p>
-                    <a href="wifi-solutions.html" class="service-link">Discover Our Wi-Fi Solutions</a>
+            <div class="support-header">
+                <div class="support-badge">
+                    <span>Ongoing Support</span>
                 </div>
-                <div class="service-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
+                <h2 class="support-title">Support and Maintenance</h2>
+                <p class="support-description">Keep your wireless infrastructure running at peak performance with our comprehensive support and maintenance services. From proactive monitoring to rapid response troubleshooting, we ensure your network remains reliable, secure, and optimized around the clock.</p>
+            </div>
+            
+            <div class="support-services-grid">
+                <div class="support-service-card">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="support-service-title">24/7 Troubleshooting Services</h3>
+                    </div>
+                    <div class="support-card-content">
+                        <p class="support-service-description">Round-the-clock technical support and proactive monitoring to resolve network outages, hardware failures, or security breaches immediately. Our Network Operations Center (NOC) and on-call field technicians minimize downtime, ensuring critical communication infrastructure remains operational 365 days a year.</p>
+                    </div>
+                </div>
+                
+                <div class="support-service-card">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="support-service-title">Interference Hunting & Investigation</h3>
+                    </div>
+                    <div class="support-card-content">
+                        <p class="support-service-description">Specialized process of locating and identifying external radio signals that disrupt wireless network performance. Using spectrum analyzers and directional antennas, we track down the physical source of interference—from malfunctioning electronics to illegal boosters—ensuring your network operates at optimal levels.</p>
+                    </div>
+                </div>
+                
+                <div class="support-service-card">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="support-service-title">System Monitoring</h3>
+                    </div>
+                    <div class="support-card-content">
+                        <p class="support-service-description">Continuous observation of network health, traffic patterns, and hardware performance through automated software tools. Real-time anomaly detection provides visibility into key metrics like uptime and bandwidth usage, allowing proactive resolution of potential failures before they impact end-users.</p>
+                    </div>
+                </div>
+                
+                <div class="support-service-card">
+                    <div class="support-card-header">
+                        <div class="support-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="support-service-title">Service Level Agreements</h3>
+                    </div>
+                    <div class="support-card-content">
+                        <p class="support-service-description">Formal contracts that define specific performance standards, uptime guarantees, and response times. SLAs establish measurable benchmarks and accountability, including financial credits if the network fails to meet agreed-upon criteria, ensuring you receive the service quality you expect.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Public Safety Section -->
-    <section class="service-section">
+    <!-- Turnkey Implementation Section -->
+    <section class="turnkey-section">
         <div class="container">
-            <div class="service-layout reverse">
-                <div class="service-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
+            <div class="turnkey-layout">
+                <div class="turnkey-content">
+                    <div class="turnkey-badge">
+                        <span>Complete Solutions</span>
+                    </div>
+                    <h2 class="turnkey-title">Turnkey Implementation</h2>
+                    <p class="turnkey-description">Streamline your project with our comprehensive turnkey approach. We handle every phase from start to finish, delivering a ready-to-use system that meets all your requirements.</p>
+                    <div class="turnkey-main-content">
+                        <p class="turnkey-service-description">Complete "end-to-end" service where a single provider handles every phase of a project, from initial design and procurement to final commissioning and hand-over. This model provides the client with a ready-to-use system upon completion, shifting all technical and logistical responsibility to Linkwave.</p>
                     </div>
                 </div>
-                <div class="service-content">
-                    <h2 class="service-title">Public Safety</h2>
-                    <p class="service-description">Critical communication infrastructure for emergency services and public safety organizations. Our solutions ensure reliable, secure connectivity for first responders, enabling rapid response and coordinated emergency operations when every second counts.</p>
-                    <a href="public-safety.html" class="service-link">Learn About Our Public Safety Solutions</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Staffing Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="service-layout">
-                <div class="service-content">
-                    <h2 class="service-title">Staffing</h2>
-                    <p class="service-description">Expert staffing solutions for wireless infrastructure projects. Our team of certified professionals provides specialized talent for DAS installation, network engineering, project management, and technical support, ensuring your projects are completed with the highest level of expertise and efficiency.</p>
-                    <a href="staffing.html" class="service-link">Learn About Our Staffing Solutions</a>
-                </div>
-                <div class="service-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
+                <div class="turnkey-visual">
+                    <div class="turnkey-image-placeholder">
+                        <i class="fas fa-cogs"></i>
+                        <span>Turnkey Implementation Placeholder</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Training Services Section -->
-    <section class="service-section">
+    <!-- Training Section -->
+    <section class="training-section">
         <div class="container">
-            <div class="service-layout reverse">
-                <div class="service-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
+            <div class="training-layout">
+                <div class="training-visual">
+                    <div class="training-image-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Training Placeholder</span>
                     </div>
                 </div>
-                <div class="service-content">
-                    <h2 class="service-title">Training Services</h2>
-                    <p class="service-description">Comprehensive training programs for wireless infrastructure professionals. Our training services provide hands-on education in DAS systems, network design, installation techniques, and maintenance procedures, empowering your team with the knowledge and skills needed to excel in wireless technology implementation.</p>
-                    <a href="training.html" class="service-link">Explore Our Training Programs</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Private Networks Section -->
-    <section class="service-section">
-        <div class="container">
-            <div class="service-layout">
-                <div class="service-content">
-                    <h2 class="service-title">Private Networks</h2>
-                    <p class="service-description">Dedicated private network solutions for secure, high-performance connectivity. Our private network services deliver customized wireless infrastructure designed for enterprise environments, ensuring enhanced security, dedicated bandwidth, and complete control over your network operations for mission-critical applications.</p>
-                    <a href="private-networks.html" class="service-link">Discover Our Private Network Solutions</a>
-                </div>
-                <div class="service-visual">
-                    <div class="placeholder-box">
-                        <span class="placeholder-text">placeholder</span>
+                <div class="training-content">
+                    <div class="training-badge">
+                        <span>Knowledge Transfer</span>
+                    </div>
+                    <h2 class="training-title">Training</h2>
+                    <p class="training-description">Empower your team with the expertise needed to maximize your network's performance and longevity. Our comprehensive training programs ensure your staff is fully equipped to operate and maintain your telecom systems.</p>
+                    <div class="training-main-content">
+                        <p class="training-service-description">Educational programs designed to provide staff with the technical knowledge and hands-on skills required to operate, maintain, and troubleshoot specific telecom systems. These sessions ensure that the workforce is proficient in safety protocols, software interfaces, and hardware configurations to maximize the network's longevity and performance.</p>
                     </div>
                 </div>
             </div>
