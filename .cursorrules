@@ -24,6 +24,7 @@ This is a multi-page HTML website for LinkWave Wireless, a wireless network cons
 - Avoid inline styles unless absolutely necessary
 - Use meaningful class names that describe purpose, not appearance
 - Ensure proper vendor prefixes when needed
+- Avoid !important overrides until absolutely necessary
 
 ### JavaScript
 - Use modern ES6+ syntax
