@@ -92,69 +92,44 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero hero--full">
-        <!-- Background image -->
-        <picture class="hero__bg">
-            <img
-                src="about_us_images/about_us_main.png"
-                alt="About Us - Linkwave Wireless"
-                loading="eager"
-                fetchpriority="high"
-            />
-        </picture>
-
-        <!-- Dark overlay for readability -->
-        <div class="hero__overlay" aria-hidden="true"></div>
-
-        <!-- Centered content -->
-        <div class="hero__container">
-            <div class="hero__content">
-                <h1 class="hero__title">
+    <section class="hero new-hero about-hero" aria-labelledby="hero-title">
+        <div class="new-hero__background">
+            <div class="new-hero__gradient"></div>
+        </div>
+        <div class="container new-hero__inner">
+            <div class="new-hero__content">
+                <h1 id="hero-title" class="hero__title">
                     Your Trusted Partner in Seamless Wireless Integration
                 </h1>
-                <p class="hero__description">
+                <p class="new-hero__subhead">
                     At Linkwave, we bring wireless expertise to the most demanding environments. From design to deployment, we deliver high-performance, secure, and custom-tailored wireless solutions backed by Professional Engineers of Ontario. Experience connectivity that works — every time, everywhere.
                 </p>
             </div>
         </div>
     </section>
 
-         <!-- About Us Section -->
-     <section id="about-us" class="about-section">
+    <!-- Our Story Section -->
+    <section id="our-story" class="about-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Us</h2>
-                <p class="section-description">Discover the foundation, values, and innovation that drive Linkwave Wireless forward.</p>
-            </div>
-            
-            <div class="about-cards-grid">
-                <div class="about-card fade-up delay-0">
-                    <div class="about-card-icon">
-                        <i class="fas fa-cubes"></i>
+            <div class="about-section__wrapper">
+                <div class="about-section__text-side">
+                    <h2 class="about-section__title">Our Story</h2>
+                    <div class="about-section__content">
+                        <p class="about-section__text">
+                            Founded in the Greater Toronto Area (GTA), Linkwave Wireless is a young and dynamic company with extensive experience in the telecommunications industry. Our success is built on a strong commitment to earning our clients' trust through honesty, integrity, continuous learning, and hard work.
+                        </p>
+                        <p class="about-section__text">
+                            From the start, our founders were driven by a clear purpose: to innovate and deliver superior-quality solutions.
+                        </p>
                     </div>
-                    <h3>Our Foundation</h3>
-                    <p>Founded in the Greater Toronto Area by telecom professionals, Linkwave began with a mission to do things differently. Our roots are grounded in experience, local insight, and a commitment to delivering better solutions that last.</p>
                 </div>
                 
-                <div class="about-card fade-up delay-100">
-                    <div class="about-card-icon">
-                        <i class="fas fa-handshake"></i>
+                <div class="about-section__image-side">
+                    <div class="about-section__image-placeholder">
+                        <i class="fas fa-image" aria-hidden="true"></i>
+                        <span>Image Placeholder</span>
                     </div>
-                    <h3>Built on Trust</h3>
-                    <p>We believe that every lasting partnership begins with trust. Our team values honesty, integrity, and clear communication. Through consistency and care, we aim to earn confidence and deliver reliable service that clients can count on.</p>
                 </div>
-                
-                <div class="about-card fade-up delay-200">
-                    <div class="about-card-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Growth & Innovation</h3>
-                    <p>Linkwave continues to grow through curiosity, learning, and forward thinking. We stay flexible, track evolving technologies, and bring new ideas to every project to deliver solutions that are smarter, stronger, and ready for what's next.</p>
-                </div>
-            </div>
-            
-            <div class="about-cta">
-                <a href="#contact" class="btn btn--orange">See if we're a fit for you.</a>
             </div>
         </div>
     </section>
@@ -168,48 +143,41 @@
              </div>
              
              <div class="values-timeline">
-                 <div class="timeline-line"></div>
-                 
-                 <div class="value-node fade-up delay-0">
-                     <div class="value-icon">
-                         <i class="fas fa-compass"></i>
-                     </div>
-                     <div class="value-card">
-                         <h3>Integrity</h3>
-                         <p>We keep our word and own our choices. This value shapes how we build trust, work as a team, and serve each client with care.</p>
-                     </div>
-                 </div>
-                 
-                 <div class="value-node fade-up delay-100">
-                     <div class="value-icon">
-                         <i class="fas fa-cog"></i>
-                     </div>
-                     <div class="value-card">
-                         <h3>Innovation</h3>
-                         <p>We think boldly and aim higher. By pushing ideas forward, we       design better systems that help clients lead the way.</p>
-                     </div>
-                 </div>
-                 
-                 <div class="value-node fade-up delay-200">
-                     <div class="value-icon">
-                         <i class="fas fa-broadcast-tower"></i>
-                     </div>
-                     <div class="value-card">
-                         <h3>Reliability</h3>
-                         <p>Our systems are built to last. Clients count on us for stable         results and service that works every single time.</p>
-                     </div>
-                 </div>
-                 
-                 <div class="value-node fade-up delay-300">
-                     <div class="value-icon">
-                         <i class="fas fa-hands-helping"></i>
-                     </div>
-                     <div class="value-card">
-                         <h3>Collaboration</h3>
-                         <p>We work closely with our team and clients. Clear goals, shared   effort, and open talk lead to real results that last.</p>
-                     </div>
-                 </div>
-             </div>
+                <div class="value-node fade-up delay-0">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                </div>
+                
+                <div class="value-node fade-up delay-100">
+                    <div class="value-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Expertise</h3>
+                </div>
+                
+                <div class="value-node fade-up delay-200">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                </div>
+                
+                <div class="value-node fade-up delay-300">
+                    <div class="value-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Quality</h3>
+                </div>
+                
+                <div class="value-node fade-up delay-400">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                </div>
+            </div>
          </div>
      </section>
 
@@ -218,35 +186,53 @@
         <div class="container">
             <div class="section-header">
                 <h2>Mission & Vision</h2>
-                <p>What motivates us daily and defines the future we're building toward.</p>
+                <p class="mission-vision-intro">Our mission, vision, and values are more than statements — they guide how we work, how we make decisions, and how we treat one another.</p>
             </div>
             
-            <div class="mission-vision-cards">
-                <!-- Mission Card -->
-                <div class="mission-vision-card group">
-                    <div class="card-gradient-overlay"></div>
-                    <div class="card-content">
-                        <div class="card-icon">
-                            <div class="icon-container">
-                                <i class="fas fa-bullseye mission-icon" aria-label="Mission target"></i>
-                            </div>
+            <!-- Mission & Vision Split Layout -->
+            <div class="mission-vision-split">
+                <!-- Mission -->
+                <div class="mv-card mission-card">
+                    <div class="mv-card-background"></div>
+                    <div class="mv-card-content">
+                        <div class="mv-icon-circle mission-icon">
+                            <i class="fas fa-bullseye" aria-hidden="true"></i>
                         </div>
-                        <h3>MISSION</h3>
-                        <p>We're committed to making wireless systems simple, strong, and efficient through clear planning and proven results.<br><br>Our mission is to offer scalable, secure systems that build long-term trust with clients by providing steady service and smooth, stable connectivity at every step.</p>
+                        <div class="mv-card-header">
+                            <span class="mv-label">Our Mission</span>
+                            <h3 class="mv-title">What We Do</h3>
+                        </div>
+                        <p class="mv-statement">To provide first-class, carrier-grade, engineered wireless connectivity solutions that address in-building wireless challenges and ensure reliable, scalable, and efficient communication for our clients.</p>
+                        <div class="mv-highlight">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            <span>Delivering high-quality solutions that our clients can rely on</span>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Vision Card -->
-                <div class="mission-vision-card group">
-                    <div class="card-gradient-overlay"></div>
-                    <div class="card-content">
-                        <div class="card-icon">
-                            <div class="icon-container">
-                                <i class="fas fa-eye vision-icon" aria-label="Vision eye"></i>
-                            </div>
+                <!-- Connecting Element -->
+                <div class="mv-connector">
+                    <div class="mv-connector-icon">
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <!-- Vision -->
+                <div class="mv-card vision-card">
+                    <div class="mv-card-background"></div>
+                    <div class="mv-card-content">
+                        <div class="mv-icon-circle vision-icon">
+                            <i class="fas fa-eye" aria-hidden="true"></i>
                         </div>
-                        <h3>VISION</h3>
-                        <p>We imagine a world where wireless systems help people and teams stay close, work fast, and move freely in any space.<br><br>Our vision is to raise the bar for in-building wireless by leading with sharp ideas, clear goals, and a bold focus on how we shape the future of signal and speed.</p>
+                        <div class="mv-card-header">
+                            <span class="mv-label">Our Vision</span>
+                            <h3 class="mv-title">Where We're Going</h3>
+                        </div>
+                        <p class="mv-statement">Linkwave Wireless Solutions will be a leading North American provider of advanced wireless solutions, enabling seamless connectivity and creating a more connected world through innovation, expertise, and customer-centric services.</p>
+                        <div class="mv-highlight">
+                            <i class="fas fa-check-circle" aria-hidden="true"></i>
+                            <span>Focused on sustainable growth, technical excellence, and long-term partnerships</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -257,7 +243,7 @@
     <section id="our-partners" class="partners-section">
         <div class="container">
             <div class="partners-header">
-                <h2 class="partners-title">Our Partners</h2>
+                <h2 class="partners-title">Technology Partners</h2>
                 <p class="partners-subtitle">
                     We're proud to work alongside industry leaders. These valued partners help us deliver smarter wireless infrastructure, every time.
                 </p>
@@ -266,28 +252,6 @@
             <!-- Partners Swiper -->
             <div class="swiper partners-swiper">
                 <div class="swiper-wrapper">
-                    <!-- CORNING -->
-                    <div class="swiper-slide partner-card">
-                        <div class="partner-photo-container">
-                            <img src="index_images/corning logo.jpg" alt="CORNING Logo" class="partner-logo">
-                        </div>
-                        <div class="partner-text-container">
-                            <h3 class="partner-text">CORNING</h3>
-                            <p class="partner-description">Corning Inc. is a global leader in glass science, ceramics, and optical physics. With over 160 years of innovation, Corning creates materials used in display tech, life sciences, and wireless infrastructure around the world.</p>
-                        </div>
-                    </div>
-
-                    <!-- COMMSCOPE -->
-                    <div class="swiper-slide partner-card">
-                        <div class="partner-photo-container">
-                            <img src="index_images/commscope logo.jpg" alt="COMMSCOPE Logo" class="partner-logo">
-                        </div>
-                        <div class="partner-text-container">
-                            <h3 class="partner-text">COMMSCOPE</h3>
-                            <p class="partner-description">CommScope enables faster, smarter, and more reliable networks. From wired to wireless solutions, they help service providers and enterprises boost performance, expand capacity, and modernize network infrastructure.</p>
-                        </div>
-                    </div>
-
                     <!-- ICOMERA -->
                     <div class="swiper-slide partner-card" data-partner="icomera">
                         <div class="partner-photo-container">
@@ -296,17 +260,6 @@
                         <div class="partner-text-container">
                             <h3 class="partner-text">ICOMERA</h3>
                             <p class="partner-description">Icomera delivers high-speed mobile internet for public transit. Powering WiFi for millions of passengers on 30,000+ buses, trains, and trams, their tech improves safety, efficiency, and digital experience on the move.</p>
-                        </div>
-                    </div>
-
-                    <!-- SUNWAVE -->
-                    <div class="swiper-slide partner-card">
-                        <div class="partner-photo-container">
-                            <img src="index_images/sunwave logo.jpg" alt="SUNWAVE Logo" class="partner-logo">
-                        </div>
-                        <div class="partner-text-container">
-                            <h3 class="partner-text">SUNWAVE</h3>
-                            <p class="partner-description">Sunwave makes wireless coverage tools and network hardware used across Canada. They provide DAS, IoT, and other smart systems to help carriers improve indoor signal, boost speed, and extend range in tough places.</p>
                         </div>
                     </div>
 
@@ -321,25 +274,14 @@
                         </div>
                     </div>
 
-                    <!-- SOLiD -->
+                    <!-- SOLiD TECHNOLOGIES -->
                     <div class="swiper-slide partner-card" data-partner="solid">
                         <div class="partner-photo-container">
-                            <img src="index_images/SOLID logo.jpg" alt="SOLiD Logo" class="partner-logo">
+                            <img src="index_images/SOLID logo.jpg" alt="SOLiD Technologies Logo" class="partner-logo">
                         </div>
                         <div class="partner-text-container">
-                            <h3 class="partner-text">SOLiD</h3>
+                            <h3 class="partner-text">SOLiD TECHNOLOGIES</h3>
                             <p class="partner-description">SOLiD builds tools for better indoor wireless. Their DAS systems are used in places like malls, stadiums, and offices. These tools help carry phone and data signals where normal coverage may not reach or stay strong.</p>
-                        </div>
-                    </div>
-
-                    <!-- NOVOTECH -->
-                    <div class="swiper-slide partner-card">
-                        <div class="partner-photo-container">
-                            <img src="index_images/novotech logo.jpg" alt="NOVOTECH Logo" class="partner-logo">
-                        </div>
-                        <div class="partner-text-container">
-                            <h3 class="partner-text">NOVOTECH</h3>
-                            <p class="partner-description">Novotech is a top distributor of IoT and M2M tech, offering modems, antennas, and modules. With key partnerships across North America, they enable scalable hardware solutions for automation, tracking, and connectivity.</p>
                         </div>
                     </div>
 
@@ -351,6 +293,76 @@
                         <div class="partner-text-container">
                             <h3 class="partner-text">NOKIA</h3>
                             <p class="partner-description">Nokia makes wireless systems and phones used around the world. They lead the way in 5G tech, helping companies and users stay connected through better, faster networks built for today and ready for what's next.</p>
+                        </div>
+                    </div>
+
+                    <!-- ANDREWS -->
+                    <div class="swiper-slide partner-card">
+                        <div class="partner-photo-container">
+                            <div class="partner-logo-placeholder">
+                                <i class="fas fa-building" aria-hidden="true"></i>
+                                <span>ANDREWS</span>
+                            </div>
+                        </div>
+                        <div class="partner-text-container">
+                            <h3 class="partner-text">ANDREWS</h3>
+                            <p class="partner-description">Andrews is a leading provider of wireless infrastructure solutions, delivering innovative technologies that enable seamless connectivity and enhanced network performance.</p>
+                        </div>
+                    </div>
+
+                    <!-- ADRF -->
+                    <div class="swiper-slide partner-card">
+                        <div class="partner-photo-container">
+                            <div class="partner-logo-placeholder">
+                                <i class="fas fa-building" aria-hidden="true"></i>
+                                <span>ADRF</span>
+                            </div>
+                        </div>
+                        <div class="partner-text-container">
+                            <h3 class="partner-text">ADRF</h3>
+                            <p class="partner-description">ADRF specializes in RF distribution systems and wireless coverage solutions, providing cutting-edge technology for in-building and distributed antenna systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEXTIVITY -->
+                    <div class="swiper-slide partner-card">
+                        <div class="partner-photo-container">
+                            <div class="partner-logo-placeholder">
+                                <i class="fas fa-building" aria-hidden="true"></i>
+                                <span>NEXTIVITY</span>
+                            </div>
+                        </div>
+                        <div class="partner-text-container">
+                            <h3 class="partner-text">NEXTIVITY</h3>
+                            <p class="partner-description">Nextivity delivers intelligent cellular coverage solutions, helping businesses improve in-building wireless connectivity and enhance network performance.</p>
+                        </div>
+                    </div>
+
+                    <!-- MOTOROLA -->
+                    <div class="swiper-slide partner-card">
+                        <div class="partner-photo-container">
+                            <div class="partner-logo-placeholder">
+                                <i class="fas fa-building" aria-hidden="true"></i>
+                                <span>MOTOROLA</span>
+                            </div>
+                        </div>
+                        <div class="partner-text-container">
+                            <h3 class="partner-text">MOTOROLA</h3>
+                            <p class="partner-description">Motorola Solutions provides mission-critical communications and analytics solutions, delivering innovative technology for public safety and enterprise communications.</p>
+                        </div>
+                    </div>
+
+                    <!-- AVARI -->
+                    <div class="swiper-slide partner-card">
+                        <div class="partner-photo-container">
+                            <div class="partner-logo-placeholder">
+                                <i class="fas fa-building" aria-hidden="true"></i>
+                                <span>AVARI</span>
+                            </div>
+                        </div>
+                        <div class="partner-text-container">
+                            <h3 class="partner-text">AVARI</h3>
+                            <p class="partner-description">Avari delivers advanced wireless solutions and network infrastructure technologies, enabling reliable connectivity and enhanced communication systems.</p>
                         </div>
                     </div>
                 </div>
@@ -365,84 +377,199 @@
         </div>
     </section>
 
-    <!-- Our Clients Section -->
-    <section id="our-clients" class="clients-section">
+    <!-- Clients Section -->
+    <section id="clients" class="clients-section">
         <div class="container">
             <div class="clients-header">
-                <h2 class="clients-title">Our Clients</h2>
+                <h2 class="clients-title">Clients</h2>
                 <p class="clients-subtitle">
                     We've had the privilege of working with a diverse range of clients across North America. From enterprise leaders to local operations, these valued partnerships reflect our commitment to delivering high-quality wireless infrastructure solutions.
                 </p>
             </div>
             
-            <div class="clients-content">
-                <div class="clients-photo-container">
-                    <img src="about_us_images/our_clients_image.png" alt="Our Clients" class="clients-photo">
+            <div class="clients-logo-scroll">
+                <div class="clients-logos-wrapper">
+                    <div class="clients-logos">
+                        <!-- Client Logos - Duplicated for seamless loop -->
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Motorola</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Rogers</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Ontario Power Generation</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Johnson Controls</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Bell Mobility</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Freedom Mobile</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Icomera</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Toronto Police</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Walmart</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Microsoft</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Metrolinx</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Boingo Wireless</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>STM</span>
+                            </div>
+                        </div>
+                        <!-- Duplicate set for seamless loop -->
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Motorola</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Rogers</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Ontario Power Generation</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Johnson Controls</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Bell Mobility</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Freedom Mobile</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Icomera</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Toronto Police</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Walmart</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Microsoft</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Metrolinx</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>Boingo Wireless</span>
+                            </div>
+                        </div>
+                        <div class="client-logo-item">
+                            <div class="client-logo-placeholder">
+                                <span>STM</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Certifications Section -->
-    <section id="our-certifications" class="certifications-section">
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
         <div class="container">
             <div class="certifications-header">
-                <h2 class="certifications-title">Our Certifications</h2>
+                <h2 class="certifications-title">Certifications</h2>
                 <p class="certifications-subtitle">
                     We're proud to hold industry-recognized certifications that reflect our commitment to safety, quality, and technical excellence.
                 </p>
             </div>
             
-            <div class="certifications-grid">
-                <!-- Certification 1 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi1.png" alt="Certification 1" class="certification-logo">
-                </div>
-                
-                <!-- Certification 2 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi2.png" alt="Certification 2" class="certification-logo">
-                </div>
-                
-                <!-- Certification 3 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi3.png" alt="Certification 3" class="certification-logo">
-                </div>
-                
-                <!-- Certification 4 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi4.png" alt="Certification 4" class="certification-logo">
-                </div>
-                
-                <!-- Certification 5 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi5.png" alt="Certification 5" class="certification-logo">
-                </div>
-                
-                <!-- Certification 6 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi6.png" alt="Certification 6" class="certification-logo">
-                </div>
-                
-                <!-- Certification 7 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi7.png" alt="Certification 7" class="certification-logo">
-                </div>
-                
-                <!-- Certification 8 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi8.png" alt="Certification 8" class="certification-logo">
-                </div>
-                
-                <!-- Certification 9 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi9.png" alt="Certification 9" class="certification-logo">
-                </div>
-                
-                <!-- Certification 10 -->
-                <div class="certification-tile">
-                    <img src="index_images/certi10.png" alt="Certification 10" class="certification-logo">
-                </div>
+            <div class="certifications-list-container">
+                <ul class="certifications-list">
+                    <li class="certification-item">
+                        <span class="certification-acronym">OIQ</span>
+                        <span class="certification-separator">—</span>
+                        <span class="certification-name">Order of Engineers of Quebec</span>
+                    </li>
+                    
+                    <li class="certification-item">
+                        <span class="certification-acronym">APCO</span>
+                        <span class="certification-separator">—</span>
+                        <span class="certification-name">Association of Public-Safety Communications Officials</span>
+                    </li>
+                    
+                    <li class="certification-item">
+                        <span class="certification-acronym">SBC</span>
+                        <span class="certification-separator">—</span>
+                        <span class="certification-name">Small Business Certification</span>
+                    </li>
+                    
+                    <li class="certification-item">
+                        <span class="certification-acronym">PEO</span>
+                        <span class="certification-separator">—</span>
+                        <span class="certification-name">Professional Engineers Ontario</span>
+                    </li>
+                    
+                    <li class="certification-item">
+                        <span class="certification-acronym">EGBC</span>
+                        <span class="certification-separator">—</span>
+                        <span class="certification-name">Engineers and Geoscientists BC</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -485,38 +612,54 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column company-info">
-                                            <div class="footer-logo">
-                            <div class="logo">
-                                <img src="LW_logo_original.png" alt="Linkwave Logo" class="footer-logo-img">
-                            </div>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-layout">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <img src="LW_logo_original.png" alt="Linkwave Wireless logo">
                         </div>
-                    <p class="company-description">
-                        Founded in the Greater Toronto Area (GTA), Linkwave Wireless is a young and dynamic company with long-term experience in the telecommunications industry. The most important ingredient in our recipe of success is our commitment to the fundamental principles of earning clients' trust: honesty, integrity, continued education and hard work.
-                    </p>
-                    <div class="social-media">
-                        <a href="#" class="linkedin-icon">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                        <p class="footer-tagline">Connecting You with Seamless Wireless Solutions.</p>
+                    </div>
+                    <div class="footer-links-groups">
+                        <div class="footer-links-group">
+                            <h3 class="footer-heading">Company</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about_us.html">About Us</a></li>
+                                <li><a href="our_team.html">Our Team</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links-group">
+                            <h3 class="footer-heading">Solutions &amp; Projects</h3>
+                            <ul>
+                                <li><a href="our_services.html">Turnkey Services</a></li>
+                                <li><a href="our_projects.html">Our Projects</a></li>
+                                <li><a href="our_process.html">Our Process</a></li>
+                                <li><a href="wireless_network_consulting.html">Wireless Consulting</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links-group">
+                            <h3 class="footer-heading">Resources</h3>
+                            <ul>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="our_solutions.html">Our Solutions</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="footer-column quick-links">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="our_projects.html">Our Projects</a></li>
-                        <li><a href="#products">Products We Support</a></li>
-                        <li><a href="#solutions">Turnkey Wireless Network Solutions</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                        <li><a href="#learn">Learn</a></li>
-                        <li><a href="#careers">Careers</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/linkwave-wireless/" aria-label="LinkedIn" class="footer-social-link">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
                 </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Linkwave Wireless Inc. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -528,3 +671,4 @@
     <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
+

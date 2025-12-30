@@ -42,6 +42,7 @@ This is a multi-page HTML website for LinkWave Wireless, a wireless network cons
 - Maintain consistent file naming (lowercase with underscores)
 
 ## Design & UX Guidelines
+- The intent is to support a clean, visual, and scannable UX/UI experience
 - Maintain consistent design language across all pages
 - Ensure responsive design works on mobile, tablet, and desktop
 - Use the established color scheme and typography (Inter for titles, Poppins for body text)
@@ -49,6 +50,8 @@ This is a multi-page HTML website for LinkWave Wireless, a wireless network cons
 - Ensure proper contrast ratios for text
 - Make interactive elements clearly identifiable
 - Use smooth transitions and animations where appropriate
+- When given content to add, content should be optimized and structured to avoid large blocks of text and ensure the pages do not feel overwhelming. Visual hierarchy, spacing, and layout should take priority over long, copy-heavy sections
+- Consistency in typography, font sizes, and spacing across the website is key to maintaining clarity and cohesion
 
 ## Best Practices
 - Always test changes across different browsers

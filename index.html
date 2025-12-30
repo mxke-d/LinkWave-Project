@@ -3,50 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linkwave Wireless - Reliable Wireless for Complex Spaces</title>
-    
+    <title>Linkwave Wireless – Enterprise DAS & Wireless Experts</title>
+    <meta name="description" content="Linkwave Wireless designs, deploys, and monitors mission-critical DAS systems for healthcare, transit, energy, and commercial campuses across Canada.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-
+<body class="new-home">
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="LW_logo_original.png" alt="Linkwave Logo">
+                <img 
+                    src="LW_logo_white.png" 
+                    alt="Linkwave Wireless logo"
+                    data-logo-dark="LW_logo_white.png"
+                    data-logo-light="LW_logo_original.png">
             </div>
-            <nav class="nav">
+            <nav class="nav" aria-label="Primary navigation">
                 <a href="index.html">Home</a>
-                <a href="new_index.html">New Landing Preview</a>
                 <div class="dropdown">
-                    <a href="about_us.html" class="dropdown-toggle">Who we are <i class="fas fa-chevron-down"></i></a>
+                    <a href="about_us.html" class="dropdown-toggle">Who we are <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                     <div class="dropdown-menu">
                         <a href="about_us.html">About Us</a>
                         <a href="our_team.html">Our Team</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="our_services.html" class="dropdown-toggle">What we do <i class="fas fa-chevron-down"></i></a>
+                    <a href="our_services.html" class="dropdown-toggle">What we do <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                     <div class="dropdown-menu">
                         <a href="our_services.html">Our Services</a>
                         <a href="our_projects.html">Our Projects</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <a href="our_process.html" class="dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                    <a href="our_process.html" class="dropdown-toggle">How we do it <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                     <div class="dropdown-menu">
                         <a href="our_process.html">Our Processes</a>
                         <a href="learn.html">Learn</a>
@@ -64,25 +66,25 @@
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-        <nav class="mobile-nav">
+    <div class="mobile-menu-overlay" aria-hidden="true">
+        <nav class="mobile-nav" aria-label="Mobile navigation">
             <a href="index.html" class="mobile-nav__link">Home</a>
             <div class="mobile-dropdown">
-                <a href="about_us.html" class="mobile-dropdown-toggle">Who we are <i class="fas fa-chevron-down"></i></a>
+                <a href="about_us.html" class="mobile-dropdown-toggle">Who we are <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="mobile-dropdown-menu">
                     <a href="about_us.html">About Us</a>
                     <a href="our_team.html">Our Team</a>
                 </div>
             </div>
             <div class="mobile-dropdown">
-                <a href="our_services.html" class="mobile-dropdown-toggle">What we do <i class="fas fa-chevron-down"></i></a>
+                <a href="our_services.html" class="mobile-dropdown-toggle">What we do <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="mobile-dropdown-menu">
                     <a href="our_services.html">Our Services</a>
                     <a href="our_projects.html">Our Projects</a>
                 </div>
             </div>
             <div class="mobile-dropdown">
-                <a href="our_process.html" class="mobile-dropdown-toggle">How we do it <i class="fas fa-chevron-down"></i></a>
+                <a href="our_process.html" class="mobile-dropdown-toggle">How we do it <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                 <div class="mobile-dropdown-menu">
                     <a href="our_process.html">Our Processes</a>
                     <a href="learn.html">Learn</a>
@@ -90,61 +92,55 @@
                 </div>
             </div>
             <a href="careers.html" class="mobile-nav__link">Careers</a>
-            <button class="mobile-contact-btn">Contact Us</button>
+            <a href="#coverage-plan" class="mobile-contact-btn">Book a Coverage Audit</a>
         </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero hero--full">
-        <!-- Background video -->
-        <div class="hero__bg">
-            <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="index_images/EDC_bg.png">
-                <source src="index_images/Homepage_Banner.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <!-- Dark overlay for readability -->
-        <div class="hero__overlay" aria-hidden="true"></div>
-
-        <!-- Centered content -->
-        <div class="hero__container">
-            <div class="hero__content">
-                <h1 class="hero__title">
-                    Wireless That Works Where Others Don’t
-                </h1>
-                <p class="hero__subtitle">
-                    Expert DAS, Wi-Fi, and Private Networks—designed for tough environments, built to perform.
-                </p>
+    <main class="new-home__main" id="top">
+        <!-- Hero Section -->
+        <section class="hero new-hero" aria-labelledby="hero-title">
+            <div class="new-hero__background">
+                <div class="new-hero__gradient"></div>
+                <video class="new-hero__video" autoplay muted loop playsinline preload="auto" poster="index_images/EDC_bg.png">
+                    <source src="index_images/Homepage_Banner.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-        </div>
-    </section>
+            <div class="container new-hero__inner">
+                <div class="new-hero__content">
+                    <p class="eyebrow" data-animate="fade-up">Enterprise DAS &amp; Public Safety Networks</p>
+                    <h1 id="hero-title" data-animate="fade-up" data-animate-delay="120">Connecting You with Seamless Wireless Solutions</h1>
+                    <p class="new-hero__subhead" data-animate="fade-up" data-animate-delay="220">
+                        From RF modeling to carrier integration, Linkwave makes compliant, future-ready DAS a reality for every environment you manage.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <!-- Industries Section -->
         <section id="industries" class="industries">
             <div class="industries-wrapper">
-                <div class="industries-intro">
-                    <h2 class="industries-heading">Industries We Serve</h2>
+                <div class="industries-intro" data-animate="fade-up" data-animate-delay="360">
+                    <p class="industries-eyebrow">WHAT WE DO</p>
+                    <h2 class="industries-heading">Our projects</h2>
+                    <h3 class="industries-subheading" data-animate="fade-up" data-animate-delay="80">Wireless expertise tailored for today's digital environments</h3>
                     <p class="industries-lead">
-                        We build tailored wireless networks for demanding environments such as hospitals, transit hubs, energy plants, and commercial towers.
+                        Tailored wireless networks for hospitals, transit hubs, energy plants, and commercial towers. Explore our featured projects across Ontario.
                     </p>
-                    <p class="industries-lead">
-                        Explore some of our featured projects across Ontario.
-                    </p>
+                    <a href="our_projects.html" class="industries-cta-btn">Read More</a>
                 </div>
 
-                <div class="industries-slider">
+                <div class="industries-slider" data-animate="fade-up" data-animate-delay="100">
                     <div class="swiper cs-swiper">
                         <div class="swiper-wrapper">
                             <article class="swiper-slide cs-card">
-                                <div class="cs-card-media" style="--cs-bg:url('index_images/powerade center.jpg')">
-                                    <span class="industry-tag">Sports &amp; Entertainment</span>
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/costco-warehouses-img-placeholder.png')">
+                                    <span class="industry-tag">Commercial</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
-                                        <h3 class="cs-card-title">Powerade Centre</h3>
+                                        <h3 class="cs-card-title">Costco Warehouses</h3>
                                         <p class="cs-card-text">
-                                            First Canadian multi-carrier system with SOLID Technologies. Designed
-                                            and commissioned by Linkwave for Wind Mobile and Bell Mobility.
+                                            Commercial cellular enhancement with public safety turnkey solution. Tri-carrier capable system for Rogers, Bell, and Telus, built in compliance with carrier agreements.
                                         </p>
                                         <a href="#" class="cs-btn">Read More</a>
                                     </div>
@@ -152,22 +148,105 @@
                             </article>
 
                             <article class="swiper-slide cs-card">
-                                <div class="cs-card-media" style="--cs-bg:url('index_images/Ontario power generation.jpg')">
-                                    <span class="industry-tag">Energy</span>
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/vaudreuil-solange-img-placeholder.png')">
+                                    <span class="industry-tag">Healthcare</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
-                                        <h3 class="cs-card-title">Ontario Power Generation</h3>
+                                        <h3 class="cs-card-title">Vaudreuil-Solange</h3>
                                         <p class="cs-card-text">
-                                            Long-term cellular solution for Darlington Energy Complex. New DAS designed &amp;
-                                            commissioned by Linkwave, scalable as OPG expands.
+                                            Neutral-host cellular and LMR+Paging turnkey DAS solution. Tri-carrier capable system for Rogers, Telus, Bell, and Videotron, with UHF LMR and 900MHz paging services.
                                         </p>
-                                        <a href="our_projects/ontario-power-generation.html" class="cs-btn">Read More</a>
+                                        <a href="#" class="cs-btn">Read More</a>
                                     </div>
                                 </div>
                             </article>
 
                             <article class="swiper-slide cs-card">
-                                <div class="cs-card-media" style="--cs-bg:url('index_images/humber river hospital.jpg')">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/union-station-train-station-img-placeholder.png')">
+                                    <span class="industry-tag">Transportation</span>
+                                    <div class="cs-card-overlay"></div>
+                                    <div class="cs-card-body">
+                                        <h3 class="cs-card-title">Union Station</h3>
+                                        <p class="cs-card-text">
+                                            Public safety turnkey solution with P25 and conventional radio systems. Supporting Toronto Police, Fire, and EMS services with hybrid fiber/coax infrastructure.
+                                        </p>
+                                        <a href="#" class="cs-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="swiper-slide cs-card">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/macdonald-block-img-placeholder.png')">
+                                    <span class="industry-tag">Government</span>
+                                    <div class="cs-card-overlay"></div>
+                                    <div class="cs-card-body">
+                                        <h3 class="cs-card-title">MacDonald Block</h3>
+                                        <p class="cs-card-text">
+                                            Public safety turnkey solution with next-generation fiber to the edge DAS platform. Multi-carrier capable system for Bell, Telus, Rogers, and Freedom, supporting 5G, P25, and 2-way radio for Toronto Police, Fire, and EMS.
+                                        </p>
+                                        <a href="#" class="cs-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="swiper-slide cs-card">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/brentwood-tower-6-img-placeholder.png')">
+                                    <span class="industry-tag">Commercial</span>
+                                    <div class="cs-card-overlay"></div>
+                                    <div class="cs-card-body">
+                                        <h3 class="cs-card-title">Brentwood Tower</h3>
+                                        <p class="cs-card-text">
+                                            Public safety E-Comm 911 DAS for residential tower in Burnaby, BC. Passive DAS system with 700/800 MHz P25 Phase 2 technology, covering below and above grade areas with off-air signal source.
+                                        </p>
+                                        <a href="#" class="cs-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="swiper-slide cs-card">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/microsoft-data-centres-img-placeholder.png')">
+                                    <span class="industry-tag">Data Centres</span>
+                                    <div class="cs-card-overlay"></div>
+                                    <div class="cs-card-body">
+                                        <h3 class="cs-card-title">Microsoft Data Centres</h3>
+                                        <p class="cs-card-text">
+                                            Turnkey cellular and LMR (PTT) DAS solutions for Class A datacenters. Integrated system supporting LTE, 5G, and MIMO cellular with UHF trunked DMR LMR network, including RF survey, design, and commissioning services.
+                                        </p>
+                                        <a href="#" class="cs-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="swiper-slide cs-card">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/chu-sainte-justine-img-placeholder.png')">
+                                    <span class="industry-tag">Healthcare</span>
+                                    <div class="cs-card-overlay"></div>
+                                    <div class="cs-card-body">
+                                        <h3 class="cs-card-title">CHU Sainte-Justine</h3>
+                                        <p class="cs-card-text">
+                                            DAS maintenance and monitoring for neutral-host cellular and public safety network in Montreal. Tri-carrier cellular system for Rogers, Telus, Bell, and Videotron, with UHF LMR, paging, and SERAM public safety services.
+                                        </p>
+                                        <a href="#" class="cs-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="swiper-slide cs-card">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/finch-west-light-rail-transit-img-placeholder.png')">
+                                    <span class="industry-tag">Transportation</span>
+                                    <div class="cs-card-overlay"></div>
+                                    <div class="cs-card-body">
+                                        <h3 class="cs-card-title">FWLRT</h3>
+                                        <p class="cs-card-text">
+                                            Public safety turnkey solution for two underground stations in Toronto. P25 and conventional radio systems supporting Toronto Police, Fire, EMS, and TTC services with hybrid fiber/coax architecture.
+                                        </p>
+                                        <a href="#" class="cs-btn">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="swiper-slide cs-card">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/humber-river-hospital-img-placeholder.png')">
                                     <span class="industry-tag">Healthcare</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
@@ -182,22 +261,7 @@
                             </article>
 
                             <article class="swiper-slide cs-card">
-                                <div class="cs-card-media" style="--cs-bg:url('index_images/toronto dominion center.jpg')">
-                                    <span class="industry-tag">Commercial</span>
-                                    <div class="cs-card-overlay"></div>
-                                    <div class="cs-card-body">
-                                        <h3 class="cs-card-title">Toronto Dominion Centre</h3>
-                                        <p class="cs-card-text">
-                                            Multi-tower DAS deployment with strict PIM testing and tight deadlines. Delivered
-                                            successfully for Bell Mobility and national operators.
-                                        </p>
-                                        <a href="our_projects/toronto-dominion-centre.html" class="cs-btn">Read More</a>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <article class="swiper-slide cs-card">
-                                <div class="cs-card-media" style="--cs-bg:url('index_images/metrolinx.jpg')">
+                                <div class="cs-card-media" style="--cs-bg:url('index_images/metrolinx-go-transit-img-placeholder.png')">
                                     <span class="industry-tag">Transportation</span>
                                     <div class="cs-card-overlay"></div>
                                     <div class="cs-card-body">
@@ -212,7 +276,7 @@
                             </article>
                         </div>
                     </div>
-                    <div class="swiper-pagination cs-dots"></div>
+                    <div class="cs-dots"></div>
                 </div>
             </div>
         </section>
@@ -221,87 +285,96 @@
         <section id="solutions" class="solutions-section">
             <div class="container">
                 <div class="solutions-intro">
-                    <h2 class="solutions-intro__title">Wireless expertise tailored for today's digital environments</h2>
-                    <p class="solutions-intro__description">
-                        From enterprise campuses to high-security sites, our wireless solutions are designed for performance, reliability, and compliance. Whether you're scaling infrastructure or building from the ground up, we bring deep industry experience to every deployment.
+                    <h2 class="solutions-intro__title" data-animate="fade-up">Wireless expertise tailored for today's digital environments</h2>
+                    <p class="solutions-intro__description" data-animate="fade-up" data-animate-delay="160">
+                        From enterprise campuses to high-security sites, we deliver in-building wireless solutions designed for performance, reliability, and compliance. 
+                        Whether you’re scaling existing infrastructure or building from the ground up, we bring deep industry experience to every deployment.
                     </p>
                 </div>
 
                 <div class="solutions-offerings">
-                    <article class="solutions-offering">
-                        <div class="solutions-offering__icon" data-feather="message-circle"></div>
-                        <h3 class="solutions-offering__label">Wireless Consulting</h3>
-                    </article>
+                    <a href="#" class="solutions-offering" data-animate="fade-up">
+                        <div class="solutions-offering__icon" data-feather="smartphone"></div>
+                        <h3 class="solutions-offering__label">Commercial Cellular</h3>
+                    </a>
 
-                    <article class="solutions-offering">
-                        <div class="solutions-offering__icon" data-feather="wifi"></div>
-                        <h3 class="solutions-offering__label">Enterprise WiFi</h3>
-                    </article>
-
-                    <article class="solutions-offering">
-                        <div class="solutions-offering__icon" data-feather="radio"></div>
-                        <h3 class="solutions-offering__label">Cellular &amp; Public Safety</h3>
-                    </article>
-
-                    <article class="solutions-offering">
+                    <a href="#" class="solutions-offering" data-animate="fade-up" data-animate-delay="80">
                         <div class="solutions-offering__icon" data-feather="lock"></div>
                         <h3 class="solutions-offering__label">Private 5G</h3>
-                    </article>
+                    </a>
 
-                    <article class="solutions-offering">
-                        <div class="solutions-offering__icon" data-feather="book-open"></div>
-                        <h3 class="solutions-offering__label">Training</h3>
-                    </article>
+                    <a href="#" class="solutions-offering" data-animate="fade-up" data-animate-delay="160">
+                        <div class="solutions-offering__icon" data-feather="wifi"></div>
+                        <h3 class="solutions-offering__label">Enterprise Wi-Fi</h3>
+                    </a>
+
+                    <a href="#" class="solutions-offering" data-animate="fade-up" data-animate-delay="240">
+                        <div class="solutions-offering__icon" data-feather="shield"></div>
+                        <h3 class="solutions-offering__label">Public Safety Radio</h3>
+                    </a>
+
+                    <a href="#" class="solutions-offering" data-animate="fade-up" data-animate-delay="320">
+                        <div class="solutions-offering__icon" data-feather="radio"></div>
+                        <h3 class="solutions-offering__label">Operational (LMR) Radio</h3>
+                    </a>
+
+                    <a href="#" class="solutions-offering" data-animate="fade-up" data-animate-delay="400">
+                        <div class="solutions-offering__icon" data-feather="navigation"></div>
+                        <h3 class="solutions-offering__label">Transit Connectivity</h3>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Section -->
         <section id="about" class="why-choose">
-            <div class="container">
-                <div class="why-choose-intro">
-                    <h2 class="why-choose-heading-title">Why Choose Linkwave?</h2>
+            <div class="why-choose-wrapper">
+                <!-- Image Side (Left) -->
+                <div class="why-choose-image-side" data-animate="fade-up">
+                    <div class="why-choose-image-container">
+                        <img src="index_images/man_sitting_orange_chair.png" alt="Professional working on laptop in orange bean bag chair" class="why-choose-person-img">
+                    </div>
                 </div>
-                <div class="why-choose-wrapper">
-                    <div class="why-choose-left">
-                        <div class="why-choose-heading">
-                            <h2 class="why-choose-title">Built on Trust &amp; Proven Results</h2>
-                            <span class="why-choose-underline"></span>
-                            <p class="why-choose-subtitle">
-                                With proven wireless expertise and engineering precision, Linkwave delivers certified, performance-driven networks trusted by top enterprises and public institutions.
-                            </p>
+
+                <!-- Text Side (Right) -->
+                <div class="why-choose-text-side" data-animate="fade-up" data-animate-delay="100">
+                    <p class="why-choose-eyebrow">WHO ARE WE?</p>
+                    <h2 class="why-choose-heading-title">Why Choose<br>Linkwave?</h2>
+                    
+                    <!-- Feature List -->
+                    <div class="why-choose-features-list">
+                        <div class="why-choose-feature-item">
+                            <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                            <div class="why-choose-feature-text">
+                                <strong>Vendor-Independent Solutions</strong>
+                                We prioritize performance over manufacturer preferences, selecting technology based on your facility's unique RF requirements and budget.
+                            </div>
                         </div>
-                        <div class="why-choose-card-grid">
-                            <article class="why-choose-card">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                                <h3>Our Experience</h3>
-                                <p>Decades of multi-industry wireless deployments spanning healthcare, transportation, government, and enterprise environments.</p>
-                            </article>
-                            <article class="why-choose-card">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-award"></i>
-                                </div>
-                                <h3>Our Credentials</h3>
-                                <p>Certified Professional Engineers of Ontario and trusted partner to leading vendors—compliance and safety always guaranteed nationwide.</p>
-                            </article>
-                            <article class="why-choose-card">
-                                <div class="why-choose-icon">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <h3>KPI Guarantee</h3>
-                                <p>Every project is delivered to the KPIs you need—coverage, uptime, and reliability validated before final handoff.</p>
-                            </article>
+                        
+                        <div class="why-choose-feature-item">
+                            <i class="fas fa-award" aria-hidden="true"></i>
+                            <div class="why-choose-feature-text">
+                                <strong>Proven Carrier-Grade Expertise</strong>
+                                Over a decade of DAS and indoor wireless experience, with specialized engineering tools that ensure projects meet or exceed carrier standards.
+                            </div>
+                        </div>
+                        
+                        <div class="why-choose-feature-item">
+                            <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                            <div class="why-choose-feature-text">
+                                <strong>End-to-End Project Management</strong>
+                                Single point of responsibility from site surveys and approvals to deployment and maintenance, ensuring reliable and future-proof installations.
+                            </div>
                         </div>
                     </div>
-                    <div class="why-choose-right">
-                        <div class="why-choose-image">
-                            <div class="why-choose-placeholder">
-                                <span class="placeholder-text">Placeholder Image</span>
-                            </div>
-                            <div class="why-choose-placeholder">
-                                <span class="placeholder-text">Placeholder Image</span>
+                    
+                    <div class="why-choose-buttons">
+                        <a href="our_services.html" class="why-choose-btn why-choose-btn--primary">Our Services</a>
+                        <div class="dropdown">
+                            <a href="about_us.html" class="why-choose-btn why-choose-btn--secondary dropdown-toggle">About us <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="about_us.html">About Us</a>
+                                <a href="our_team.html">Our Team</a>
                             </div>
                         </div>
                     </div>
@@ -314,11 +387,11 @@
         <div class="container">
             <div class="contact-layout">
                 <div class="contact-left">
-                    <h3 class="contact-subtitle">CONTACT US TODAY</h3>
-                    <h2 class="contact-title">Unlock the power<br>of ultimate<br>connectivity</h2>
-                    <p class="contact-description">In today's digital world, wireless solutions have become indispensable tools for businesses. With our in-building wireless solutions, you can unlock the full potential of your connectivity and increase efficiency.</p>
+                    <h3 class="contact-subtitle" data-animate="fade-up">Contact us today</h3>
+                    <h2 class="contact-title" data-animate="fade-up" data-animate-delay="100">Unlock the power<br>of ultimate<br>connectivity</h2>
+                    <p class="contact-description" data-animate="fade-up" data-animate-delay="180">Unlock the full potential of your connectivity with our in-building wireless solutions designed to increase efficiency and performance.</p>
                     
-                    <div class="contact-cta">
+                    <div class="contact-cta" data-animate="fade-up" data-animate-delay="260">
                         <button class="contact-cta-btn">Contact Us</button>
                         <div class="contact-support">
                             <div class="contact-support-text">
@@ -329,17 +402,25 @@
                     </div>
                 </div>
                 
-                <div class="contact-right">
-                    <div class="contact-form">
-                        <input type="text" placeholder="Name" class="form-input">
-                        <input type="email" placeholder="Email" class="form-input">
-                        <input type="text" placeholder="Subject" class="form-input">
-                        <textarea placeholder="Message" class="form-textarea"></textarea>
-                        <button class="form-submit">
+                <div class="contact-right" data-animate="fade-left">
+                    <form class="contact-form" action="#" method="post" novalidate>
+                        <label class="sr-only" for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Name" class="form-input" required>
+
+                        <label class="sr-only" for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Email" class="form-input" required>
+
+                        <label class="sr-only" for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" placeholder="Subject" class="form-input" required>
+
+                        <label class="sr-only" for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="Message" class="form-textarea" rows="4" required></textarea>
+
+                        <button class="form-submit" type="submit">
                             Send
-                            <i class="fas fa-paper-plane"></i>
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -354,41 +435,40 @@
                         <div class="footer-logo">
                             <img src="LW_logo_original.png" alt="Linkwave Wireless logo">
                         </div>
-                        <p class="footer-tagline">Providing wireless networks you can trust, powered by real experience and proven results.</p>
+                        <p class="footer-tagline">Connecting You with Seamless Wireless Solutions.</p>
                     </div>
                     <div class="footer-links-groups">
                         <div class="footer-links-group">
                             <h3 class="footer-heading">Company</h3>
                             <ul>
-                                <li><a href="#about">About Us</a></li>
-                                <li><a href="#team">Our Team</a></li>
-                                <li><a href="#careers">Careers</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about_us.html">About Us</a></li>
+                                <li><a href="our_team.html">Our Team</a></li>
+                                <li><a href="careers.html">Careers</a></li>
                             </ul>
                         </div>
                         <div class="footer-links-group">
                             <h3 class="footer-heading">Solutions &amp; Projects</h3>
                             <ul>
+                                <li><a href="our_services.html">Turnkey Services</a></li>
                                 <li><a href="our_projects.html">Our Projects</a></li>
-                                <li><a href="#products">Products We Support</a></li>
-                                <li><a href="#solutions">Turnkey Wireless Network Solutions</a></li>
+                                <li><a href="our_process.html">Our Process</a></li>
+                                <li><a href="wireless_network_consulting.html">Wireless Consulting</a></li>
                             </ul>
                         </div>
                         <div class="footer-links-group">
-                            <h3 class="footer-heading">Legal &amp; Support</h3>
+                            <h3 class="footer-heading">Resources</h3>
                             <ul>
-                                <li><a href="#contact">Contact Us</a></li>
-                                <li><a href="privacy.html">Privacy Policy</a></li>
-                                <li><a href="terms.html">Terms of Use</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="our_solutions.html">Our Solutions</a></li>
+                                <li><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="footer-social">
-                    <a href="#" aria-label="LinkedIn" class="footer-social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" aria-label="Twitter" class="footer-social-link">
-                        <i class="fab fa-twitter"></i>
+                    <a href="https://www.linkedin.com/company/linkwave-wireless/" aria-label="LinkedIn" class="footer-social-link">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -406,3 +486,4 @@
     <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
+
