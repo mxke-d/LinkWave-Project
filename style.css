@@ -3798,6 +3798,68 @@ body.new-home [data-animate] {
     margin: 0;
 }
 
+/* Team Banner in Why Work Grid */
+.why-work-team-banner {
+    grid-column: 1 / -1;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-banner-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #200029 0%, #3d1a4a 50%, #200029 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.team-banner-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 158, 78, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(245, 120, 34, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.team-banner-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
+    animation: shimmer 4s infinite;
+    pointer-events: none;
+}
+
+.team-banner-placeholder i {
+    font-size: 3rem;
+    color: rgba(255, 158, 78, 0.6);
+    z-index: 1;
+}
+
+.team-banner-placeholder span {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
 /* Benefits Section */
 .benefits-section {
     display: grid;
@@ -4142,6 +4204,10 @@ body.new-home [data-animate] {
     .why-work-card {
         padding: 2rem;
     }
+    
+    .why-work-team-banner {
+        height: 220px;
+    }
 }
 
 /* Mobile Responsive Styles for Why Work Section */
@@ -4192,6 +4258,19 @@ body.new-home [data-animate] {
     }
     
     .why-work-card-text {
+        font-size: 1rem;
+    }
+    
+    .why-work-team-banner {
+        height: 180px;
+        border-radius: 16px;
+    }
+    
+    .team-banner-placeholder i {
+        font-size: 2.25rem;
+    }
+    
+    .team-banner-placeholder span {
         font-size: 1rem;
     }
     
@@ -5561,13 +5640,13 @@ body.new-home .contact-form {
 .audit-services-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .audit-service-card {
     background: white;
     border-radius: 1rem;
-    padding: 2.5rem;
+    padding: 1.5rem 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     border: 1px solid rgba(32, 0, 41, 0.08);
@@ -5602,9 +5681,9 @@ body.new-home .contact-form {
 .audit-card-header {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid #F4F4F4;
 }
 
@@ -5972,7 +6051,7 @@ body.new-home .contact-form {
 
 .construction-item {
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     display: flex;
     align-items: center;
     opacity: 0;
@@ -6076,11 +6155,11 @@ body.new-home .contact-form {
 .construction-content {
     background: white;
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 1.75rem 2rem;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 158, 78, 0.1);
     transition: all 0.3s ease;
-    width: 45%;
+    width: 48%;
     position: relative;
 }
 
@@ -6342,16 +6421,21 @@ body.new-home .contact-form {
 .support-services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    max-width: 75rem;
+    gap: 1rem;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 0 1.25rem;
+}
+
+.support-services-grid--two {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 50rem;
 }
 
 .support-service-card {
     background: #F4F4F4;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     border: 1px solid rgba(32, 0, 41, 0.08);
@@ -6387,9 +6471,9 @@ body.new-home .contact-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
-    padding-bottom: 1.25rem;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid rgba(32, 0, 41, 0.1);
     text-align: center;
 }
@@ -6478,6 +6562,11 @@ body.new-home .contact-form {
     .support-services-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    .support-services-grid--two {
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
     
     .support-service-card {
@@ -12768,7 +12857,6 @@ body.new-home .contact-form {
     .icon-container i {
         font-size: 1.25rem;
     }
-}
 
 /* Projects Showcase Styles */
 .projects-showcase {
@@ -14416,6 +14504,8 @@ body.new-home .contact-form {
     overflow: hidden;
     transition: all 0.3s ease;
     border: 1px solid #f1f3f4;
+    display: flex;
+    flex-direction: column;
 }
 
 .job-card:hover {
@@ -14460,6 +14550,10 @@ body.new-home .contact-form {
 .job-card-content {
     padding: 1.5rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
 }
 
 .job-title {
@@ -14468,6 +14562,10 @@ body.new-home .contact-form {
     color: #2c3e50;
     margin-bottom: 0.5rem;
     font-family: var(--font-title);
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .job-location {
@@ -14496,6 +14594,7 @@ body.new-home .contact-form {
     background: #d4edda;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
+    margin-top: auto;
 }
 
 .job-apply-btn {
@@ -15239,18 +15338,8 @@ body.new-home .contact-form {
 }
 
 .growth-support-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.growth-support-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
 }
 
 .growth-support-intro {
@@ -15259,20 +15348,14 @@ body.new-home .contact-form {
     color: #200029;
     font-weight: 500;
     font-family: var(--font-body);
-    margin: 0;
-}
-
-.growth-support-text-item {
-    font-size: 1.0625rem;
-    line-height: 1.7;
-    color: #200029;
-    font-family: var(--font-body);
-    margin: 0;
+    margin: 0 auto 3rem;
+    text-align: center;
+    max-width: 800px;
 }
 
 .growth-support-features {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
@@ -15339,11 +15422,8 @@ body.new-home .contact-form {
 
 /* Responsive Styles for Growth Support Section */
 @media (max-width: 1024px) {
-    .growth-support-content {
-        gap: 3rem;
-    }
-    
     .growth-support-features {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
     
@@ -15357,21 +15437,9 @@ body.new-home .contact-form {
         padding: 4rem 0;
     }
     
-    .growth-support-title {
-        font-size: 2.5rem;
-    }
-    
-    .growth-support-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
     .growth-support-intro {
         font-size: 1.125rem;
-    }
-    
-    .growth-support-text-item {
-        font-size: 1rem;
+        margin-bottom: 2rem;
     }
     
     .growth-support-features {
