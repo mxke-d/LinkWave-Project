@@ -2736,7 +2736,6 @@ body.new-home [data-animate] {
     border-radius: 24px;
 }
 
-
 /* Text Side (Right) */
 .why-choose-text-side {
     flex: 0 0 40%;
@@ -4122,6 +4121,23 @@ body.new-home [data-animate] {
     color: #200029;
 }
 
+.president-photo {
+    width: 100%;
+    max-width: 420px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(32, 0, 41, 0.06);
+    border: 1px solid rgba(245, 120, 34, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.president-photo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(32, 0, 41, 0.12);
+    border-color: rgba(245, 120, 34, 0.25);
+}
+
 .president-message-right {
     padding-left: 1rem;
 }
@@ -4356,6 +4372,12 @@ body.new-home [data-animate] {
     }
     
     .president-image-placeholder {
+        max-width: 100%;
+        height: 350px;
+        margin: 0 auto;
+    }
+    
+    .president-photo {
         max-width: 100%;
         height: 350px;
         margin: 0 auto;
@@ -9920,6 +9942,19 @@ body.new-home .contact-form {
     transition: all 0.3s ease;
 }
 
+.certification-logo {
+    height: 50px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.certification-item:hover .certification-logo {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
 .certification-separator {
     color: rgba(32, 0, 41, 0.2);
     font-weight: 300;
@@ -9971,6 +10006,11 @@ body.new-home .contact-form {
         min-width: 70px;
     }
     
+    .certification-logo {
+        height: 45px;
+        max-width: 100px;
+    }
+    
     .certification-name {
         font-size: 1rem;
     }
@@ -10010,6 +10050,11 @@ body.new-home .contact-form {
         letter-spacing: 0.1em;
     }
     
+    .certification-logo {
+        height: 40px;
+        max-width: 90px;
+    }
+    
     .certification-separator {
         display: none;
     }
@@ -10036,6 +10081,11 @@ body.new-home .contact-form {
     .certification-acronym {
         font-size: 1rem;
         min-width: 55px;
+    }
+    
+    .certification-logo {
+        height: 35px;
+        max-width: 80px;
     }
     
     .certification-name {
