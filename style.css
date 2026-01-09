@@ -9944,10 +9944,11 @@ body.new-home .contact-form {
 
 .certification-logo {
     height: 50px;
-    width: auto;
-    max-width: 120px;
+    width: 120px;
     object-fit: contain;
+    object-position: left center;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .certification-item:hover .certification-logo {
@@ -9959,6 +9960,9 @@ body.new-home .contact-form {
     color: rgba(32, 0, 41, 0.2);
     font-weight: 300;
     transition: all 0.3s ease;
+    flex-shrink: 0;
+    width: 12px;
+    text-align: center;
 }
 
 .certification-item:hover .certification-separator {
@@ -9973,6 +9977,16 @@ body.new-home .contact-form {
     line-height: 1.6;
     flex: 1;
     transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.certification-name:hover {
+    color: #F57822;
+    text-decoration: underline;
+}
+
+.certification-item:hover .certification-name {
+    color: #F57822;
 }
 
 /* Responsive Design for Certifications Section */
@@ -10008,7 +10022,9 @@ body.new-home .contact-form {
     
     .certification-logo {
         height: 45px;
-        max-width: 100px;
+        width: 100px;
+        object-fit: contain;
+        object-position: left center;
     }
     
     .certification-name {
@@ -10052,7 +10068,9 @@ body.new-home .contact-form {
     
     .certification-logo {
         height: 40px;
-        max-width: 90px;
+        width: 90px;
+        object-fit: contain;
+        object-position: left center;
     }
     
     .certification-separator {
@@ -10085,7 +10103,9 @@ body.new-home .contact-form {
     
     .certification-logo {
         height: 35px;
-        max-width: 80px;
+        width: 80px;
+        object-fit: contain;
+        object-position: left center;
     }
     
     .certification-name {

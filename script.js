@@ -270,6 +270,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Desktop dropdown toggle functionality - prevent navigation, only show dropdown on hover
+    const desktopDropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    desktopDropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Dropdown is handled by CSS :hover, so we just prevent navigation
+        });
+    });
+
     // Scroll-triggered animations
     const observerOptions = {
         threshold: 0.1,
