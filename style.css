@@ -3553,28 +3553,35 @@ body.new-home [data-animate] {
 
 .solutions-offering:hover .solutions-offering__icon {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(32, 0, 41, 0.14);
+    box-shadow: none;
 }
 
 .solutions-offering__icon {
-    width: 32px;
-    height: 32px;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
     margin: 0 auto 18px;
-    border-radius: 10px;
-    background: var(--lw-white-smoke);
-    box-shadow: 0 16px 32px rgba(32, 0, 41, 0.08);
-    display: flex;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--lw-pumpkin);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 0;
 }
 
 .solutions-offering__icon svg {
-    width: 18px;
-    height: 18px;
+    width: 32px;
+    height: 32px;
     stroke-width: 1.75;
     stroke: currentColor;
+    fill: none;
+    display: block;
 }
 
 .solutions-offering__icon-wrapper {
@@ -7802,6 +7809,14 @@ body.new-home .contact-form {
     align-items: center;
     justify-content: center;
     position: relative;
+    background: transparent;
+}
+
+.turnkey-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: transparent;
 }
 
 .turnkey-image-placeholder {
@@ -7874,6 +7889,14 @@ body.new-home .contact-form {
     justify-content: center;
     position: relative;
     order: 1;
+    background: transparent;
+}
+
+.training-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: transparent;
 }
 
 .training-image-placeholder {
@@ -14776,6 +14799,15 @@ body.new-home .contact-form {
     align-items: center;
 }
 
+.careers-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+}
+
 .careers-image-placeholder {
     width: 100%;
     max-width: 500px;
@@ -14857,6 +14889,10 @@ body.new-home .contact-form {
     
     .careers-cta {
         justify-content: center;
+    }
+    
+    .careers-image {
+        max-width: 100%;
     }
     
     .careers-image-placeholder {
