@@ -29,6 +29,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Smooth scroll to anchor on page load (for navigation from other pages)
+    // Start at top, then scroll to target after a brief delay
+    if (window.location.hash) {
+        // First, ensure we're at the top
+        window.scrollTo(0, 0);
+        
+        // Then scroll to target after page fully loads and renders
+        const targetId = window.location.hash;
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            // Wait for page to fully render, then scroll smoothly to target
+            setTimeout(() => {
+                const headerOffset = 100; // Account for fixed header
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 800); // Delay to let user see the top of the page first
+        }
+    }
+
     // Header background on scroll
     const header = document.querySelector('.header');
     const headerLogo = header ? header.querySelector('.logo img') : null;
