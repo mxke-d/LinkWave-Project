@@ -1950,6 +1950,10 @@ body.new-home [data-animate] {
     position: absolute;
     inset: 0;
     z-index: 0;
+    background-image: url('our_services_images/our_services_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .services-hero .new-hero__gradient {
@@ -2013,6 +2017,10 @@ body.new-home [data-animate] {
     position: absolute;
     inset: 0;
     z-index: 0;
+    background-image: url('about_us_images/hero.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-hero .new-hero__gradient {
@@ -2072,6 +2080,10 @@ body.new-home [data-animate] {
     position: absolute;
     inset: 0;
     z-index: 0;
+    background-image: url('our_team_images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .team-hero .new-hero__gradient {
@@ -2107,6 +2119,68 @@ body.new-home [data-animate] {
 }
 
 .team-hero .new-hero__subhead {
+    font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Projects Hero */
+.projects-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 0 120px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.projects-hero .new-hero__background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.projects-hero .new-hero__gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(32, 0, 41, 0.5) 0%, rgba(13, 2, 20, 0.4) 50%, rgba(32, 0, 41, 0.5) 100%),
+                radial-gradient(circle at top right, rgba(255, 158, 78, 0.6) 0%, transparent 60%),
+                radial-gradient(circle at bottom left, rgba(245, 120, 34, 0.5) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(244, 244, 244, 0.5) 0%, transparent 100%);
+    z-index: 1;
+}
+
+.projects-hero .new-hero__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.projects-hero .new-hero__content {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-hero .hero__title {
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    line-height: 1.08;
+    margin-bottom: 24px;
+    color: #fff;
+    font-family: var(--font-title);
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.projects-hero .new-hero__subhead {
     font-size: clamp(1.05rem, 1.35vw, 1.25rem);
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.95);
