@@ -1956,13 +1956,18 @@ body.new-home [data-animate] {
     background-repeat: no-repeat;
 }
 
+.services-hero .new-hero__video {
+    object-position: center top;
+}
+
 .services-hero .new-hero__gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(32, 0, 41, 0.7) 0%, rgba(13, 2, 20, 0.6) 50%, rgba(32, 0, 41, 0.7) 100%),
-                radial-gradient(circle at top right, rgba(255, 158, 78, 0.5) 0%, transparent 60%),
-                radial-gradient(circle at bottom left, rgba(245, 120, 34, 0.4) 0%, transparent 50%),
-                linear-gradient(180deg, rgba(244, 244, 244, 0.3) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(32, 0, 41, 0.55) 0%, rgba(13, 2, 20, 0.45) 50%, rgba(32, 0, 41, 0.55) 100%),
+                linear-gradient(135deg, rgba(245, 120, 34, 0.35) 0%, rgba(255, 158, 78, 0.3) 50%, rgba(245, 120, 34, 0.35) 100%),
+                radial-gradient(circle at top left, rgba(255, 158, 78, 0.5) 0%, transparent 55%),
+                radial-gradient(circle at bottom right, rgba(245, 120, 34, 0.45) 0%, transparent 60%),
+                linear-gradient(180deg, rgba(245, 120, 34, 0.4) 0%, rgba(32, 0, 41, 0.3) 40%, transparent 100%);
     z-index: 1;
 }
 
@@ -2029,7 +2034,7 @@ body.new-home [data-animate] {
     background: linear-gradient(135deg, rgba(32, 0, 41, 0.5) 0%, rgba(13, 2, 20, 0.4) 50%, rgba(32, 0, 41, 0.5) 100%),
                 radial-gradient(circle at top right, rgba(255, 158, 78, 0.6) 0%, transparent 60%),
                 radial-gradient(circle at bottom left, rgba(245, 120, 34, 0.5) 0%, transparent 50%),
-                linear-gradient(180deg, rgba(244, 244, 244, 0.5) 0%, transparent 100%);
+                linear-gradient(180deg, rgba(32, 0, 41, 0.65) 0%, rgba(32, 0, 41, 0.3) 40%, transparent 100%);
     z-index: 1;
 }
 
@@ -6766,7 +6771,17 @@ body.new-home .contact-form {
     z-index: 0;
 }
 
-.learn-hero .new-hero__gradient,
+.learn-hero .new-hero__gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 158, 78, 0.45) 0%, rgba(32, 0, 41, 0.5) 50%, rgba(245, 120, 34, 0.45) 100%),
+                linear-gradient(135deg, rgba(32, 0, 41, 0.4) 0%, rgba(13, 2, 20, 0.35) 50%, rgba(32, 0, 41, 0.4) 100%),
+                radial-gradient(circle at center, rgba(255, 158, 78, 0.4) 0%, transparent 70%),
+                radial-gradient(circle at bottom left, rgba(245, 120, 34, 0.35) 0%, transparent 55%),
+                linear-gradient(180deg, rgba(32, 0, 41, 0.5) 0%, rgba(255, 158, 78, 0.3) 50%, transparent 100%);
+    z-index: 1;
+}
+
 .faq-hero .new-hero__gradient {
     position: absolute;
     inset: 0;
