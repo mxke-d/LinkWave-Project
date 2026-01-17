@@ -1,8 +1,9 @@
-// LinkWave Chatbot Frontend
-class LinkWaveChatbot {
+// Linkwave Chatbot Frontend
+class LinkwaveChatbot {
     constructor() {
         this.apiUrl = 'http://localhost:3000/api/chat';
         this.isOpen = false;
+        this.isProcessing = false; // Track if a message is currently being sent/processed
         this.conversationHistory = [];
         this.storageKey = 'linkwave_chatbot_history';
         this.storageTimestampKey = 'linkwave_chatbot_timestamp';
@@ -57,6 +58,7 @@ class LinkWaveChatbot {
         this.createChatbotHTML();
         this.attachEventListeners();
         this.restoreMessages();
+        // Initial button state will be set by restoreMessages
     }
 
     createChatbotHTML() {
@@ -69,13 +71,18 @@ class LinkWaveChatbot {
                                 <i class="fas fa-wifi" aria-hidden="true"></i>
                             </div>
                             <div class="chatbot-header-text">
-                                <h3 class="chatbot-title">LinkWave Assistant</h3>
-                                <p class="chatbot-subtitle">Ask me about DAS and wireless solutions</p>
+                                <h3 class="chatbot-title">Linkwave Assistant</h3>
+                                <p class="chatbot-subtitle">Your wireless solution expert 😊</p>
                             </div>
                         </div>
-                        <button id="chatbot-close" class="chatbot-close" aria-label="Close chatbot">
-                            <i class="fas fa-times" aria-hidden="true"></i>
-                        </button>
+                        <div class="chatbot-header-actions">
+                            <button id="chatbot-new-chat" class="chatbot-new-chat" aria-label="Start new chat" title="Start new chat">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </button>
+                            <button id="chatbot-close" class="chatbot-close" aria-label="Close chatbot">
+                                <i class="fas fa-times" aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
                     <div id="chatbot-messages" class="chatbot-messages"></div>
                     <div class="chatbot-input-container">
@@ -88,14 +95,15 @@ class LinkWaveChatbot {
                                 autocomplete="off"
                                 aria-label="Chatbot message input"
                             />
-                            <button type="submit" class="chatbot-send" aria-label="Send message">
+                            <button type="submit" id="chatbot-send" class="chatbot-send" aria-label="Send message">
                                 <i class="fas fa-paper-plane" aria-hidden="true"></i>
                             </button>
                         </form>
                         <div class="chatbot-quick-actions">
-                            <button class="quick-action-btn" data-action="What is DAS?">What is DAS?</button>
-                            <button class="quick-action-btn" data-action="Book a consultation">Book Consultation</button>
-                            <button class="quick-action-btn" data-action="Tell me about your services">Our Services</button>
+                            <button class="quick-action-btn" data-action="Who is Linkwave?">Who is Linkwave? 👋</button>
+                            <button class="quick-action-btn" data-action="What is DAS?">What is DAS? 📡</button>
+                            <button class="quick-action-btn" data-action="Tell me about your services">Our Services 🛠️</button>
+                            <button class="quick-action-btn" data-action="Book a consultation">Book Consultation 📅</button>
                         </div>
                     </div>
                 </div>
@@ -124,33 +132,117 @@ class LinkWaveChatbot {
             });
         } else {
             // Only show greeting if no history exists
-            this.addMessage('assistant', 'Hello! I\'m your LinkWave assistant. I can answer questions about DAS systems, wireless solutions, and help you book a consultation with our team. How can I help you today?');
+            this.addMessage('assistant', 'Hello! I\'m your Linkwave assistant. I can answer questions about DAS systems, wireless solutions, and help you book a consultation with our team. How can I help you today?');
         }
+        
+        // Update new chat button state after restoring messages
+        this.updateNewChatButton();
+    }
+
+    // Check if conversation is empty (only greeting)
+    isConversationEmpty() {
+        // Conversation is empty if there are no user messages
+        return this.conversationHistory.filter(msg => msg.role === 'user').length === 0;
+    }
+
+    // Update new chat button state
+    updateNewChatButton() {
+        const newChatBtn = document.getElementById('chatbot-new-chat');
+        if (newChatBtn) {
+            const isEmpty = this.isConversationEmpty();
+            newChatBtn.disabled = isEmpty || this.isProcessing;
+        }
+    }
+
+    // Enable/disable input and buttons based on processing state
+    setInputState(enabled) {
+        const input = document.getElementById('chatbot-input');
+        const sendBtn = document.getElementById('chatbot-send');
+        const quickActions = document.querySelectorAll('.quick-action-btn');
+        const newChatBtn = document.getElementById('chatbot-new-chat');
+        
+        if (input) {
+            input.disabled = !enabled;
+            if (!enabled) {
+                input.style.opacity = '0.6';
+                input.style.cursor = 'not-allowed';
+            } else {
+                input.style.opacity = '1';
+                input.style.cursor = 'text';
+            }
+        }
+        
+        if (sendBtn) {
+            sendBtn.disabled = !enabled;
+            if (!enabled) {
+                sendBtn.style.opacity = '0.6';
+                sendBtn.style.cursor = 'not-allowed';
+            } else {
+                sendBtn.style.opacity = '1';
+                sendBtn.style.cursor = 'pointer';
+            }
+        }
+        
+        quickActions.forEach(btn => {
+            btn.disabled = !enabled;
+            if (!enabled) {
+                btn.style.opacity = '0.6';
+                btn.style.cursor = 'not-allowed';
+            } else {
+                btn.style.opacity = '1';
+                btn.style.cursor = 'pointer';
+            }
+        });
+        
+        if (newChatBtn) {
+            const isEmpty = this.isConversationEmpty();
+            newChatBtn.disabled = isEmpty || !enabled;
+        }
+    }
+
+    // Start a new chat session
+    startNewChat() {
+        // Prevent creating new chat if conversation is empty
+        if (this.isConversationEmpty()) {
+            return;
+        }
+        
+        this.clearHistory();
+        const messagesContainer = document.getElementById('chatbot-messages');
+        messagesContainer.innerHTML = '';
+        this.addMessage('assistant', 'Hello! I\'m your Linkwave assistant. I can answer questions about DAS systems, wireless solutions, and help you book a consultation with our team. How can I help you today?');
+        this.updateNewChatButton(); // Update button state after clearing
     }
 
     attachEventListeners() {
         const toggle = document.getElementById('chatbot-toggle');
         const close = document.getElementById('chatbot-close');
+        const newChat = document.getElementById('chatbot-new-chat');
         const form = document.getElementById('chatbot-form');
         const input = document.getElementById('chatbot-input');
         const quickActions = document.querySelectorAll('.quick-action-btn');
 
         toggle.addEventListener('click', () => this.toggleChatbot());
         close.addEventListener('click', () => this.closeChatbot());
+        if (newChat) {
+            newChat.addEventListener('click', () => this.startNewChat());
+        }
         
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const message = input.value.trim();
-            if (message) {
-                this.sendMessage(message);
+            if (message && !this.isProcessing) {
                 input.value = '';
+                this.sendMessage(message);
             }
         });
 
         quickActions.forEach(btn => {
             btn.addEventListener('click', () => {
-                const action = btn.getAttribute('data-action');
-                this.sendMessage(action);
+                if (!this.isProcessing) {
+                    const action = btn.getAttribute('data-action');
+                    this.sendMessage(action);
+                }
             });
         });
 
@@ -184,9 +276,33 @@ class LinkWaveChatbot {
         window.classList.remove('chatbot-window-open');
     }
 
+    // Normalize inline list formatting into separate lines
+    normalizeListText(text) {
+        if (!text) return text;
+        const lines = text.split('\n');
+        const normalized = lines.map((line) => {
+            const numberedMatches = line.match(/\d+\.\s+/g);
+            if (numberedMatches && numberedMatches.length > 0) {
+                let isFirst = true;
+                const needsLeadingBreak = !/^\s*\d+\.\s+/.test(line);
+                return line.replace(/(\d+)\.\s+/g, (match) => {
+                    if (isFirst) {
+                        isFirst = false;
+                        return needsLeadingBreak ? `\n${match}` : match;
+                    }
+                    return `\n${match}`;
+                });
+            }
+            return line;
+        });
+        return normalized.join('\n');
+    }
+
     // Convert markdown to HTML for proper formatting
     markdownToHTML(text) {
         if (!text) return '';
+
+        text = this.normalizeListText(text);
         
         // Escape HTML to prevent XSS
         const escapeHtml = (unsafe) => {
@@ -254,20 +370,30 @@ class LinkWaveChatbot {
         // Close any remaining list
         closeCurrentList();
         
-        // Join lines with proper spacing
-        const joined = result
-            .filter(line => line.trim())
-            .map((line, index, array) => {
-                const prev = array[index - 1];
-                // Add spacing between lists and text
-                if (index > 0 && prev && (prev.includes('<ol>') || prev.includes('<ul>'))) {
-                    if (line && !line.startsWith('<')) {
-                        return '<br>' + line;
-                    }
+        // Join lines with proper spacing - preserve list structure
+        const output = [];
+        for (let i = 0; i < result.length; i++) {
+            const line = result[i];
+            const prev = result[i - 1];
+            
+            // If previous was a list and current is text, add spacing
+            if (i > 0 && prev && (prev.includes('<ol>') || prev.includes('<ul>'))) {
+                if (line && !line.startsWith('<')) {
+                    output.push('<br>');
                 }
-                return line;
-            })
-            .join('');
+            }
+            
+            // If previous was text and current is a list, add spacing
+            if (i > 0 && prev && !prev.includes('<ol>') && !prev.includes('<ul>') && !prev.startsWith('<br>')) {
+                if (line && (line.includes('<ol>') || line.includes('<ul>'))) {
+                    output.push('<br>');
+                }
+            }
+            
+            output.push(line);
+        }
+        
+        const joined = output.filter(line => line.trim()).join('');
         
         // Wrap in paragraph tags if there's content and no lists
         if (joined && !joined.includes('<ol>') && !joined.includes('<ul>')) {
@@ -338,6 +464,15 @@ class LinkWaveChatbot {
     }
 
     async sendMessage(message) {
+        // Prevent multiple messages from being sent at once
+        if (this.isProcessing) {
+            return;
+        }
+
+        // Set processing state and disable inputs
+        this.isProcessing = true;
+        this.setInputState(false);
+
         // Add user message
         this.addMessage('user', message);
         this.conversationHistory.push({ role: 'user', content: message });
@@ -371,7 +506,7 @@ class LinkWaveChatbot {
             await this.addMessageWithTyping('assistant', data.response);
             this.conversationHistory.push({ role: 'assistant', content: data.response });
             this.saveHistory(); // Save after each message
-
+            
             // Show consultation CTA if intent detected
             if (data.consultationIntent) {
                 setTimeout(() => {
@@ -383,6 +518,10 @@ class LinkWaveChatbot {
             console.error('Chatbot error:', error);
             typingMessage.remove();
             this.addMessage('assistant', 'I apologize, but I\'m having trouble connecting right now. Please contact us directly at 1-888-859-2673 or info@linkwavewireless.com for immediate assistance.');
+        } finally {
+            // Re-enable inputs after message is complete
+            this.isProcessing = false;
+            this.setInputState(true);
         }
     }
 
@@ -406,7 +545,7 @@ class LinkWaveChatbot {
 
 // Initialize chatbot when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    if (typeof LinkWaveChatbot !== 'undefined') {
-        window.linkwaveChatbot = new LinkWaveChatbot();
+    if (typeof LinkwaveChatbot !== 'undefined') {
+        window.linkwaveChatbot = new LinkwaveChatbot();
     }
 });
