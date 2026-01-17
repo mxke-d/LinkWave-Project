@@ -355,16 +355,19 @@ class LinkwaveChatbot {
                 continue;
             }
             
+            // Ignore blank lines so lists can continue across spacing
+            if (!trimmed) {
+                continue;
+            }
+
             // Not a list item - close any open list
             closeCurrentList();
             
             // Regular text line
-            if (trimmed) {
-                let processedLine = escapeHtml(trimmed);
-                // Convert bold **text**
-                processedLine = processedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                result.push(processedLine);
-            }
+            let processedLine = escapeHtml(trimmed);
+            // Convert bold **text**
+            processedLine = processedLine.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            result.push(processedLine);
         }
         
         // Close any remaining list
