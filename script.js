@@ -76,10 +76,38 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!header) return;
 
         let isHeaderOnLightBackground = false;
+        let isOnBanner = false;
 
         if (isNewHome) {
-            isHeaderOnLightBackground = window.scrollY > 80;
-            header.classList.toggle('header--scrolled', isHeaderOnLightBackground);
+            // Get the hero section to determine when we're on the banner
+            const heroSection = document.querySelector('.hero.new-hero, .hero');
+            const heroHeight = heroSection ? heroSection.offsetHeight : 600;
+            
+            // Check if we're still on the banner
+            isOnBanner = window.scrollY < heroHeight;
+            isHeaderOnLightBackground = !isOnBanner; // White background after banner
+            
+            // Toggle scrolled class (when past banner)
+            header.classList.toggle('header--scrolled', !isOnBanner);
+            
+            // Set header background based on position
+            if (isOnBanner) {
+                // On banner: match banner background (dark purple gradient)
+                header.style.background = 'linear-gradient(135deg, rgba(32, 0, 41, 0.95), rgba(13, 2, 20, 0.85))';
+                header.style.backdropFilter = 'blur(15px)';
+                header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
+                header.style.boxShadow = 'none';
+            } else {
+                // Past banner: white background
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(15px)';
+                header.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
+                header.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.08)';
+            }
+            
+            // Logo: white when on banner, gray when scrolled past
+            const shouldUseWhiteLogo = isOnBanner;
+            updateHeaderLogo(shouldUseWhiteLogo);
         } else {
             isHeaderOnLightBackground = window.scrollY > 100;
 
@@ -90,9 +118,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = 'none';
             }
+            
+            updateHeaderLogo(!isHeaderOnLightBackground);
         }
-
-        updateHeaderLogo(isHeaderOnLightBackground);
     }
 
     if (isNewHome) {

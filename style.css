@@ -75,10 +75,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body.new-home .header {
-    background: rgba(13, 2, 20, 0.7);
+    background: linear-gradient(135deg, rgba(32, 0, 41, 0.95), rgba(13, 2, 20, 0.85));
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: none;
     padding: 12px 0;
+    transition: all 0.3s ease;
 }
 
 body.new-home .header .logo {
