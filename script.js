@@ -68,7 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetSrc = isHeaderScrolled ? lightLogoSrc : darkLogoSrc;
 
         if (targetSrc && headerLogo.getAttribute('src') !== targetSrc) {
-            headerLogo.setAttribute('src', targetSrc);
+            // Smooth fade transition for logo change
+            headerLogo.style.opacity = '0';
+            setTimeout(() => {
+                headerLogo.setAttribute('src', targetSrc);
+                headerLogo.style.opacity = '1';
+            }, 150);
         }
     }
 

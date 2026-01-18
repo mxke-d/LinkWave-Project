@@ -80,7 +80,7 @@ body.new-home .header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: none;
     padding: 12px 0;
-    transition: all 0.3s ease;
+    transition: background 0.4s ease, border-bottom 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 body.new-home .header .logo {
@@ -88,9 +88,14 @@ body.new-home .header .logo {
     min-height: auto;
 }
 
+body.new-home .header .logo img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 body.new-home .header .nav a {
     padding: 10px 0;
     font-size: 15px;
+    transition: color 0.4s ease;
 }
 
 body.new-home .header.header--scrolled {
@@ -101,10 +106,12 @@ body.new-home .header.header--scrolled {
 
 body.new-home .nav a {
     color: #f6f6f9;
+    transition: color 0.4s ease;
 }
 
 body.new-home .nav a::after {
     background: var(--lw-sandy-orange, #FF9E4E);
+    transition: width 0.3s ease, background 0.3s ease;
 }
 
 body.new-home .nav a:hover {
@@ -113,6 +120,7 @@ body.new-home .nav a:hover {
 
 body.new-home .header.header--scrolled .nav a {
     color: #200029;
+    transition: color 0.4s ease;
 }
 
 body.new-home .header.header--scrolled .nav a:hover {
@@ -148,6 +156,7 @@ body.new-home .header.header--scrolled .nav a:hover {
     width: auto;
     display: block;
     object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .nav {
