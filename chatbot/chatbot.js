@@ -1,15 +1,47 @@
 // Linkwave Chatbot Frontend
 class LinkwaveChatbot {
     constructor() {
-        this.apiUrl = 'http://localhost:3000/api/chat';
+        // Security: Make API URL configurable - detect from current domain or use environment
+        // In production, set window.CHATBOT_API_URL or use relative path
+        const defaultApiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+            ? 'http://localhost:3000/api/chat'
+            : '/api/chat'; // Use relative path in production (assumes same domain)
+        
+        this.apiUrl = window.CHATBOT_API_URL || defaultApiUrl;
         this.isOpen = false;
         this.isProcessing = false; // Track if a message is currently being sent/processed
         this.conversationHistory = [];
         this.storageKey = 'linkwave_chatbot_history';
         this.storageTimestampKey = 'linkwave_chatbot_timestamp';
-        this.historyExpiryDays = 30; // Industry standard: 30 days
+        this.historyExpiryHours = 3; // Chat history expires after 3 hours
+        this.maxMessageLength = 250; // Security: Limit message length (casual use case)
         this.loadHistory();
         this.init();
+    }
+
+    // Security: Sanitize user input
+    sanitizeInput(input) {
+        if (typeof input !== 'string') return '';
+        // Remove null bytes and control characters (except newlines and tabs)
+        let sanitized = input.replace(/[\x00-\x08\x0B-\x0C\x0E-\x1F\x7F]/g, '');
+        // Trim and limit length
+        sanitized = sanitized.trim();
+        if (sanitized.length > this.maxMessageLength) {
+            sanitized = sanitized.substring(0, this.maxMessageLength);
+        }
+        return sanitized;
+    }
+
+    // Security: Validate message before sending
+    validateMessage(message) {
+        const sanitized = this.sanitizeInput(message);
+        if (!sanitized || sanitized.length === 0) {
+            return { valid: false, error: 'Message cannot be empty' };
+        }
+        if (sanitized.length > this.maxMessageLength) {
+            return { valid: false, error: `Message is too long (max ${this.maxMessageLength} characters)` };
+        }
+        return { valid: true, message: sanitized };
     }
 
     // Load chat history from localStorage
@@ -21,10 +53,10 @@ class LinkwaveChatbot {
             if (stored && timestamp) {
                 const savedTime = parseInt(timestamp, 10);
                 const now = Date.now();
-                const daysSince = (now - savedTime) / (1000 * 60 * 60 * 24);
+                const hoursSince = (now - savedTime) / (1000 * 60 * 60);
                 
-                // Only load if within expiry period
-                if (daysSince < this.historyExpiryDays) {
+                // Only load if within expiry period (few hours)
+                if (hoursSince < this.historyExpiryHours) {
                     this.conversationHistory = JSON.parse(stored);
                 } else {
                     // Expired - clear old history
@@ -93,6 +125,7 @@ class LinkwaveChatbot {
                                 class="chatbot-input" 
                                 placeholder="Type your message..." 
                                 autocomplete="off"
+                                maxlength="250"
                                 aria-label="Chatbot message input"
                             />
                             <button type="submit" id="chatbot-send" class="chatbot-send" aria-label="Send message">
@@ -230,10 +263,14 @@ class LinkwaveChatbot {
         
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const message = input.value.trim();
-            if (message && !this.isProcessing) {
+            const rawMessage = input.value;
+            const validation = this.validateMessage(rawMessage);
+            if (validation.valid && !this.isProcessing) {
                 input.value = '';
-                this.sendMessage(message);
+                this.sendMessage(validation.message);
+            } else if (!validation.valid) {
+                // Show validation error to user
+                this.addMessage('assistant', validation.error || 'Please enter a valid message.');
             }
         });
 
@@ -241,7 +278,10 @@ class LinkwaveChatbot {
             btn.addEventListener('click', () => {
                 if (!this.isProcessing) {
                     const action = btn.getAttribute('data-action');
-                    this.sendMessage(action);
+                    const validation = this.validateMessage(action);
+                    if (validation.valid) {
+                        this.sendMessage(validation.message);
+                    }
                 }
             });
         });
@@ -472,6 +512,14 @@ class LinkwaveChatbot {
             return;
         }
 
+        // Security: Validate message again before sending
+        const validation = this.validateMessage(message);
+        if (!validation.valid) {
+            this.addMessage('assistant', validation.error || 'Please enter a valid message.');
+            return;
+        }
+        message = validation.message;
+
         // Set processing state and disable inputs
         this.isProcessing = true;
         this.setInputState(false);
@@ -481,10 +529,19 @@ class LinkwaveChatbot {
         this.conversationHistory.push({ role: 'user', content: message });
         this.saveHistory(); // Save after each message
 
+        // Security: Limit conversation history size
+        if (this.conversationHistory.length > 20) {
+            this.conversationHistory = this.conversationHistory.slice(-20);
+        }
+
         // Show typing indicator
         const typingMessage = this.addMessage('assistant', '', true);
 
         try {
+            // Security: Add timeout to fetch request (30 seconds)
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 30000);
+
             const response = await fetch(this.apiUrl, {
                 method: 'POST',
                 headers: {
@@ -492,15 +549,31 @@ class LinkwaveChatbot {
                 },
                 body: JSON.stringify({
                     message: message,
-                    conversationHistory: this.conversationHistory
-                })
+                    conversationHistory: this.conversationHistory.slice(-10) // Only send last 10 messages
+                }),
+                signal: controller.signal
             });
 
+            clearTimeout(timeoutId);
+
             if (!response.ok) {
-                throw new Error('Failed to get response');
+                // Handle rate limiting and other HTTP errors
+                if (response.status === 429) {
+                    throw new Error('Too many requests. Please wait a moment and try again.');
+                } else if (response.status >= 500) {
+                    throw new Error('Server error. Please try again later.');
+                } else {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || 'Failed to get response');
+                }
             }
 
             const data = await response.json();
+            
+            // Security: Validate response structure
+            if (!data || typeof data !== 'object' || typeof data.response !== 'string') {
+                throw new Error('Invalid response from server');
+            }
             
             // Remove typing indicator
             typingMessage.remove();
@@ -518,9 +591,23 @@ class LinkwaveChatbot {
             }
 
         } catch (error) {
+            // Security: Don't expose internal error details to user
             console.error('Chatbot error:', error);
             typingMessage.remove();
-            this.addMessage('assistant', 'I apologize, but I\'m having trouble connecting right now. Please contact us directly at 1-888-859-2673 or info@linkwavewireless.com for immediate assistance.');
+            
+            let errorMessage = 'I apologize, but I\'m having trouble connecting right now. Please contact us directly at 1-888-859-2673 or info@linkwavewireless.com for immediate assistance.';
+            
+            // Show user-friendly error for timeout
+            if (error.name === 'AbortError' || error.message.includes('timeout')) {
+                errorMessage = 'The request took too long. Please try again or contact us directly at 1-888-859-2673.';
+            } else if (error.message && !error.message.includes('Failed to get response')) {
+                // Only show specific error if it's user-friendly (like rate limiting)
+                if (error.message.includes('Too many requests')) {
+                    errorMessage = error.message;
+                }
+            }
+            
+            this.addMessage('assistant', errorMessage);
         } finally {
             // Re-enable inputs after message is complete
             this.isProcessing = false;
