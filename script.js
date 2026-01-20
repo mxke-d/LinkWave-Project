@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Set header background based on position
             if (isOnBanner) {
                 // On banner: match banner background (dark purple gradient)
-                header.style.background = 'linear-gradient(135deg, rgba(32, 0, 41, 0.95), rgba(13, 2, 20, 0.85))';
+                header.style.background = 'linear-gradient(135deg, rgba(32, 0, 41, 0.95), rgba(32, 0, 41, 0.90))';
                 header.style.backdropFilter = 'blur(15px)';
                 header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.15)';
                 header.style.boxShadow = 'none';

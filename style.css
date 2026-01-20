@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body.new-home .header {
-    background: linear-gradient(135deg, rgba(32, 0, 41, 0.95), rgba(13, 2, 20, 0.85));
+    background: linear-gradient(135deg, rgba(32, 0, 41, 0.95), rgba(32, 0, 41, 0.90));
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: none;
@@ -296,6 +296,64 @@ body.new-home .header.header--scrolled .nav a:hover {
     left: auto;
     right: 0;
 }
+
+/* Enhanced dropdown style for "Who we are" - distinct boxes */
+.dropdown--who-we-are .dropdown-menu {
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+    min-width: 240px;
+}
+
+.dropdown--who-we-are .dropdown-menu a {
+    display: block;
+    padding: 16px 32px 16px 10px !important;
+    color: #200029 !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border: 2px solid rgba(32, 0, 41, 0.15);
+    border-radius: 12px;
+    background: #ffffff;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remove any divider lines or special styling for first/last child */
+.dropdown--who-we-are .dropdown-menu a::after {
+    display: none !important;
+    content: none !important;
+}
+
+.dropdown--who-we-are .dropdown-menu a:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.dropdown--who-we-are .dropdown-menu a:last-child {
+    border-bottom: 2px solid rgba(32, 0, 41, 0.15) !important;
+}
+
+/* Same hover effect for both items */
+.dropdown--who-we-are .dropdown-menu a:hover {
+    background: rgba(245, 120, 34, 0.1) !important;
+    color: #F57822 !important;
+    border-color: #F57822 !important;
+    border-width: 2px !important;
+    border-bottom: 2px solid #F57822 !important;
+    padding: 16px 32px 16px 10px !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 120, 34, 0.2);
+}
+
 /* Hero Section Styles */
 .hero {
     position: relative;
