@@ -12822,6 +12822,64 @@ body.new-home .contact-form {
     color: #200029;
 }
 
+/* Case Study About Section */
+.case-study-about {
+    background: #F4F4F4;
+    border-radius: 24px;
+    padding: 60px;
+    margin-bottom: 60px;
+}
+
+.case-study-about__header {
+    background: #FF9E4E;
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-bottom: 32px;
+}
+
+.case-study-about__title {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.case-study-about__content {
+    padding: 0;
+}
+
+.case-study-about__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.case-study-about__list li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #200029;
+    line-height: 1.8;
+    padding: 16px 0;
+    padding-left: 32px;
+    position: relative;
+}
+
+.case-study-about__list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FF9E4E;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.case-study-about__list li:not(:last-child) {
+    border-bottom: 1px solid rgba(32, 0, 41, 0.1);
+}
+
 /* Case Study CTA */
 .case-study-cta {
     margin-top: 60px;
@@ -13432,6 +13490,42 @@ body.new-home .contact-form {
     .nav a {
         font-size: 13px;
     }
+    
+    /* Design Services Section - Small Desktop/Tablet */
+    .support-services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.125rem;
+    }
+    
+    .design-services-section {
+        padding: 4rem 0;
+    }
+    
+    /* Construction Services Section - Small Desktop/Tablet */
+    .construction-services-section {
+        padding: 4rem 0;
+    }
+    
+    .construction-timeline {
+        max-width: 1000px;
+    }
+    
+    .construction-content {
+        width: 45%;
+        padding: 1.5rem 1.75rem;
+    }
+    
+    /* Turnkey & Training Sections - Small Desktop/Tablet */
+    .turnkey-section,
+    .training-section {
+        padding: 4rem 0;
+    }
+    
+    .turnkey-layout,
+    .training-layout {
+        gap: 3rem;
+        max-width: 70rem;
+    }
 }
 
 /* ==========================================================================
@@ -13741,6 +13835,7 @@ body.new-home .contact-form {
     
     .chatbot-window {
         width: 380px;
+        max-width: 380px;
         max-height: 70vh;
         bottom: 70px;
     }
@@ -14071,6 +14166,195 @@ body.new-home .contact-form {
     
     .footer-bottom p {
         font-size: 0.8rem;
+    }
+    
+    /* ==========================================================================
+       DESIGN SERVICES SECTION - Tablet
+       ========================================================================== */
+    .design-services-section {
+        padding: 3rem 0;
+    }
+    
+    .support-header {
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+    }
+    
+    .support-title {
+        font-size: clamp(1.75rem, 4vw, 2.25rem);
+        margin-bottom: 1rem;
+    }
+    
+    .support-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .support-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        padding: 0 1rem;
+    }
+    
+    .support-service-card {
+        padding: 1.25rem;
+    }
+    
+    .support-icon {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    
+    .support-icon i {
+        font-size: 1.125rem;
+    }
+    
+    .support-service-title {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+    }
+    
+    .support-service-description {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+    
+    /* ==========================================================================
+       CONSTRUCTION SERVICES SECTION - Tablet
+       ========================================================================== */
+    .construction-services-section {
+        padding: 3rem 0;
+    }
+    
+    .construction-header {
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+    }
+    
+    .construction-title {
+        font-size: clamp(1.75rem, 4vw, 2.25rem);
+        margin-bottom: 1rem;
+    }
+    
+    .construction-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .construction-timeline {
+        padding: 0 1rem;
+    }
+    
+    .construction-track {
+        left: 30px;
+        transform: none;
+    }
+    
+    .construction-item {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+    
+    .construction-marker {
+        left: 30px;
+        transform: translate(-50%, 0);
+        top: 0;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .construction-icon {
+        font-size: 1.25rem;
+    }
+    
+    .construction-number {
+        font-size: 0.75rem;
+    }
+    
+    .construction-content {
+        width: calc(100% - 90px);
+        margin-left: 75px;
+        margin-right: 0;
+        text-align: left;
+        padding: 1.5rem 1.5rem;
+    }
+    
+    /* Remove arrow indicators on tablet */
+    .construction-item .construction-content::before {
+        display: none;
+    }
+    
+    /* Reset all alternating layouts */
+    .construction-item:nth-child(2) .construction-content,
+    .construction-item:nth-child(3) .construction-content,
+    .construction-item:nth-child(4) .construction-content,
+    .construction-item:nth-child(5) .construction-content,
+    .construction-item:nth-child(6) .construction-content,
+    .construction-item:nth-child(7) .construction-content {
+        margin-left: 75px;
+        margin-right: 0;
+        text-align: left;
+        padding: 1.5rem 1.5rem;
+    }
+    
+    .construction-step-title {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+    }
+    
+    .construction-step-description {
+        font-size: 0.9375rem;
+    }
+    
+    /* ==========================================================================
+       TURNKEY & TRAINING SECTIONS - Tablet
+       ========================================================================== */
+    .turnkey-section,
+    .training-section {
+        padding: 3rem 0;
+    }
+    
+    .turnkey-layout,
+    .training-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 0 1rem;
+    }
+    
+    .turnkey-content,
+    .training-content {
+        order: 1;
+        text-align: center;
+    }
+    
+    .turnkey-visual,
+    .training-visual {
+        order: 2;
+    }
+    
+    .turnkey-title,
+    .training-title {
+        font-size: clamp(1.75rem, 4vw, 2.25rem);
+        margin-bottom: 1.25rem;
+    }
+    
+    .turnkey-description,
+    .training-description {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    
+    .turnkey-image,
+    .training-image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Button adjustments */
+    .turnkey-section .btn,
+    .training-section .btn {
+        padding: 12px 24px;
+        font-size: 0.9375rem;
     }
 }
 
@@ -14934,6 +15218,224 @@ body.new-home .contact-form {
     
     .footer-bottom p {
         font-size: 0.75rem;
+    }
+    
+    /* ==========================================================================
+       DESIGN SERVICES SECTION - Mobile
+       ========================================================================== */
+    .design-services-section {
+        padding: 2.5rem 0;
+    }
+    
+    .support-maintenance-section {
+        padding: 2.5rem 0;
+    }
+    
+    .support-header {
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    .support-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 0.875rem;
+    }
+    
+    .support-description {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+    
+    .support-services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+        max-width: 100%;
+    }
+    
+    .support-services-grid--two {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    
+    .support-service-card {
+        padding: 1.25rem 1rem;
+    }
+    
+    .support-card-header {
+        gap: 0.625rem;
+        margin-bottom: 0.875rem;
+        padding-bottom: 0.875rem;
+    }
+    
+    .support-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.625rem;
+    }
+    
+    .support-icon i {
+        font-size: 1rem;
+    }
+    
+    .support-service-title {
+        font-size: clamp(1rem, 4vw, 1.125rem);
+        line-height: 1.3;
+    }
+    
+    .support-service-description {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+    
+    /* Button adjustments for mobile */
+    .design-services-section .btn {
+        padding: 12px 24px;
+        font-size: 0.9375rem;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    /* ==========================================================================
+       CONSTRUCTION SERVICES SECTION - Mobile
+       ========================================================================== */
+    .construction-services-section {
+        padding: 2.5rem 0;
+    }
+    
+    .construction-header {
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    .construction-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 0.875rem;
+    }
+    
+    .construction-description {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+    
+    .construction-timeline {
+        padding: 0 0.5rem;
+    }
+    
+    .construction-track {
+        left: 20px;
+        width: 3px;
+    }
+    
+    .construction-item {
+        margin-bottom: 1.75rem;
+    }
+    
+    .construction-marker {
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+        margin-right: 1.25rem;
+    }
+    
+    .construction-icon {
+        font-size: 1rem;
+        margin-bottom: 0.125rem;
+    }
+    
+    .construction-number {
+        font-size: 0.6875rem;
+    }
+    
+    .construction-content {
+        width: calc(100% - 70px);
+        margin-left: 60px;
+        margin-right: 0;
+        padding: 1.25rem 1rem;
+        border-radius: 16px;
+    }
+    
+    /* Reset all alternating layouts for mobile */
+    .construction-item:nth-child(2) .construction-content,
+    .construction-item:nth-child(3) .construction-content,
+    .construction-item:nth-child(4) .construction-content,
+    .construction-item:nth-child(5) .construction-content,
+    .construction-item:nth-child(6) .construction-content,
+    .construction-item:nth-child(7) .construction-content {
+        margin-left: 60px;
+        margin-right: 0;
+        text-align: left;
+        padding: 1.25rem 1rem;
+    }
+    
+    .construction-step-title {
+        font-size: clamp(1.125rem, 4vw, 1.25rem);
+        margin-bottom: 0.75rem;
+    }
+    
+    .construction-step-description {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+    
+    /* ==========================================================================
+       TURNKEY & TRAINING SECTIONS - Mobile
+       ========================================================================== */
+    .turnkey-section,
+    .training-section {
+        padding: 2.5rem 0;
+    }
+    
+    .turnkey-layout,
+    .training-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    .turnkey-content,
+    .training-content {
+        order: 1;
+        text-align: center;
+    }
+    
+    .turnkey-visual,
+    .training-visual {
+        order: 2;
+    }
+    
+    .turnkey-title,
+    .training-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 1rem;
+    }
+    
+    .turnkey-description,
+    .training-description {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: 1.75rem;
+    }
+    
+    .turnkey-image,
+    .training-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+    
+    /* Button adjustments for mobile */
+    .turnkey-section .btn,
+    .training-section .btn {
+        padding: 12px 24px;
+        font-size: 0.9375rem;
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
 }
 
