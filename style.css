@@ -7665,6 +7665,77 @@ body.new-home .contact-form {
     color: #F57822;
 }
 
+/* Client Logo Card (Name on top, Logo on bottom) */
+.client-logo-card {
+    padding: 20px 24px;
+    background: #ffffff;
+    border: 2px solid rgba(32, 0, 41, 0.1);
+    border-radius: 12px;
+    min-width: 180px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.client-logo-card:hover {
+    border-color: rgba(255, 158, 78, 0.4);
+    box-shadow: 0 4px 16px rgba(255, 158, 78, 0.2);
+    transform: translateY(-4px);
+}
+
+.client-logo-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #200029;
+    text-align: center;
+    font-family: var(--font-title);
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.client-logo-card:hover .client-logo-name {
+    color: #F57822;
+}
+
+.client-logo-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.client-logo-image img {
+    max-width: 150px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 1;
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+}
+
+.client-logo-card:hover .client-logo-image img {
+    opacity: 1;
+    transform: scale(1.25);
+}
+
+/* Specific logo sizing - Pomerleau */
+.client-logo-card--pomerleau .client-logo-image img {
+    transform: scale(1.4);
+}
+
+.client-logo-card--pomerleau:hover .client-logo-image img {
+    transform: scale(1.45);
+}
+
 /* Responsive Design for Clients Section */
 
 /* Our Certifications Section */
