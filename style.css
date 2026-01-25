@@ -3879,6 +3879,7 @@ body.new-home .contact-form {
     border: 2px solid #E2E8F0;
     border-radius: 8px;
     font-size: 16px;
+    font-family: inherit;
     margin-bottom: 20px;
     transition: border-color 0.3s ease;
 }
@@ -13672,6 +13673,7 @@ body.new-home .contact-form {
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
+        overflow-y: auto;
     }
     
     .mobile-menu-overlay.active {
@@ -13683,59 +13685,78 @@ body.new-home .contact-form {
     .mobile-nav {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        text-align: center;
-        width: 100%;
-        max-width: 300px;
-        padding: 100px 20px 40px;
+        align-items: stretch;
+        gap: 14px;
+        text-align: left;
+        width: min(360px, 92%);
+        max-width: 360px;
+        padding: 120px 20px 40px;
         margin: 0 auto;
     }
     
     .mobile-nav__link {
         text-decoration: none;
-        color: #200029;
+        color: var(--lw-dark-purple, #200029);
         font-weight: 600;
         font-size: 16px;
-        transition: color 0.3s ease;
-        padding: 8px 0;
+        transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+        padding: 12px 16px;
+        border-radius: 12px;
+        background: var(--lw-white-smoke, #F4F4F4);
+        border: 1px solid rgba(32, 0, 41, 0.08);
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     
     .mobile-nav__link:hover {
-        color: #FF6B35;
+        color: var(--lw-pumpkin, #F57822);
+        background: #ffffff;
+        border-color: rgba(245, 120, 34, 0.25);
     }
     
     /* Mobile dropdowns */
     .mobile-dropdown {
-        text-align: center;
         width: 100%;
     }
     
     .mobile-dropdown-toggle {
         text-decoration: none;
-        color: #200029;
+        color: var(--lw-dark-purple, #200029);
         font-weight: 600;
         font-size: 16px;
-        transition: color 0.3s ease;
-        padding: 8px 0;
+        transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+        padding: 12px 16px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         gap: 8px;
         cursor: pointer;
         width: 100%;
+        border-radius: 12px;
+        background: var(--lw-white-smoke, #F4F4F4);
+        border: 1px solid rgba(32, 0, 41, 0.08);
     }
     
     .mobile-dropdown-toggle:hover {
-        color: #FF6B35;
+        color: var(--lw-pumpkin, #F57822);
+        background: #ffffff;
+        border-color: rgba(245, 120, 34, 0.25);
+    }
+
+    .mobile-dropdown-toggle i {
+        font-size: 12px;
+        color: var(--lw-pumpkin, #F57822);
     }
     
     .mobile-dropdown-menu {
         margin-top: 10px;
         display: none;
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
+        padding-left: 12px;
+        border-left: 2px solid rgba(245, 120, 34, 0.25);
     }
     
     .mobile-dropdown-menu.active {
@@ -13744,36 +13765,308 @@ body.new-home .contact-form {
     
     .mobile-dropdown-menu a {
         text-decoration: none;
-        color: #200029;
+        color: var(--lw-dark-purple, #200029);
         font-weight: 500;
         font-size: 14px;
-        padding: 6px 0;
-        transition: color 0.3s ease;
+        padding: 8px 10px;
+        transition: color 0.3s ease, background 0.3s ease;
+        border-radius: 10px;
     }
     
     .mobile-dropdown-menu a:hover {
-        color: #FF6B35;
+        color: var(--lw-pumpkin, #F57822);
+        background: rgba(245, 120, 34, 0.08);
     }
     
     /* Mobile contact button */
     .mobile-contact-btn {
-        background: #FF6B35;
+        background: var(--lw-pumpkin, #F57822);
         color: white;
         border: none;
         padding: 12px 24px;
-        border-radius: 8px;
+        border-radius: 12px;
         font-weight: 600;
         font-size: 14px;
+        font-family: var(--font-body);
+        line-height: 1;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        margin-top: 15px;
+        box-shadow: 0 6px 18px rgba(245, 120, 34, 0.25);
+        margin-top: 10px;
+        width: 100%;
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     
     .mobile-contact-btn:hover {
-        background: #e55a2b;
+        background: var(--lw-sandy-orange, #FF9E4E);
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        box-shadow: 0 8px 24px rgba(245, 120, 34, 0.35);
+    }
+
+    /* Careers Hero - Tablet */
+    .careers-hero {
+        padding: 5.25rem 0 4rem;
+        margin-top: 64px;
+    }
+
+    .careers-hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .careers-hero-left {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .careers-title {
+        font-size: clamp(2.5rem, 6vw, 3.2rem);
+        margin-bottom: 1rem;
+    }
+
+    .careers-description {
+        font-size: 1.05rem;
+        margin-bottom: 1.25rem;
+        max-width: 100%;
+    }
+
+    .careers-hero-right {
+        width: 100%;
+    }
+
+    .careers-image {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    /* Active Postings - Tablet */
+    .active-postings {
+        padding: 4.5rem 0;
+    }
+
+    .postings-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .postings-title {
+        font-size: clamp(2.2rem, 5vw, 2.8rem);
+        margin-bottom: 1rem;
+    }
+
+    .postings-description {
+        font-size: 1.05rem;
+    }
+
+    .job-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .job-card-image {
+        height: 130px;
+    }
+
+    .job-title {
+        font-size: 1.2rem;
+        min-height: 2.75rem;
+    }
+
+    .job-card-content {
+        padding: 1.25rem;
+    }
+
+    /* Why Work - Tablet */
+    .why-work-at-linkwave {
+        padding: 4.5rem 0;
+    }
+
+    .why-work-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .why-work-title {
+        font-size: clamp(2.2rem, 5vw, 2.8rem);
+        margin-bottom: 1rem;
+    }
+
+    .why-work-intro-text {
+        font-size: 1.05rem;
+    }
+
+    .why-work-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .why-work-card {
+        padding: 2rem;
+    }
+
+    .why-work-card-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1.25rem;
+    }
+
+    .why-work-card-icon i {
+        font-size: 1.5rem;
+    }
+
+    .why-work-card-title {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .why-work-card-list li,
+    .why-work-card-text {
+        font-size: 1rem;
+    }
+
+    .why-work-team-banner,
+    .why-work-card--secondary {
+        display: none;
+    }
+
+    /* Growth Support - Tablet */
+    .growth-support-section {
+        padding: 4.5rem 0;
+    }
+
+    .growth-support-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .growth-support-title {
+        font-size: clamp(2.2rem, 5vw, 2.8rem);
+    }
+
+    .growth-support-intro {
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .growth-support-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .growth-feature-card {
+        padding: 1.75rem;
+    }
+
+    .growth-feature-icon {
+        width: 54px;
+        height: 54px;
+        margin-bottom: 1rem;
+    }
+
+    .growth-feature-icon i {
+        font-size: 1.35rem;
+    }
+
+    .growth-feature-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .growth-feature-list li {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    /* Our Culture & Values - Tablet */
+    .company-culture {
+        padding: 4.5rem 0;
+    }
+
+    .culture-header {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .culture-header-content {
+        align-items: center;
+    }
+
+    .culture-title {
+        font-size: clamp(2.2rem, 5vw, 2.8rem);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .culture-subtitle {
+        font-size: 1.05rem;
+        text-align: center;
+        max-width: 680px;
+    }
+
+    .culture-image-placeholder {
+        height: 240px;
+    }
+
+    .culture-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .culture-feature {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .feature-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 1.35rem;
+    }
+
+    .feature-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature-content p {
+        font-size: 0.98rem;
+    }
+
+    /* Message from the President - Tablet */
+    .president-message-standalone {
+        padding: 4.5rem 0;
+    }
+
+    .president-message-section {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .president-message-right {
+        padding-left: 0;
+    }
+
+    .president-title {
+        font-size: clamp(2.1rem, 5vw, 2.6rem);
+        margin-bottom: 1.25rem;
+        text-align: center;
+    }
+
+    .president-quote {
+        font-size: 1.05rem;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .president-photo {
+        max-width: 360px;
+        height: 420px;
+        margin: 0 auto;
     }
     
     /* Logo adjustments */
@@ -14465,22 +14758,317 @@ body.new-home .contact-form {
     
     /* Mobile nav */
     .mobile-nav {
-        padding: 90px 15px 30px;
-        gap: 16px;
+        padding: 110px 12px 28px;
+        gap: 12px;
     }
     
     .mobile-nav__link,
     .mobile-dropdown-toggle {
         font-size: 15px;
+        padding: 10px 14px;
     }
     
     .mobile-dropdown-menu a {
         font-size: 13px;
+        padding: 7px 8px;
     }
     
     .mobile-contact-btn {
-        padding: 10px 20px;
+        padding: 10px 18px;
         font-size: 13px;
+        min-height: 44px;
+    }
+
+    /* Careers Hero - Mobile */
+    .careers-hero {
+        padding: 4.5rem 0 3.25rem;
+        margin-top: 58px;
+    }
+
+    .careers-hero-content {
+        gap: 1.75rem;
+    }
+
+    .careers-hero-left {
+        text-align: center;
+    }
+
+    .careers-title {
+        font-size: clamp(2.1rem, 9vw, 2.6rem);
+        margin-bottom: 0.85rem;
+    }
+
+    .careers-description {
+        font-size: 1rem;
+    }
+
+    .careers-image {
+        max-width: 300px;
+    }
+
+    /* Active Postings - Mobile */
+    .active-postings {
+        padding: 4rem 0;
+    }
+
+    .postings-header {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .postings-title {
+        font-size: clamp(1.9rem, 7.5vw, 2.4rem);
+        margin-bottom: 0.75rem;
+    }
+
+    .postings-description {
+        font-size: 0.98rem;
+        max-width: 320px;
+    }
+
+    .job-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .job-card {
+        border-radius: 14px;
+    }
+
+    .job-card-image {
+        height: 120px;
+    }
+
+    .job-card-content {
+        padding: 1.15rem;
+    }
+
+    .job-title {
+        font-size: 1.1rem;
+        min-height: 0;
+    }
+
+    .job-type {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.65rem;
+    }
+
+    .job-apply-btn {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    /* Why Work - Mobile */
+    .why-work-at-linkwave {
+        padding: 4rem 0;
+    }
+
+    .why-work-header {
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+
+    .why-work-title {
+        font-size: clamp(1.9rem, 7.5vw, 2.4rem);
+        margin-bottom: 0.75rem;
+    }
+
+    .why-work-intro-text {
+        font-size: 1rem;
+    }
+
+    .why-work-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .why-work-card {
+        padding: 1.5rem;
+        border-radius: 14px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .why-work-card-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+    }
+
+    .why-work-card-icon i {
+        font-size: 1.35rem;
+    }
+
+    .why-work-card-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .why-work-card-list {
+        align-items: center;
+    }
+
+    .why-work-card-list li {
+        font-size: 0.98rem;
+        text-align: left;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .why-work-card-text {
+        font-size: 0.98rem;
+    }
+
+    /* Growth Support - Mobile */
+    .growth-support-section {
+        padding: 4rem 0;
+    }
+
+    .growth-support-header {
+        margin-bottom: 2rem;
+    }
+
+    .growth-support-title {
+        font-size: clamp(1.9rem, 7.5vw, 2.4rem);
+        margin-bottom: 0.75rem;
+    }
+
+    .growth-support-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        max-width: 320px;
+    }
+
+    .growth-support-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .growth-feature-card {
+        padding: 1.5rem;
+        border-radius: 14px;
+        text-align: center;
+    }
+
+    .growth-feature-icon {
+        width: 52px;
+        height: 52px;
+        margin: 0 auto 0.9rem;
+    }
+
+    .growth-feature-icon i {
+        font-size: 1.25rem;
+    }
+
+    .growth-feature-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .growth-feature-list li {
+        font-size: 0.96rem;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* Our Culture & Values - Mobile */
+    .company-culture {
+        padding: 4rem 0;
+    }
+
+    .culture-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .culture-header-content {
+        align-items: center;
+    }
+
+    .culture-title {
+        font-size: clamp(1.9rem, 7.5vw, 2.4rem);
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+
+    .culture-subtitle {
+        font-size: 1rem;
+        text-align: center;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .culture-image-placeholder {
+        height: 200px;
+    }
+
+    .culture-features {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .culture-feature {
+        padding: 1.5rem 1.25rem;
+        border-radius: 16px;
+    }
+
+    .feature-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.25rem;
+    }
+
+    .feature-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .feature-content p {
+        font-size: 0.96rem;
+    }
+
+    /* Message from the President - Mobile */
+    .president-message-standalone {
+        padding: 4rem 0;
+    }
+
+    .president-message-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .president-message-right {
+        padding-left: 0;
+    }
+
+    .president-title {
+        font-size: clamp(1.9rem, 7vw, 2.3rem);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .president-quote {
+        font-size: 0.98rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    .president-photo {
+        max-width: 300px;
+        height: 360px;
+        margin: 0 auto;
+    }
+
+    .president-signature {
+        align-items: center;
     }
 
         /* Mobile dropdown fix */
