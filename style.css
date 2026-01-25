@@ -14601,6 +14601,110 @@ body.new-home .contact-form {
         }
       
       }
+
+      @media (max-width: 480px) {
+        .team-member-1-layout,
+        .team-member-3-layout,
+        .team-member-5-layout,
+        .team-member-7-layout  {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .team-member-1-content,
+        .team-member-3-content,
+        .team-member-5-content,
+        .team-member-7-content {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 90%;
+          transform: translateX(-40%);
+        }
+      
+        .team-member-1-description,
+        .team-member-3-description,
+        .team-member-5-description,
+        .team-member-7-description {
+          text-align: center;
+          margin-left: -29%;
+        }
+      
+        .team-member-1-visual .placeholder-box,
+        .team-member-3-visual .placeholder-box,
+        .team-member-5-visual .placeholder-box,
+        .team-member-7-visual .placeholder-box  {
+          transform: translateX(-25%);
+        }
+      }
+
+      @media (max-width: 480px) {
+
+        .team-member-2-layout,
+        .team-member-4-layout,
+        .team-member-6-layout,
+        .team-member-8-layout {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "content"
+            "visual";
+        }
+      
+        .team-member-2-content,
+        .team-member-4-content,
+        .team-member-6-content,
+        .team-member-8-content {
+          grid-area: content;
+          text-align: center;
+          margin-left: 0;
+          transform: none;
+          max-width: 32ch;
+          margin: 0 auto;
+        }
+      
+        .team-member-2-title,
+        .team-member-4-title,
+        .team-member-6-title,
+        .team-member-8-title {
+          position: relative;
+          transform: translateX(12%);
+        }
+      
+        .team-member-2-description,
+        .team-member-4-description,
+        .team-member-6-description,
+        .team-member-8-description {
+          text-align: center;
+          max-width: 32ch;
+          margin: 0 auto;
+          transform: translateX(4%);
+        }
+      
+        .team-member-2-visual,
+        .team-member-4-visual,
+        .team-member-6-visual,
+        .team-member-8-visual {
+          grid-area: visual;
+        }
+
+        .team-member-2-position,
+        .team-member-4-position,
+        .team-member-6-position,
+        .team-member-8-position {
+           transform: translateX(12%);
+        }
+      
+        .team-member-2-visual .placeholder-box,
+        .team-member-4-visual .placeholder-box,
+        .team-member-6-visual .placeholder-box,
+        .team-member-8-visual .placeholder-box {
+          transform: translateX(7%);
+        }
+      }
+
+      
+      
     
     /* General section adjustments */
     section {
