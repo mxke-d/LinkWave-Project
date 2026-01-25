@@ -14496,8 +14496,111 @@ body.new-home .contact-form {
           margin-right: auto;
         }
       }
-      
+    
+    @media (max-width: 480px) {
 
+        /* Our Story / About section — mobile */
+        .about-section__wrapper {
+          flex-direction: column;
+        }
+      
+        .about-section__text-side {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        h2.about-section__title {
+          width: 100%;
+          text-align: center;
+          position: relative;
+        }
+      
+        h2.about-section__title::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      
+        .about-section__text {
+          text-align: center;
+        }
+      
+      }
+      
+    @media (max-width: 480px) {
+
+        /* Our Values — mobile stacked layout */
+        .values-timeline {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 32px;
+        }
+      
+      }
+      
+    @media (max-width: 480px) {
+        .mission-vision-split{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .mv-connector-icon {
+            transform: rotate(90deg);
+            margin: 16px 0;
+            position: static;
+          }
+
+        .mv-icon-circle {
+          display: flex;
+          align-items: center;
+          position: static;
+          margin: 0 auto 16px;
+        }
+
+
+      }
+      
+    @media (max-width: 480px) {
+        /* Stack Mission & Vision vertically */
+        .mv-cards,
+        .mv-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        }
+      
+        /* Rotate & center arrow */
+        .mv-arrow {
+          transform: rotate(90deg);
+          margin: 16px 0;
+          display: flex;
+          justify-content: center;
+        }
+      }
+      
+    @media (max-width: 480px) {
+
+        /* Stack contact layout into one column */
+        .contact-layout {
+          grid-template-columns: 1fr;
+        }
+      
+        /* Learn More section first */
+        .contact-left {
+          grid-row: 1;
+        }
+      
+        /* Contact form below Learn More */
+        .contact-form {
+          grid-row: 2;
+          margin-top: 32px;
+        }
+      
+      }
     
     /* General section adjustments */
     section {
