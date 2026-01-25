@@ -14482,6 +14482,22 @@ body.new-home .contact-form {
         padding: 10px 20px;
         font-size: 13px;
     }
+
+        /* Mobile dropdown fix */
+    .dropdown {
+        overflow: visible;
+    }
+
+    @media (max-width: 480px) {
+        .dropdown .dropdown-menu {
+          position: static;
+          max-height: none;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      
+
     
     /* General section adjustments */
     section {
