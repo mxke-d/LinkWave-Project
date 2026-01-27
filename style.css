@@ -12952,6 +12952,19 @@ body.new-home .contact-form {
     border-bottom: 1px solid rgba(32, 0, 41, 0.1);
 }
 
+/* Case Study PDF Image Preview */
+.case-study-pdf-preview {
+    text-align: center;
+    margin: 40px 0 60px;
+}
+
+.case-study-pdf-preview img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
 /* Case Study CTA */
 .case-study-cta {
     margin-top: 60px;
