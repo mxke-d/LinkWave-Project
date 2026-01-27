@@ -7666,14 +7666,14 @@ body.new-home .contact-form {
     color: #F57822;
 }
 
-/* Client Logo Card (Name on top, Logo on bottom) */
+/* Client Logo Card (Logo only) */
 .client-logo-card {
     padding: 20px 24px;
     background: #ffffff;
     border: 2px solid rgba(32, 0, 41, 0.1);
     border-radius: 12px;
     min-width: 180px;
-    min-height: 140px;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7708,13 +7708,13 @@ body.new-home .contact-form {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 60px;
+    height: 100%;
     flex-shrink: 0;
 }
 
 .client-logo-image img {
-    max-width: 150px;
-    max-height: 70px;
+    max-width: 180px;
+    max-height: 80px;
     width: auto;
     height: auto;
     object-fit: contain;
