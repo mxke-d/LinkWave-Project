@@ -12958,11 +12958,27 @@ body.new-home .contact-form {
     margin: 40px 0 60px;
 }
 
-.case-study-pdf-preview img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+.case-study-pdf-preview__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background-color: #F57822;
+    color: #F4F4F4;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.case-study-pdf-preview__link:hover,
+.case-study-pdf-preview__link:focus-visible {
+    background-color: #FF9E4E;
+    color: #200029;
+    transform: translateY(-1px);
 }
 
 /* Case Study CTA */
