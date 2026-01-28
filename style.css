@@ -11929,8 +11929,9 @@ body.new-home .contact-form {
 
 .growth-support-features {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
 }
 
 .growth-feature-card {
@@ -11939,6 +11940,10 @@ body.new-home .contact-form {
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 280px;
 }
 
 .growth-feature-card:hover {
@@ -14028,12 +14033,13 @@ body.new-home .contact-form {
     }
 
     .growth-support-features {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.25rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
 
     .growth-feature-card {
         padding: 1.75rem;
+        min-height: 260px;
     }
 
     .growth-feature-icon {
@@ -15133,6 +15139,7 @@ body.new-home .contact-form {
         padding: 1.5rem;
         border-radius: 14px;
         text-align: center;
+        min-height: auto;
     }
 
     .growth-feature-icon {
