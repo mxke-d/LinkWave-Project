@@ -265,34 +265,49 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentTestimonial = 0;
 
     function showTestimonial(index) {
+        if (!testimonialCards.length || !dots.length) {
+            return;
+        }
+
+        const safeIndex = index % testimonialCards.length;
         testimonialCards.forEach(card => card.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
-        
-        testimonialCards[index].classList.add('active');
-        dots[index].classList.add('active');
+
+        testimonialCards[safeIndex].classList.add('active');
+        if (dots[safeIndex]) {
+            dots[safeIndex].classList.add('active');
+        }
     }
 
     // Auto-rotate testimonials
     function nextTestimonial() {
+        if (!testimonialCards.length || !dots.length) {
+            return;
+        }
         currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
         showTestimonial(currentTestimonial);
     }
 
     // Manual navigation with dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentTestimonial = index;
-            showTestimonial(currentTestimonial);
+    if (testimonialCards.length && dots.length) {
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = index;
+                showTestimonial(currentTestimonial);
+            });
         });
-    });
+    }
 
     // Auto-rotate every 5 seconds
-    setInterval(nextTestimonial, 5000);
+    if (testimonialCards.length && dots.length) {
+        setInterval(nextTestimonial, 5000);
+    }
 
     // Mobile Menu Functionality
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    const mobileContactBtn = document.querySelector('.mobile-contact-btn');
 
     // Toggle mobile menu
     if (mobileMenuToggle && mobileMenuOverlay) {
@@ -326,6 +341,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    if (mobileContactBtn) {
+        mobileContactBtn.addEventListener('click', function() {
+            window.location.href = 'contact_us.html';
+        });
+    }
 
     // Desktop dropdown toggle functionality - prevent navigation, only show dropdown on hover
     const desktopDropdownToggles = document.querySelectorAll('.dropdown-toggle');
@@ -572,55 +593,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize Swipers for Case Studies and Industries
-    const csSwiperElements = document.querySelectorAll('.cs-swiper');
-    csSwiperElements.forEach(swiperEl => {
-        const paginationEl = swiperEl.parentElement.querySelector('.cs-dots');
+    if (window.Swiper) {
+        const csSwiperElements = document.querySelectorAll('.cs-swiper');
+        csSwiperElements.forEach(swiperEl => {
+            const paginationEl = swiperEl.parentElement.querySelector('.cs-dots');
 
-        new Swiper(swiperEl, {
-            loop: true,
-            spaceBetween: 24,
-            slidesPerView: 1,
-            autoplay: {
-                delay: 3000, // 3 seconds (40% faster than 5 seconds)
-                disableOnInteraction: false, // Continue autoplay after user interaction
-                pauseOnMouseEnter: true // Pause on hover
-            },
-            pagination: {
-                el: paginationEl,
-                clickable: true
-            },
-            breakpoints: {
-                640:  { slidesPerView: 1.1 },
-                768:  { slidesPerView: 1.5 },
-                1024: { slidesPerView: 2 }
-            }
+            new Swiper(swiperEl, {
+                loop: true,
+                spaceBetween: 24,
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 3000, // 3 seconds (40% faster than 5 seconds)
+                    disableOnInteraction: false, // Continue autoplay after user interaction
+                    pauseOnMouseEnter: true // Pause on hover
+                },
+                pagination: {
+                    el: paginationEl,
+                    clickable: true
+                },
+                breakpoints: {
+                    640:  { slidesPerView: 1.1 },
+                    768:  { slidesPerView: 1.5 },
+                    1024: { slidesPerView: 2 }
+                }
+            });
         });
-    });
 
-    // Initialize Swiper for Partners
-    new Swiper('.partners-swiper', {
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 1,
-        autoplay: {
-            delay: 4000, // 4 seconds
-            disableOnInteraction: false, // Continue autoplay after user interaction
-            pauseOnMouseEnter: true // Pause on hover
-        },
-        navigation: {
-            nextEl: '.partners-next',
-            prevEl: '.partners-prev',
-        },
-        pagination: { 
-            el: '.partners-pagination', 
-            clickable: true 
-        },
-        breakpoints: {
-            640:  { slidesPerView: 2 },
-            768:  { slidesPerView: 2.5 },
-            1024: { slidesPerView: 3 }
+        // Initialize Swiper for Partners
+        const partnersSwiperEl = document.querySelector('.partners-swiper');
+        if (partnersSwiperEl) {
+            new Swiper('.partners-swiper', {
+                loop: true,
+                spaceBetween: 30,
+                slidesPerView: 1,
+                autoplay: {
+                    delay: 4000, // 4 seconds
+                    disableOnInteraction: false, // Continue autoplay after user interaction
+                    pauseOnMouseEnter: true // Pause on hover
+                },
+                navigation: {
+                    nextEl: '.partners-next',
+                    prevEl: '.partners-prev',
+                },
+                pagination: { 
+                    el: '.partners-pagination', 
+                    clickable: true 
+                },
+                breakpoints: {
+                    640:  { slidesPerView: 2 },
+                    768:  { slidesPerView: 2.5 },
+                    1024: { slidesPerView: 3 }
+                }
+            });
         }
-    });
+    }
 }); 
 
 // Mission & Vision section animations
